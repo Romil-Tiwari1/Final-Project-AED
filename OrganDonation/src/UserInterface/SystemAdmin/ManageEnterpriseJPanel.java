@@ -129,7 +129,6 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         btnCreateEnterprise = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 153, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -166,7 +165,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
             enterpriseJTable.getColumnModel().getColumn(5).setResizable(false);
         }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 800, 380));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 430, 410));
 
         jPanel2.setBackground(new java.awt.Color(255, 102, 102));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 255, 204)));
@@ -180,7 +179,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Create Enterprise");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 20, 408, 30));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 408, 30));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -258,7 +257,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         });
         jPanel2.add(btnCreateEnterprise, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 360, 200, 33));
 
-        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 80, 410, 450));
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, 410, 450));
 
         jPanel3.setBackground(new java.awt.Color(31, 31, 31));
         jPanel3.setPreferredSize(new java.awt.Dimension(926, 70));
@@ -274,21 +273,15 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, 1546, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 843, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(721, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
 
         add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1570, -1));
-
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/enterprise.png"))); // NOI18N
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 80, 290, 320));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCreateEnterpriseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateEnterpriseActionPerformed
@@ -443,7 +436,6 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
