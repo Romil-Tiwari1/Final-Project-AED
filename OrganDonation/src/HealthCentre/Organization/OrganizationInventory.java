@@ -6,13 +6,14 @@ package HealthCentre.Organization;
 
 import HealthCentre.Organization.Organization.Type;
 import java.util.ArrayList;
-import HealthCentre.Organization.DonorOrganization;
+
 
 /**
  *
  * @author fakhr
  */
 public class OrganizationInventory {
+     
     private ArrayList<Organization> organizationList;
 
     public OrganizationInventory() {
@@ -23,36 +24,26 @@ public class OrganizationInventory {
         return organizationList;
     }
     
-//    public Organization createOrganization(Type type, String realName){
-//        Organization organization = null;
+    public Organization createOrganization(Type type, String realName){
+        Organization organization = null;
 //        if (type.getValue().equals(Type.Doctor.getValue())){
 //            organization = new DoctorOrganization();
 //            organization.setRealName(realName);
 //            organizationList.add(organization);
 //        }
 //        else if (type.getValue().equals(Type.SystemCoordinator.getValue())){
-//            organization = new DonorCoordinatorOrganization();
+//            organization = new SystemCoordinatorOrganization();
 //            organization.setRealName(realName);
 //            organizationList.add(organization);
 //        }
 //        else if (type.getValue().equals(Type.Pathologist.getValue())){
-//            organization = new TransplantCoordinatorOrganization();
+//            organization = new PathologistOrganization();
 //            organization.setRealName(realName);
 //            organizationList.add(organization);
 //        }
-//        return organization;
-//    }
-    
-    
-      public Organization createDonorOrganization(Organization.GovernmentType govtType, String realName){
-        Organization organization = null;
-        if (govtType.getValue().equals(Organization.GovernmentType.Government.getValue())){
-            organization = new DonorOrganization();
-            organization.setRealName(realName);
-            organizationList.add(organization);
-        }
         return organization;
     }
-         
+    
+   
 }
 

@@ -11,172 +11,172 @@ package HealthCentre.OrganType;
 public class OrganType {
  
     
-    private static int aPositive = 30;
-    private static int aNegative = 25;
-    private static int bPositive = 65;
-    private static int bNegative = 35;
-    private static int oPositive = 75;
-    private static int oNegative = 27;
-    private static int abPositive = 35;
-    private static int abNegative = 28;
+    private static int eye = 30;
+    private static int kidney = 25;
+    private static int lungs = 65;
+    private static int intestine = 35;
+    private static int liver = 75;
+    private static int tissue = 27;
+    private static int heart = 35;
+    private static int pancreas = 28;
 
-    public OrganType(String bloodGroup){
-        if(bloodGroup.equals("A+")){
-            aPositive++;
+    public OrganType(String OrganType){
+        if(OrganType.equals("eye")){
+            eye++;
         }
-        else if(bloodGroup.equals("A-")){
-            aNegative++;
+        else if(OrganType.equals("kidney")){
+            kidney++;
         }
-        else if(bloodGroup.equals("B+")){
-            bPositive++;
+        else if(OrganType.equals("lungs")){
+            lungs++;
         }
-        else if(bloodGroup.equals("B-")){
-            bNegative++;
+        else if(OrganType.equals("intestine")){
+            intestine++;
         }
-        else if(bloodGroup.equals("AB+")){
-            abPositive++;
+        else if(OrganType.equals("liver")){
+            liver++;
         }
-        else if(bloodGroup.equals("AB-")){
-            abNegative++;
+        else if(OrganType.equals("tissue")){
+            tissue++;
         }
-        else if(bloodGroup.equals("O+")){
-            oPositive++;
+        else if(OrganType.equals("heart")){
+            heart++;
         }
-        else if(bloodGroup.equals("O-")){
-            oNegative++;
+        else if(OrganType.equals("pancreas")){
+            pancreas++;
         }
         else{
-            System.out.println("Blood Group invalid");
+            System.out.println("Organ Type invalid");
         }
         
     }
     
     
-    public static int getaPositive() {
-        return aPositive;
+    public static int getEye() {
+        return eye;
     }
 
-    public static void setaPositive(int aPositive) {
-        OrganType.aPositive = aPositive;
+    public static void setEye(int eye) {
+        OrganType.eye = eye;
     }
 
-    public static int getaNegative() {
-        return aNegative;
+    public static int getKidney() {
+        return kidney;
     }
 
-    public static void setaNegative(int aNegative) {
-        OrganType.aNegative = aNegative;
+    public static void setKidney(int kidney) {
+        OrganType.kidney = kidney;
     }
 
-    public static int getbPositive() {
-        return bPositive;
+    public static int getLungs() {
+        return lungs;
     }
 
-    public static void setbPositive(int bPositive) {
-        OrganType.bPositive = bPositive;
+    public static void setLungs(int lungs) {
+        OrganType.lungs = lungs;
     }
 
-    public static int getbNegative() {
-        return bNegative;
+    public static int getIntestine() {
+        return intestine;
     }
 
-    public static void setbNegative(int bNegative) {
-        OrganType.bNegative = bNegative;
+    public static void setIntestine(int intestine) {
+        OrganType.intestine = intestine;
     }
 
-    public static int getoPositive() {
-        return oPositive;
+    public static int getLiver() {
+        return liver;
     }
 
-    public static void setoPositive(int oPositive) {
-        OrganType.oPositive = oPositive;
+    public static void setLiver(int liver) {
+        OrganType.liver = liver;
     }
 
-    public static int getoNegative() {
-        return oNegative;
+    public static int getTissue() {
+        return tissue;
     }
 
-    public static void setoNegative(int oNegative) {
-        OrganType.oNegative = oNegative;
+    public static void setTissue(int tissue) {
+        OrganType.tissue = tissue;
     }
 
-    public static int getAbPositive() {
-        return abPositive;
+    public static int getHeart() {
+        return heart;
     }
 
-    public static void setAbPositive(int abPositive) {
-        OrganType.abPositive = abPositive;
+    public static void setHeart(int heart) {
+        OrganType.heart = heart;
     }
 
-    public static int getAbNegative() {
-        return abNegative;
+    public static int getPancreas() {
+        return pancreas;
     }
 
-    public static void setAbNegative(int abNegative) {
-        OrganType.abNegative = abNegative;
+    public static void setPancreas(int pancreas) {
+        OrganType.pancreas = pancreas;
     }
     
     
-    public void subtractBloodGroup(String bloodGroup){
-        if(bloodGroup.equals("A+")){
-            aPositive--;
+    public void subtractOrganType(String OrganType){
+        if(OrganType.equals("eye")){
+            eye--;
         }
-        else if(bloodGroup.equals("A-")){
-            aNegative--;
+        else if(OrganType.equals("kidney")){
+            kidney--;
         }
-        else if(bloodGroup.equals("B+")){
-            bPositive--;
+        else if(OrganType.equals("lungs")){
+            lungs--;
         }
-        else if(bloodGroup.equals("B-")){
-            bNegative--;
+        else if(OrganType.equals("intestine")){
+            intestine--;
         }
-        else if(bloodGroup.equals("AB+")){
-            abPositive--;
+        else if(OrganType.equals("liver")){
+            liver--;
         }
-        else if(bloodGroup.equals("AB-")){
-            abNegative--;
+        else if(OrganType.equals("tissue")){
+            tissue--;
         }
-        else if(bloodGroup.equals("O+")){
-            oPositive--;
+        else if(OrganType.equals("heart")){
+            heart--;
         }
-        else if(bloodGroup.equals("O-")){
-            oNegative--;
+        else if(OrganType.equals("pancreas")){
+            pancreas--;
         }
         else{
-            System.out.println("Blood Group invalid");
+            System.out.println("Organ Type invalid");
         }
         
     }
 
-    public void addBloodGroup(String bloodGroup){
-        if(bloodGroup.equals("A+")){
-            aPositive++;
+    public void addOrganType(String OrganType){
+         if(OrganType.equals("eye")){
+            eye++;
         }
-        else if(bloodGroup.equals("A-")){
-            aNegative++;
+        else if(OrganType.equals("kidney")){
+            kidney++;
         }
-        else if(bloodGroup.equals("B+")){
-            bPositive++;
+        else if(OrganType.equals("lungs")){
+            lungs++;
         }
-        else if(bloodGroup.equals("B-")){
-            bNegative++;
+        else if(OrganType.equals("intestine")){
+            intestine++;
         }
-        else if(bloodGroup.equals("AB+")){
-            abPositive++;
+        else if(OrganType.equals("liver")){
+            liver++;
         }
-        else if(bloodGroup.equals("AB-")){
-            abNegative++;
+        else if(OrganType.equals("tissue")){
+            tissue++;
         }
-        else if(bloodGroup.equals("O+")){
-            oPositive++;
+        else if(OrganType.equals("heart")){
+            heart++;
         }
-        else if(bloodGroup.equals("O-")){
-            oNegative++;
+        else if(OrganType.equals("pancreas")){
+            pancreas--;
         }
         else{
-            System.out.println("Blood Group invalid");
+            System.out.println("Organ Type invalid");
         }
-        
+      
     }
     
     
