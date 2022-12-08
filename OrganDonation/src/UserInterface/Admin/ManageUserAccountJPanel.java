@@ -267,7 +267,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         passwordJTextField.setBorder(null);
         jPanel2.add(passwordJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 344, 290, 30));
 
-        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 470, 470));
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 80, 470, 470));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -308,10 +308,10 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         userJTable.setRowHeight(30);
         jScrollPane2.setViewportView(userJTable);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 970, 450));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 700, 450));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/login.png"))); // NOI18N
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1350, 110, 130, 130));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 170, 130, 130));
     }// </editor-fold>//GEN-END:initComponents
 
     private void createUserJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createUserJButtonActionPerformed

@@ -183,7 +183,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         organizationJTable.setRowHeight(30);
         jScrollPane1.setViewportView(organizationJTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 280, 820, 460));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-110, 70, 760, 460));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -263,7 +263,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         nameSeparator1.setForeground(new java.awt.Color(0, 0, 0));
         panel1.add(nameSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, 290, 10));
 
-        add(panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 370, 460));
+        add(panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 80, 370, 460));
 
         jPanel3.setBackground(new java.awt.Color(31, 31, 31));
         jPanel3.setPreferredSize(new java.awt.Dimension(926, 70));
@@ -298,7 +298,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 80, -1, -1));
 
         nameSeparator4.setForeground(new java.awt.Color(0, 0, 0));
-        add(nameSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 140, 250, 10));
+        add(nameSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 150, 250, 10));
 
         enterpriseNameTextField1.setBackground(new java.awt.Color(0, 0, 0));
         enterpriseNameTextField1.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -307,7 +307,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         add(enterpriseNameTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 110, 230, 30));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/organizationn.png"))); // NOI18N
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 90, -1, 200));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 140, 210, 200));
     }// </editor-fold>//GEN-END:initComponents
 
     private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
