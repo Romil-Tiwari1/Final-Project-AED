@@ -124,9 +124,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         nameSeparator1 = new javax.swing.JSeparator();
         nameSeparator3 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
-        nameSeparator4 = new javax.swing.JSeparator();
         enterpriseNameTextField1 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
 
         enterpriseNameTextField.setBackground(new java.awt.Color(55, 96, 128));
         enterpriseNameTextField.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -180,7 +178,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
             organizationJTable.getColumnModel().getColumn(1).setResizable(false);
         }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 640, 450));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 450, 450));
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -208,8 +206,8 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 1668, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 1033, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(641, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -278,7 +276,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
 
         addJButton.setBackground(new java.awt.Color(255, 153, 153));
         addJButton.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        addJButton.setText("ADD");
+        addJButton.setText("CREATE");
         addJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         addJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -298,24 +296,18 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         nameSeparator3.setForeground(new java.awt.Color(0, 0, 0));
         jPanel2.add(nameSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 300, 10));
 
-        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 80, 370, 450));
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 80, 370, 450));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Enterprise:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 80, -1, -1));
-
-        nameSeparator4.setForeground(new java.awt.Color(0, 0, 0));
-        add(nameSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 150, 210, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 80, -1, -1));
 
         enterpriseNameTextField1.setBackground(new java.awt.Color(0, 0, 0));
         enterpriseNameTextField1.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         enterpriseNameTextField1.setForeground(new java.awt.Color(255, 255, 255));
         enterpriseNameTextField1.setBorder(null);
-        add(enterpriseNameTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 110, 190, 30));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/employeenew.png"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 200, 200, 150));
+        add(enterpriseNameTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 110, 190, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
@@ -422,7 +414,6 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField enterpriseNameTextField;
     private javax.swing.JTextField enterpriseNameTextField1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -436,7 +427,6 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
     private javax.swing.JSeparator nameSeparator;
     private javax.swing.JSeparator nameSeparator1;
     private javax.swing.JSeparator nameSeparator3;
-    private javax.swing.JSeparator nameSeparator4;
     private javax.swing.JComboBox organizationEmpJComboBox;
     private javax.swing.JComboBox organizationJComboBox;
     private javax.swing.JTable organizationJTable;

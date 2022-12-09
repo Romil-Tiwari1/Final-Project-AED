@@ -183,7 +183,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         organizationJTable.setRowHeight(30);
         jScrollPane1.setViewportView(organizationJTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-110, 70, 760, 460));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, 80, 760, 460));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -251,7 +251,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
 
         addJButton.setBackground(new java.awt.Color(255, 153, 153));
         addJButton.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        addJButton.setText("ADD");
+        addJButton.setText("CREATE");
         addJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         addJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -306,8 +306,8 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         enterpriseNameTextField1.setBorder(null);
         add(enterpriseNameTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 110, 230, 30));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/organizationn.png"))); // NOI18N
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 140, 210, 200));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/organizationnn.png"))); // NOI18N
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 180, 240, 200));
     }// </editor-fold>//GEN-END:initComponents
 
     private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
