@@ -6,6 +6,8 @@ package HealthCentre.WorkQueue;
 
 import HealthCentre.DB4OUtil.DB4OUtil;
 import HealthCentre.Enterprise.Enterprise;
+import HealthCentre.Person.Donor;
+import HealthCentre.Person.Patient;
 import HealthCentre.UserAccount.UserAccount;
 import java.util.Date;
 
@@ -14,25 +16,18 @@ import java.util.Date;
  * @author fakhr
  */
 public class WorkRequest {
-    private String message;
-    private UserAccount sender;
-    private UserAccount receiver;
-    private String status;
-    private Date requestDate;
-    private Date resolveDate;
     
-    private Date actionDate;
-    private String summary;
-    private String notes;
-    private String requestNumber;
-    private String assigned;
-    private UserAccount pathologist;
+    private String status;
+    private String doctorRequestSummary;
     private UserAccount userAccount;
     private String overallStatus;
     private Enterprise enterprise;
     private String type;
-   // private Patient patient;
+    private Patient patient;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
+    private Donor organDonor;
+    private Date actionDate;
+     private String assignement;
 
     private static int count = 1;
     private static int ct;
@@ -53,11 +48,53 @@ public class WorkRequest {
         this.userAccount = userAccount;
     }
     
-//    public Patient getPatient() {
-//        return patient;
-//    }
-//
-//    public void setPatient(Patient patient) {
-//        this.patient = patient;
-//    }
+    public Patient getPatient() {
+        return patient;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+    }
+
+    public String getDoctorRequestSummary() {
+        return doctorRequestSummary;
+    }
+
+    public void setDoctorRequestSummary(String doctorRequestSummary) {
+        this.doctorRequestSummary = doctorRequestSummary;
+    }
+
+    public Enterprise getEnterprise() {
+        return enterprise;
+    }
+
+    public void setEnterprise(Enterprise enterprise) {
+        this.enterprise = enterprise;
+    }
+
+    public Donor getOrganDonor() {
+        return organDonor;
+    }
+
+    public void setOrganDonor(Donor organDonor) {
+        this.organDonor = organDonor;
+    } 
+
+    public Date getActionDate() {
+        return actionDate;
+    }
+
+    public void setActionDate(Date actionDate) {
+        this.actionDate = actionDate;
+    }
+
+    public String getAssignement() {
+        return assignement;
+    }
+
+    public void setAssignement(String assignement) {
+        this.assignement = assignement;
+    }
+    
+    
 }

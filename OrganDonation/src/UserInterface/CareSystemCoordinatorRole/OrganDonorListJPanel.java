@@ -10,6 +10,7 @@ import HealthCentre.Enterprise.Enterprise;
 import HealthCentre.Enterprise.EnterpriseInventory;
 import HealthCentre.Network.Network;
 import HealthCentre.Organization.Organization;
+import HealthCentre.Person.Donor;
 import HealthCentre.UserAccount.UserAccount;
 import HealthCentre.WorkQueue.HealthCareSystemCoordinatorWorkRequest;
 import HealthCentre.WorkQueue.WorkRequest;
@@ -39,12 +40,62 @@ public class OrganDonorListJPanel extends javax.swing.JPanel {
         this.userAccount = userAccount;
         this.ecoSystem = system;
         this.network = network;
-
         organDonorTableList.getTableHeader().setDefaultRenderer(new TableFormat());
         hospitalListTable.getTableHeader().setDefaultRenderer(new TableFormat());
         assignmentListTable.getTableHeader().setDefaultRenderer(new TableFormat());
     }
 
+    /**
+     * Description : Populate Organ Donor Table
+     */
+    private void populateOrganDonorTable() {
+        DefaultTableModel dtm = (DefaultTableModel) organDonorTableList.getModel();
+        dtm.setRowCount(0);
+        for (Donor donor : ecoSystem.getOrganDonorDirectory().getDonorList()) {
+            Object row[] = new Object[4];
+            row[0] = donor;
+            row[1] = donor.getName();
+            row[2] = donor.getContact();
+            row[3] = donor.getStatus();
+            dtm.addRow(row);
+        }
+    }
+
+    /**
+     * Description : Populate List of Available Hospitals for Organ Donation.
+     */
+    private void populateAvailableHospitalListTable() {
+        DefaultTableModel dtm = (DefaultTableModel) hospitalListTable.getModel();
+        dtm.setRowCount(0);
+        for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
+            if (enterprise.getEnterpriseType().toString().equals("Hospital")) {
+                System.out.println("Hosp");
+                Object[] row = new Object[2];
+                row[0] = enterprise;
+                row[1] = enterprise.getName();
+
+                dtm.addRow(row);
+            }
+        }
+    }
+
+    /**
+     * Description : Populate request for Organ Donation Assignment.
+     */
+    private void populateOrganDonationAssignRequestTable() {
+        DefaultTableModel model = (DefaultTableModel) assignmentListTable.getModel();
+        model.setRowCount(0);
+        for (WorkRequest request : userAccount.getWorkQueue().getWorkRequestList()) {
+            Object[] row = new Object[6];
+            row[0] = request;
+            row[1] = request.getOrganDonor();
+            row[2] = request.getDoctorRequestSummary();
+            row[3] = request.getEnterprise();
+            row[4] = request.getStatus();
+            row[5] = request.getActionDate();
+            model.addRow(row);
+        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -265,7 +316,53 @@ public class OrganDonorListJPanel extends javax.swing.JPanel {
 
     private void assignButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignButtonActionPerformed
         // TODO add your handling code here:
- 
+        int row = organDonorTableList.getSelectedRow();
+        int row1 = hospitalListTable.getSelectedRow();
+        if (row < 0) {
+            JOptionPane.showMessageDialog(null,
+                    new JLabel("<html><h2><I>Please select<font color='red'> a row</font> from the<font color='green'> Donors Table</I></font></h2></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        } else if (row1 < 0) {
+            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><I>Please select<font color='red'> a row</font> from the<font color='green'> Hospital Table</I></font></h2></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        } else {
+            WorkRequest request = new HealthCareSystemCoordinatorWorkRequest();
+            {
+                request.setActionDate(new Date());
+                request.setAssignement("Hospital Pool");
+                request.setDoctorRequestSummary("Requested for Organ Donation");
+                request.setStatus("Assigned to Hospital"); 
+                request.setUserAccount(userAccount);
+                request.setOrganDonor((Donor) organDonorTableList.getValueAt(row, 0));
+                request.getOrganDonor().setStatus("Assigned to Hospital"); // Organ Donor's Status changed
+                request.setEnterprise((Enterprise) hospitalListTable.getValueAt(row1, 0));
+
+                Organization org = null;
+                Enterprise enterprise = (Enterprise) hospitalListTable.getValueAt(row1, 0);
+                for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
+                    if (organization instanceof PathologistOrganization) {
+                        org = organization;
+                        break;
+                    }
+                }
+
+                if (org != null) {
+                    org.getWorkQueue().getWorkRequestList().add(request);
+                    System.out.println(org.getName());
+                    userAccount.getWorkQueue().getWorkRequestList().add(request);
+                    populateOrganDonorTable();
+                    populateOrganDonationAssignRequestTable();
+                    JOptionPane.showMessageDialog(null, new JLabel("<html><h2><I>Request sent<font color='green'> successfully</font>!</I></font></h2></html>"),
+                            "Info", JOptionPane.INFORMATION_MESSAGE);
+                } else {
+                    JOptionPane.showMessageDialog(null, "No organization present", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+            //else{
+            //    JOptionPane.showMessageDialog(null,"Donor is already assigned to a Hospital.", "Info", JOptionPane.INFORMATION_MESSAGE);
+            //}    
+        }
+        dB4OUtil.storeSystem(ecoSystem);
     }//GEN-LAST:event_assignButtonActionPerformed
 
 

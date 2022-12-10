@@ -9,6 +9,7 @@ import HealthCentre.Organization.OrganizationInventory;
 import HealthCentre.Organization.Organization;
 import HealthCentre.Network.Network;
 import HealthCentre.Organization.Organization;
+import HealthCentre.Person.DonorDirectory;
 import HealthCentre.UserAccount.UserAccountInventory;
 import HealthCentre.UserRole.SystemAdminRole;
 import HealthCentre.UserRole.UserRole;
@@ -21,9 +22,13 @@ public class EcoSystem extends Organization{
     private static EcoSystem business;
     
     private  UserAccountInventory userAccountDirectory;
+    private DonorDirectory donorDirectory;
 
     public UserAccountInventory getUserAccountDirectory() {return userAccountDirectory; }
     public void setUserAccountDirectory(UserAccountInventory userAccountDirectory) { this.userAccountDirectory = userAccountDirectory;  }
+    
+    public DonorDirectory getOrganDonorDirectory() {return donorDirectory;}
+    public void setOrganDonorDirectory(DonorDirectory donorDirectory) {this.donorDirectory = donorDirectory;}
     
     
     private ArrayList<Network> networkList;
