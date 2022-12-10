@@ -7,6 +7,7 @@ package HealthCentre.WorkQueue;
 import HealthCentre.DB4OUtil.DB4OUtil;
 import HealthCentre.Enterprise.Enterprise;
 import HealthCentre.UserAccount.UserAccount;
+import HealthCentre.Person.Patient;
 import java.util.Date;
 
 /**
@@ -31,7 +32,7 @@ public class WorkRequest {
     private String overallStatus;
     private Enterprise enterprise;
     private String type;
-   // private Patient patient;
+    private Patient patient;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
 
     private static int count = 1;
@@ -53,11 +54,20 @@ public class WorkRequest {
         this.userAccount = userAccount;
     }
     
-//    public Patient getPatient() {
-//        return patient;
-//    }
-//
-//    public void setPatient(Patient patient) {
-//        this.patient = patient;
-//    }
+    public Patient getPatient() {
+        return patient;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+    }
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
+
 }
