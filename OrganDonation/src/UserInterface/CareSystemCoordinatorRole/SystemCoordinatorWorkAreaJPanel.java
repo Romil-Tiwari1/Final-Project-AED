@@ -590,6 +590,10 @@ public class SystemCoordinatorWorkAreaJPanel extends javax.swing.JPanel {
 
     private void receivingPatientListButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_receivingPatientListButtonMouseClicked
         // TODO add your handling code here:
+        PaitentListJPanel patientListJPanel = new PaitentListJPanel(userAccount, ecoSystem, network, careSystemCoordinatorOrg);
+        userProcessContainer.add("PaitentListJPanel",patientListJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_receivingPatientListButtonMouseClicked
 
     private void organDonorRequestButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_organDonorRequestButtonMouseClicked
@@ -608,7 +612,6 @@ public class SystemCoordinatorWorkAreaJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         JFrame frame = (JFrame) getWindowAncestor(this);
         frame.dispose();
-
         dB4OUtil.storeSystem(ecoSystem);
     }//GEN-LAST:event_backButtonMouseClicked
 

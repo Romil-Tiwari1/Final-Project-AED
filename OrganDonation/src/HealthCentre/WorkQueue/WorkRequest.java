@@ -27,7 +27,7 @@ public class WorkRequest {
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
     private Donor organDonor;
     private Date actionDate;
-     private String assignement;
+    private String assignement;
 
     private static int count = 1;
     private static int ct;

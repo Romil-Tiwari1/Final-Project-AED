@@ -340,7 +340,7 @@ public class OrganDonorListJPanel extends javax.swing.JPanel {
                 Organization org = null;
                 Enterprise enterprise = (Enterprise) hospitalListTable.getValueAt(row1, 0);
                 for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
-                    if (organization instanceof PathologistOrganization) {
+                    if (organization instanceof LabTestCoordinator) {
                         org = organization;
                         break;
                     }
