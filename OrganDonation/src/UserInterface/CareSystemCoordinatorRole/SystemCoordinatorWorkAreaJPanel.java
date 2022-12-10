@@ -32,7 +32,6 @@ public class SystemCoordinatorWorkAreaJPanel extends javax.swing.JPanel {
     private CareSystemCoordinatorOrganisation careSystemCoordinatorOrg;
     private Enterprise enterprise;
     private EcoSystem ecoSystem;
-    private DonorDirectory donorDirectory;
     private Network network;
 
     /**
@@ -99,11 +98,11 @@ public class SystemCoordinatorWorkAreaJPanel extends javax.swing.JPanel {
         if (board == true) {
             showHideMenu.setPreferredSize(new Dimension(50,
                     showHideMenu.getHeight()));
-            imageChangeOnClick(labelButton, "/Images/menu_32px.png");
+            imageChangeOnClick(labelButton, "/Images_1/menu-bar.png");
         } else {
             showHideMenu.setPreferredSize(new Dimension(270,
                     showHideMenu.getHeight()));
-            imageChangeOnClick(labelButton, "/Images/menu_32px.png");
+            imageChangeOnClick(labelButton, "/Images_1/menu-bar.png");
         }
     }
 
@@ -591,10 +590,6 @@ public class SystemCoordinatorWorkAreaJPanel extends javax.swing.JPanel {
 
     private void receivingPatientListButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_receivingPatientListButtonMouseClicked
         // TODO add your handling code here:
-        PatientListJPanel patientListJPanel = new PatientListJPanel(userAccount, ecoSystem, network, careSystemCoordinatorOrg);
-        userProcessContainer.add("PatientListJPanel", patientListJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
     }//GEN-LAST:event_receivingPatientListButtonMouseClicked
 
     private void organDonorRequestButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_organDonorRequestButtonMouseClicked
@@ -607,11 +602,6 @@ public class SystemCoordinatorWorkAreaJPanel extends javax.swing.JPanel {
 
     private void userProfileButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userProfileButtonMouseClicked
         // TODO add your handling code here:
-        ManageSystemCoordinatorProfileJPanel manageSystCoordinatorProfile = 
-                new ManageSystemCoordinatorProfileJPanel(userAccount, careSystemCoordinatorOrg, enterprise);
-        userProcessContainer.add("ManageSystemCoordinatorProfile", manageSystCoordinatorProfile);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
     }//GEN-LAST:event_userProfileButtonMouseClicked
 
     private void backButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backButtonMouseClicked
