@@ -15,7 +15,7 @@ import HealthCentre.Organization.Organization;
 import HealthCentre.Organization.Organization.CovidCentreType;
 import HealthCentre.Organization.Organization.GovernmentType;
 import HealthCentre.Organization.Organization.LegalType;
-import HealthCentre.Organization.Organization.PlasmaBankType;
+
 import HealthCentre.Organization.Organization.Type;
 import HealthCentre.Organization.OrganizationInventory;
 import HomeScreens.TableFormat;
@@ -74,14 +74,14 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
        
        else if(enterprise.getEnterpriseType().toString().equals(PlasmaBank.toString())){
            System.out.println("1");
-        for(Organization.PlasmaBankType plasmaType: Organization.PlasmaBankType.values()){
-            System.out.println("1");
-            System.out.println(plasmaType.getValue());
-            System.out.println(Organization.PlasmaBankType.PlasmaBank.getValue());
-            if (plasmaType.getValue().equals(Organization.PlasmaBankType.PlasmaBank.getValue())){
-                organizationJComboBox.addItem(plasmaType);
-            }
-        }
+//        for(Organization.PlasmaBankType plasmaType: Organization.PlasmaBankType.values()){
+//            System.out.println("1");
+//            System.out.println(plasmaType.getValue());
+//            System.out.println(Organization.PlasmaBankType.PlasmaBank.getValue());
+//            if (plasmaType.getValue().equals(Organization.PlasmaBankType.PlasmaBank.getValue())){
+//                organizationJComboBox.addItem(plasmaType);
+//            }
+//        }
         }
        else if(enterprise.getEnterpriseType().toString().equals(CovidCentre.toString())){
         for(Organization.CovidCentreType covidType: Organization.CovidCentreType.values()){
@@ -101,7 +101,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         for (Organization.Type type : Organization.Type.values()){            
             if (type.getValue().equals(Organization.Type.SystemCoordinator.getValue())
                     ||type.getValue().equals(Organization.Type.Doctor.getValue())
-                    ||type.getValue().equals(Organization.Type.Pathologist.getValue())
+                    ||type.getValue().equals(Organization.Type.LabCoordinator.getValue())
                     )
                 organizationJComboBox.addItem(type);
         }

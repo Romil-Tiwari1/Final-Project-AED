@@ -9,6 +9,7 @@ import HealthCentre.Enterprise.Enterprise;
 import HealthCentre.Person.Donor;
 import HealthCentre.Person.Patient;
 import HealthCentre.UserAccount.UserAccount;
+import HealthCentre.Person.Patient;
 import java.util.Date;
 
 /**
@@ -28,6 +29,7 @@ public class WorkRequest {
     private Donor organDonor;
     private Date actionDate;
      private String assignement;
+private String summary;
 
     private static int count = 1;
     private static int ct;
@@ -55,6 +57,16 @@ public class WorkRequest {
     public void setPatient(Patient patient) {
         this.patient = patient;
     }
+
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
+
 
     public String getDoctorRequestSummary() {
         return doctorRequestSummary;
@@ -97,4 +109,5 @@ public class WorkRequest {
     }
     
     
+
 }
