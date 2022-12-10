@@ -8,6 +8,7 @@ import HealthCentre.DB4OUtil.DB4OUtil;
 import HealthCentre.EcoSystem;
 import HealthCentre.Enterprise.Enterprise;
 import HealthCentre.Network.Network;
+import HealthCentre.Organization.DoctorOrganization;
 import HealthCentre.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.awt.Color;
@@ -34,14 +35,17 @@ public class DoctorRoleWorkAreaJPanel extends javax.swing.JPanel {
      */
     private UserAccount userAccount;
     boolean index = true;
-    Network network;
+    DoctorOrganization doctorOrganization;
     Enterprise enterprise;
     EcoSystem system;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
-    public DoctorRoleWorkAreaJPanel(UserAccount account, Enterprise enterprise, EcoSystem system, Network network) {
+    public DoctorRoleWorkAreaJPanel(UserAccount account, DoctorOrganization 
+            doctorOrganization, Enterprise enterprise, EcoSystem system, 
+            Network network) {
         initComponents();
         this.system = system;
         this.userAccount = account;
+        this.doctorOrganization = doctorOrganization;
         this.enterprise = enterprise;
     }
 
@@ -52,7 +56,56 @@ public class DoctorRoleWorkAreaJPanel extends javax.swing.JPanel {
      */
     @SuppressWarnings("unchecked")
  
+    /**
+     * Definition : Function to change color of background
+     * @param hover
+     * @param rand
+     */
+    public void changeColorProperty(JPanel hoverMenuPanel, Color random){
+        hoverMenuPanel.setBackground(random);    
+    }
     
+    /**
+     * Definition : Function to handle hide menu click
+     * @param hideMenu1
+     * @param hideMenu2
+     * @param booleanNumber 
+     */
+    public void hideMenuClickHandling(JPanel hideMenu1, JPanel hideMenu2, int booleanNumber){
+        if(booleanNumber == 1){
+            hideMenu1.setBackground(new Color(70,55,37));
+            hideMenu2.setBackground(new Color(216,99,1));        
+        } else{
+            hideMenu1.setBackground(new Color(216,99,1));
+            hideMenu2.setBackground(new Color(70,55,37));   
+        }  
+    }
+    
+    /**
+     * Definition : Handle Image Changes as per respective button clicks
+     * @param button
+     * @param resourcecheimg 
+     */
+    public void imageChangeHandling(JLabel button, String imageResource){
+        ImageIcon iconImage = new ImageIcon(getClass().getResource(imageResource));
+        button.setIcon(iconImage);
+    }
+    
+    /**
+     * Definition : Hide Menu Handling for Dashboard
+     * @param menushowhide
+     * @param dashboard
+     * @param button 
+     */
+    public void hideMenu(JPanel menuVar, boolean dashBoard, JLabel button){
+        if(dashBoard == true){
+            menuVar.setPreferredSize(new Dimension(50, menuVar.getHeight()));
+            imageChangeHandling(button, "/Images/menu_32px.png");
+        } else{
+            menuVar.setPreferredSize(new Dimension(270, menuVar.getHeight()));
+            imageChangeHandling(button, "/Images/menu_32px.png");
+        }
+    }
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -382,12 +435,12 @@ public class DoctorRoleWorkAreaJPanel extends javax.swing.JPanel {
 
     private void closeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeMouseEntered
         // TODO add your handling code here:
-       
+        changeColorProperty(btnClose, new Color(204,0,0));
     }//GEN-LAST:event_closeMouseEntered
 
     private void closeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeMouseExited
         // TODO add your handling code here:
-       
+        changeColorProperty(btnClose, new Color(15,29,52));
     }//GEN-LAST:event_closeMouseExited
 
     private void fullMaximumMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fullMaximumMouseClicked
@@ -396,16 +449,25 @@ public class DoctorRoleWorkAreaJPanel extends javax.swing.JPanel {
 
     private void fullMaximumMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fullMaximumMouseEntered
         // TODO add your handling code here:
-        
+        changeColorProperty(btnMaximize, new Color(0,237,0));
     }//GEN-LAST:event_fullMaximumMouseEntered
 
     private void fullMaximumMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fullMaximumMouseExited
         // TODO add your handling code here:
-        
+        changeColorProperty(btnClose, new Color(15,29,52));
     }//GEN-LAST:event_fullMaximumMouseExited
 
     private void hideMenuButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hideMenuButtonMouseClicked
- 
+        hideMenuClickHandling(hidemenu, hidemenu, 1);
+        if(index == true){
+            hideMenu(mainMenu,index, hideMenuButton );
+            SwingUtilities.updateComponentTreeUI(this);
+            index = false;
+        } else{
+            hideMenu(mainMenu, index, hideMenuButton);
+            SwingUtilities.updateComponentTreeUI(this);
+            index = true;
+        }
     }//GEN-LAST:event_hideMenuButtonMouseClicked
 
     private void hideMenuButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hideMenuButtonMouseEntered
@@ -418,10 +480,18 @@ public class DoctorRoleWorkAreaJPanel extends javax.swing.JPanel {
 
     private void manageDoctorProfileLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageDoctorProfileLabelMouseClicked
         // TODO add your handling code here:
+        ManageDoctorProfileJPanel manageDoctorProfileJPanel = new ManageDoctorProfileJPanel(userAccount,doctorOrganization,enterprise);
+        userProcessContainer.add("ManageDoctorProfileJPanel",manageDoctorProfileJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_manageDoctorProfileLabelMouseClicked
 
     private void manageDoctorJPanelLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageDoctorJPanelLabelMouseClicked
         // TODO add your handling code here:
+        ManageDoctorJPanel manageDoctorJPanel = new ManageDoctorJPanel(system, userAccount, doctorOrganization, enterprise);
+        userProcessContainer.add("ManageDoctorJPanel",manageDoctorJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_manageDoctorJPanelLabelMouseClicked
 
     private void backArrowLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backArrowLabelMouseClicked
