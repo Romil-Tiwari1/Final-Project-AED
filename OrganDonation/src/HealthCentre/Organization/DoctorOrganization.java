@@ -19,8 +19,8 @@ public class DoctorOrganization extends Organization {
     
     @Override
     public ArrayList<UserRole> getSupportedRole() {
-        ArrayList<UserRole> roles = new ArrayList();
-        roles.add(new DoctorRole());
-        return roles;
+        ArrayList<UserRole> userRoles = new ArrayList();
+        userRoles.add(new DoctorRole());
+        return userRoles;
     }
 }
