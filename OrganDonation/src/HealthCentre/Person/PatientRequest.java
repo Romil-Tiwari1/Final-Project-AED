@@ -1,45 +1,40 @@
-package HealthCentre.Person;
-
-
-import java.util.Date;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+package HealthCentre.Person;
+
+import java.util.Date;
 
 /**
  *
  * @author shrutisrivastava
  */
-public class Donor {
-//Donor Attribute
-    private String donorID;
+public class PatientRequest {
+    private String patientID;
     private String name;
     private String gender;
     private String bloodGroup;
     private String streetAddress;
-    private String city;
-    private String state;
     private int zipCode;
     private int contact;
     private String emailID;
+    private boolean labReport;
     private String status;
-    private Date  lastDonationDate;
-    private boolean labConfirmation; 
-
-    private boolean followUpTest;  
+    private String imagePath;
     private byte[] dP; 
     private Date dob;
-    private int age;
+    private int age; 
+    private String city;
+    private String state;
     private String organType;
 
-    public String getDonorID() {
-        return donorID;
+    public String getPatientID() {
+        return patientID;
     }
 
-    public void setDonorID(String donorID) {
-        this.donorID = donorID;
+    public void setPatientID(String patientID) {
+        this.patientID = patientID;
     }
 
     public String getName() {
@@ -74,22 +69,6 @@ public class Donor {
         this.streetAddress = streetAddress;
     }
 
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
     public int getZipCode() {
         return zipCode;
     }
@@ -114,6 +93,14 @@ public class Donor {
         this.emailID = emailID;
     }
 
+    public boolean isLabReport() {
+        return labReport;
+    }
+
+    public void setLabReport(boolean labReport) {
+        this.labReport = labReport;
+    }
+
     public String getStatus() {
         return status;
     }
@@ -122,28 +109,12 @@ public class Donor {
         this.status = status;
     }
 
-    public Date getLastDonationDate() {
-        return lastDonationDate;
+    public String getImagePath() {
+        return imagePath;
     }
 
-    public void setLastDonationDate(Date lastDonationDate) {
-        this.lastDonationDate = lastDonationDate;
-    }
-
-    public boolean isLabConfirmation() {
-        return labConfirmation;
-    }
-
-    public void setLabConfirmation(boolean labConfirmation) {
-        this.labConfirmation = labConfirmation;
-    }
-
-    public boolean isFollowUpTest() {
-        return followUpTest;
-    }
-
-    public void setFollowUpTest(boolean followUpTest) {
-        this.followUpTest = followUpTest;
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 
     public byte[] getdP() {
@@ -170,6 +141,22 @@ public class Donor {
         this.age = age;
     }
 
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
     public String getOrganType() {
         return organType;
     }
@@ -177,10 +164,10 @@ public class Donor {
     public void setOrganType(String organType) {
         this.organType = organType;
     }
-
-  @Override
+    
+    @Override
     public String toString() {
-        return donorID;
+        return patientID;
     }
-       
+
 }

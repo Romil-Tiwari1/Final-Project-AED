@@ -1,45 +1,45 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package HealthCentre.Person;
 
-
 import java.util.Date;
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 
 /**
  *
  * @author shrutisrivastava
  */
-public class Donor {
-//Donor Attribute
-    private String donorID;
+public class Patient {
+    
+// Patient Attribute  
+    private String patientID;
     private String name;
-    private String gender;
-    private String bloodGroup;
-    private String streetAddress;
     private String city;
     private String state;
     private int zipCode;
     private int contact;
     private String emailID;
     private String status;
-    private Date  lastDonationDate;
-    private boolean labConfirmation; 
-
-    private boolean followUpTest;  
-    private byte[] dP; 
+    private boolean labReport;
+    private boolean concentApproval;
+    private boolean emergencyStatus;
+    private String imagePath;
+    private byte[] dP;
     private Date dob;
     private int age;
+    private String gender;
+    private String bloodGroup;
+    private String streetAddress;
     private String organType;
 
-    public String getDonorID() {
-        return donorID;
+    public String getPatientID() {
+        return patientID;
     }
 
-    public void setDonorID(String donorID) {
-        this.donorID = donorID;
+    public void setPatientID(String patientID) {
+        this.patientID = patientID;
     }
 
     public String getName() {
@@ -48,30 +48,6 @@ public class Donor {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getBloodGroup() {
-        return bloodGroup;
-    }
-
-    public void setBloodGroup(String bloodGroup) {
-        this.bloodGroup = bloodGroup;
-    }
-
-    public String getStreetAddress() {
-        return streetAddress;
-    }
-
-    public void setStreetAddress(String streetAddress) {
-        this.streetAddress = streetAddress;
     }
 
     public String getCity() {
@@ -122,28 +98,36 @@ public class Donor {
         this.status = status;
     }
 
-    public Date getLastDonationDate() {
-        return lastDonationDate;
+    public boolean isLabReport() {
+        return labReport;
     }
 
-    public void setLastDonationDate(Date lastDonationDate) {
-        this.lastDonationDate = lastDonationDate;
+    public void setLabReport(boolean labReport) {
+        this.labReport = labReport;
     }
 
-    public boolean isLabConfirmation() {
-        return labConfirmation;
+    public boolean isConcentApproval() {
+        return concentApproval;
     }
 
-    public void setLabConfirmation(boolean labConfirmation) {
-        this.labConfirmation = labConfirmation;
+    public void setConcentApproval(boolean concentApproval) {
+        this.concentApproval = concentApproval;
     }
 
-    public boolean isFollowUpTest() {
-        return followUpTest;
+    public boolean isEmergencyStatus() {
+        return emergencyStatus;
     }
 
-    public void setFollowUpTest(boolean followUpTest) {
-        this.followUpTest = followUpTest;
+    public void setEmergencyStatus(boolean emergencyStatus) {
+        this.emergencyStatus = emergencyStatus;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 
     public byte[] getdP() {
@@ -170,6 +154,30 @@ public class Donor {
         this.age = age;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getBloodGroup() {
+        return bloodGroup;
+    }
+
+    public void setBloodGroup(String bloodGroup) {
+        this.bloodGroup = bloodGroup;
+    }
+
+    public String getStreetAddress() {
+        return streetAddress;
+    }
+
+    public void setStreetAddress(String streetAddress) {
+        this.streetAddress = streetAddress;
+    }
+
     public String getOrganType() {
         return organType;
     }
@@ -178,9 +186,17 @@ public class Donor {
         this.organType = organType;
     }
 
-  @Override
+
+
+    
+
+
+    
+    
+    
+    @Override
     public String toString() {
-        return donorID;
+        return patientID;
     }
-       
-}
+    
+ }
