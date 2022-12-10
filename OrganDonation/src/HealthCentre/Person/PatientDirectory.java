@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package HealthCenter.Person;
+package HealthCentre.Person;
 import java.util.ArrayList;
 /**
  *
