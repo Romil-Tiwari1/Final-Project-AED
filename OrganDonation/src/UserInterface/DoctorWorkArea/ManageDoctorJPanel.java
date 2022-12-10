@@ -65,7 +65,7 @@ public class ManageDoctorJPanel extends javax.swing.JPanel {
                 .getWorkRequestList()) {
             Object[] row = new Object[5];
             row[0] = request;
-            row[1] = request.getSummary();
+            row[1] = request.getDoctorRequestSummary();
             row[2] = request.getPatient();
             row[3] = request.getPatient().getName();
             //  row[4] = request.getPatient().getContact();
