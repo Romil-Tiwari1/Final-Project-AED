@@ -33,7 +33,7 @@ public abstract class Organization {
         
         SystemCoordinator("System Coorinator Organization"),
         Doctor("Doctor Organization"), 
-        Pathologist("Pathologist Organization");
+        LabCoordinator(" LabCoordinator Organization");
         private String value;
         private Type(String value) {
             this.value = value;
@@ -43,12 +43,12 @@ public abstract class Organization {
         }
     }
     
-     public enum PlasmaBankType {
+     public enum LabCoordinatorType {
          
-        PlasmaBank("Plasma Bank Coordinator Organization");
+        LabCoordinator("LabCoordinator Organization");
         private String value;
 
-        private PlasmaBankType(String value) {
+        private LabCoordinatorType(String value) {
             this.value = value;
         }
 

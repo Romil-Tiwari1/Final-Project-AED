@@ -9,6 +9,7 @@ import HealthCentre.Enterprise.Enterprise;
 import HealthCentre.Person.Donor;
 import HealthCentre.Person.Patient;
 import HealthCentre.UserAccount.UserAccount;
+import HealthCentre.Person.Patient;
 import java.util.Date;
 
 /**
@@ -16,7 +17,7 @@ import java.util.Date;
  * @author fakhr
  */
 public class WorkRequest {
-    
+
     private String status;
     private String doctorRequestSummary;
     private UserAccount userAccount;
@@ -28,18 +29,19 @@ public class WorkRequest {
     private Donor organDonor;
     private Date actionDate;
     private String assignement;
+    private String summary;
 
     private static int count = 1;
     private static int ct;
-    
+
     public String getStatus() {
         return status;
     }
-    
+
     public void setStatus(String status) {
         this.status = status;
     }
-    
+
     public UserAccount getUserAccount() {
         return userAccount;
     }
@@ -47,13 +49,21 @@ public class WorkRequest {
     public void setUserAccount(UserAccount userAccount) {
         this.userAccount = userAccount;
     }
-    
+
     public Patient getPatient() {
         return patient;
     }
 
     public void setPatient(Patient patient) {
         this.patient = patient;
+    }
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary;
     }
 
     public String getDoctorRequestSummary() {
@@ -78,7 +88,7 @@ public class WorkRequest {
 
     public void setOrganDonor(Donor organDonor) {
         this.organDonor = organDonor;
-    } 
+    }
 
     public Date getActionDate() {
         return actionDate;
@@ -95,6 +105,5 @@ public class WorkRequest {
     public void setAssignement(String assignement) {
         this.assignement = assignement;
     }
-    
-    
+
 }

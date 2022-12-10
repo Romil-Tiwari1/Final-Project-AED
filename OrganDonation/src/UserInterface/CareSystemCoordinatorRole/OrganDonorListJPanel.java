@@ -13,6 +13,7 @@ import HealthCentre.Organization.Organization;
 import HealthCentre.Person.Donor;
 import HealthCentre.UserAccount.UserAccount;
 import HealthCentre.WorkQueue.HealthCareSystemCoordinatorWorkRequest;
+import HealthCentre.Organization.LabCoordinatorOrganization;
 import HealthCentre.WorkQueue.WorkRequest;
 import HomeScreens.TableFormat;
 import java.util.Date;
@@ -340,7 +341,7 @@ public class OrganDonorListJPanel extends javax.swing.JPanel {
                 Organization org = null;
                 Enterprise enterprise = (Enterprise) hospitalListTable.getValueAt(row1, 0);
                 for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
-                    if (organization instanceof LabTestCoordinator) {
+                    if (organization instanceof LabCoordinatorOrganization) {
                         org = organization;
                         break;
                     }
