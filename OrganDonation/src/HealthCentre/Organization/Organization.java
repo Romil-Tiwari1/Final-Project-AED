@@ -23,14 +23,13 @@ public abstract class Organization {
     private UserAccountInventory userAccountDirectory;
     
     private static int counter=0;
-    private OrganType bloodGroup;
+    private OrganType organType;
     //private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
     
     
     
     public enum Type{
-        Admin("Admin Organization"), 
-        
+        Admin("Admin Organization"),
         SystemCoordinator("System Coorinator Organization"),
         Doctor("Doctor Organization"), 
         Pathologist("Pathologist Organization");
@@ -43,40 +42,14 @@ public abstract class Organization {
         }
     }
     
-     public enum PlasmaBankType {
-         
-        PlasmaBank("Plasma Bank Coordinator Organization");
-        private String value;
-
-        private PlasmaBankType(String value) {
-            this.value = value;
-        }
-
-        public String getValue() {
-            return value;
-        }
-     }
+   
     
-    public enum CovidCentreType {
+    public enum DonationType {
          
-        CovidCentre("Covid centre coordinaor Organization");
+        Donation("Donation Coordinator Organization");
         private String value;
 
-        private CovidCentreType(String value) {
-            this.value = value;
-        }
-
-        public String getValue() {
-            return value;
-        }
-     }
-    
-    public enum GovernmentType {
-         
-        Government("Government Coordinator Organization");
-        private String value;
-
-        private GovernmentType(String value) {
+        private DonationType(String value) {
             this.value = value;
         }
 
@@ -86,19 +59,6 @@ public abstract class Organization {
      }
     
     
-     public enum LegalType {
-         
-        LegalOfficer("Legal Officer Organization");
-        private String value;
-
-        private LegalType(String value) {
-            this.value = value;
-        }
-
-        public String getValue() {
-            return value;
-        }
-     }
 
     public Organization(String name) {
         this.name = name;
@@ -106,7 +66,7 @@ public abstract class Organization {
         System.out.println("initialise work queue");
         employeeDirectory = new EmployeeInventory();
         userAccountDirectory = new UserAccountInventory();
-        bloodGroup = new OrganType();
+        organType = new OrganType();
         
           organizationID = counter;  
         
@@ -144,12 +104,12 @@ public abstract class Organization {
         this.workQueue = workQueue;
     }
 
-    public OrganType getBloodGroup() {
-        return bloodGroup;
+    public OrganType getOrganType() {
+        return organType;
     }
 
-    public void setBloodGroup(OrganType bloodGroup) {
-        this.bloodGroup = bloodGroup;
+    public void setOrganType(OrganType organType) {
+        this.organType = organType;
     }
 
     public String getRealName() {

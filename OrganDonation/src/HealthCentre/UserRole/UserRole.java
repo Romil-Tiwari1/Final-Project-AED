@@ -20,11 +20,7 @@ public abstract class UserRole {
      public enum RoleType{
         Admin("Admin"),
         Doctor("Doctor"),
-        GovernmentCoordinator("GovernmentCoordinator"),
-        LegalOfficer("LegalOfficer"),
-        Pathologist("Pathologist"),
-        PlasmaBankCoordinator("PlasmaBankCoordinator"),
-        SystemCoordinator("SystemCoordinator");
+        DonationCoordinator("DonationCoordinator");
         
         private String value;
         private RoleType(String value){

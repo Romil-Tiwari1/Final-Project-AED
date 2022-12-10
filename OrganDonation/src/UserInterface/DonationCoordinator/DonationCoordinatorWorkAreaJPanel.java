@@ -38,17 +38,17 @@ public class DonationCoordinatorWorkAreaJPanel extends javax.swing.JPanel {
      */
     
     private UserAccount userAccount;
-    private DonationOrganization govtorganization;
+    private DonationOrganization donorganization;
     boolean a = true;
     DonationOrganization doctorOrganization;
     private Enterprise enterprise;
     private EcoSystem system;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
-    public DonationCoordinatorWorkAreaJPanel(UserAccount account, DonationOrganization govtorganization, Enterprise enterprise, EcoSystem business, Network network) {
+    public DonationCoordinatorWorkAreaJPanel(UserAccount account, DonationOrganization donorganization, Enterprise enterprise, EcoSystem business, Network network) {
         initComponents();
         this.system = system;
         this.userAccount = account;
-        this.govtorganization = govtorganization;
+        this.donorganization = donorganization;
         this.enterprise = enterprise;
         this.system = business;
     }
