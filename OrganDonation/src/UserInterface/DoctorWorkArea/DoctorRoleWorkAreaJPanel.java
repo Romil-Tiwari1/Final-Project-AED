@@ -322,7 +322,7 @@ public class DoctorRoleWorkAreaJPanel extends javax.swing.JPanel {
         manageDoctorProfileLabel.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         manageDoctorProfileLabel.setForeground(new java.awt.Color(255, 255, 255));
         manageDoctorProfileLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        manageDoctorProfileLabel.setText("Profile");
+        manageDoctorProfileLabel.setText("Doctor Profile");
         manageDoctorProfileLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         manageDoctorProfileLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -337,9 +337,9 @@ public class DoctorRoleWorkAreaJPanel extends javax.swing.JPanel {
             .addGap(0, 220, Short.MAX_VALUE)
             .addGroup(doctorProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, doctorProfilePanelLayout.createSequentialGroup()
-                    .addContainerGap(28, Short.MAX_VALUE)
-                    .addComponent(manageDoctorProfileLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(26, Short.MAX_VALUE)))
+                    .addContainerGap(17, Short.MAX_VALUE)
+                    .addComponent(manageDoctorProfileLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap()))
         );
         doctorProfilePanelLayout.setVerticalGroup(
             doctorProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -351,14 +351,14 @@ public class DoctorRoleWorkAreaJPanel extends javax.swing.JPanel {
                     .addContainerGap()))
         );
 
-        hideMenuPanel.add(doctorProfilePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 220, 60));
+        hideMenuPanel.add(doctorProfilePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 220, 60));
 
         manageDoctorPanel.setBackground(new java.awt.Color(31, 31, 31));
 
         manageDoctorJPanelLabel.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         manageDoctorJPanelLabel.setForeground(new java.awt.Color(255, 255, 255));
         manageDoctorJPanelLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        manageDoctorJPanelLabel.setText("Manage Requests");
+        manageDoctorJPanelLabel.setText("Manage Doctor Request");
         manageDoctorJPanelLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         manageDoctorJPanelLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -373,21 +373,18 @@ public class DoctorRoleWorkAreaJPanel extends javax.swing.JPanel {
             .addGap(0, 220, Short.MAX_VALUE)
             .addGroup(manageDoctorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, manageDoctorPanelLayout.createSequentialGroup()
-                    .addContainerGap(28, Short.MAX_VALUE)
-                    .addComponent(manageDoctorJPanelLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(26, Short.MAX_VALUE)))
+                    .addContainerGap(23, Short.MAX_VALUE)
+                    .addComponent(manageDoctorJPanelLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap()))
         );
         manageDoctorPanelLayout.setVerticalGroup(
             manageDoctorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 60, Short.MAX_VALUE)
             .addGroup(manageDoctorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(manageDoctorPanelLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(manageDoctorJPanelLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
-                    .addContainerGap()))
+                .addComponent(manageDoctorJPanelLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE))
         );
 
-        hideMenuPanel.add(manageDoctorPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, -1, -1));
+        hideMenuPanel.add(manageDoctorPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, -1, -1));
 
         backPanel.setBackground(new java.awt.Color(31, 31, 31));
 
@@ -405,9 +402,9 @@ public class DoctorRoleWorkAreaJPanel extends javax.swing.JPanel {
         backPanelLayout.setHorizontalGroup(
             backPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(backPanelLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
+                .addGap(74, 74, 74)
                 .addComponent(backArrowLabel)
-                .addContainerGap(86, Short.MAX_VALUE))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
         backPanelLayout.setVerticalGroup(
             backPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -417,13 +414,13 @@ public class DoctorRoleWorkAreaJPanel extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        hideMenuPanel.add(backPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, -1, -1));
+        hideMenuPanel.add(backPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 520, -1, -1));
 
         mainMenu.add(hideMenuPanel, java.awt.BorderLayout.CENTER);
 
         add(mainMenu, java.awt.BorderLayout.LINE_START);
 
-        userProcessContainer.setBackground(new java.awt.Color(208, 93, 2));
+        userProcessContainer.setBackground(new java.awt.Color(199, 247, 247));
         userProcessContainer.setLayout(new java.awt.CardLayout());
         add(userProcessContainer, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
@@ -488,10 +485,6 @@ public class DoctorRoleWorkAreaJPanel extends javax.swing.JPanel {
 
     private void manageDoctorJPanelLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageDoctorJPanelLabelMouseClicked
         // TODO add your handling code here:
-        ManageDoctorJPanel manageDoctorJPanel = new ManageDoctorJPanel(system, userAccount, doctorOrganization, enterprise);
-        userProcessContainer.add("ManageDoctorJPanel",manageDoctorJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
     }//GEN-LAST:event_manageDoctorJPanelLabelMouseClicked
 
     private void backArrowLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backArrowLabelMouseClicked
