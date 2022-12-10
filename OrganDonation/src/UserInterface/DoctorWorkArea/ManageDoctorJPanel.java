@@ -292,7 +292,7 @@ public class ManageDoctorJPanel extends javax.swing.JPanel {
             jLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
             panel.add(jLabel);
             frame.getContentPane().add(panel, BorderLayout.NORTH);
-            frame.getContentPane().add(new AnimationPanel(), BorderLayout.CENTER);
+//            frame.getContentPane().add(new AnimationPanel(), BorderLayout.CENTER);
             frame.setVisible(true);
         }
 
