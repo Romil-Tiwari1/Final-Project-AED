@@ -145,7 +145,7 @@ public class LoginScreen extends javax.swing.JFrame {
         jPanel4.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 70, -1));
 
         jLabel7.setForeground(new java.awt.Color(51, 0, 0));
-        jLabel7.setIcon(new javax.swing.ImageIcon("/Users/romiltiwari/Desktop/Mitochondria/Final-Project-AED/OrganDonation/src/Images_1/heart.jpeg")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images_1/heart.jpeg"))); // NOI18N
         jLabel7.setOpaque(true);
         jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 630, 360));
 
