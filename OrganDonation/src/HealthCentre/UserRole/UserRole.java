@@ -22,7 +22,11 @@ public abstract class UserRole {
         Doctor("Doctor"),
         SystemCoordinator("SystemCoordinator"),
         DonationCoordinator("DonationCoordinator"),
-        OrganBankCoordinator("OrganBankCoordinator");
+        OrganBankCoordinator("OrganBankCoordinator"),
+        ConsentVerification("OrganBankCoordinator"),
+TransplantCenter("TransplantCenter"),
+LabCoordinator("LabCoordinator");
+
         
         private String value;
         private RoleType(String value){

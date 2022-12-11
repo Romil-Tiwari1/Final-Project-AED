@@ -8,6 +8,11 @@ import HealthCentre.DB4OUtil.DB4OUtil;
 import HealthCentre.EcoSystem;
 import HealthCentre.Enterprise.Enterprise;
 import static HealthCentre.Enterprise.Enterprise.EnterpriseType.Donation;
+import static HealthCentre.Enterprise.Enterprise.EnterpriseType.ConsentVerification;
+import static HealthCentre.Enterprise.Enterprise.EnterpriseType.Hospital;
+import static HealthCentre.Enterprise.Enterprise.EnterpriseType.OrganBank;
+import static HealthCentre.Enterprise.Enterprise.EnterpriseType.OrganTransplantCentre;
+
 import HealthCentre.Organization.Organization;
 
 import HealthCentre.Organization.Organization.DonationType;
@@ -70,6 +75,37 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
                 }
             }
         }
+       else if(enterprise.getEnterpriseType().toString().equals(ConsentVerification.toString())){
+        for(Organization.ConsentVerificationType cType: Organization.ConsentVerificationType.values()){
+            if (cType.getValue().equals(Organization.ConsentVerificationType.ConsentVerification.getValue())){
+                organizationJComboBox.addItem(cType);
+            }
+        }
+        }
+       else if(enterprise.getEnterpriseType().toString().equals(OrganBank.toString())){
+        for(Organization.OrganBankType cType: Organization.OrganBankType.values()){
+            if (cType.getValue().equals(Organization.OrganBankType.OrganBank.getValue())){
+                organizationJComboBox.addItem(cType);
+            }
+        }
+        }
+             else if(enterprise.getEnterpriseType().toString().equals(OrganTransplantCentre.toString())){
+        for(Organization.TransplantCentreOrganizationType cType: Organization.TransplantCentreOrganizationType.values()){
+            if (cType.getValue().equals(Organization.TransplantCentreOrganizationType.TransplantCentreOrganization.getValue())){
+                organizationJComboBox.addItem(cType);
+            }
+        }
+        }
+else{
+        for (Organization.Type type : Organization.Type.values()){            
+            if (type.getValue().equals(Organization.Type.SystemCoordinator.getValue())
+                    ||type.getValue().equals(Organization.Type.Doctor.getValue())
+                    ||type.getValue().equals(Organization.Type.LabCoordinator.getValue())
+                    )
+                organizationJComboBox.addItem(type);
+        }
+       
+    }
     }
 
     private void populateTable() {

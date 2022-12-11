@@ -66,7 +66,6 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         this.radioGroup2 = new ButtonGroup();
         this.radioGroup3 = new ButtonGroup();
         this.radioGroup4 = new ButtonGroup();
-
         emailSuccessLabel.setVisible(false);
         emailValidateMessage.setVisible(false);
 
