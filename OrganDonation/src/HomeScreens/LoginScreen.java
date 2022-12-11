@@ -29,21 +29,16 @@ public class LoginScreen extends javax.swing.JFrame {
      */
     private EcoSystem system;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
+
     public LoginScreen() {
         system = dB4OUtil.retrieveSystem();
-        System.out.println(system.getWorkQueue().getWorkRequestList().size()+"cz");
+        System.out.println(system.getWorkQueue().getWorkRequestList().size() + "cz");
         initComponents();
-        
-        //to make the panels transparent
-        
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-       // this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2- this.getSize().height/2);
-        this.setBackground(new Color(0,0,0,0));
-        jPanel4.setBackground(new Color(0,0,0,0));
-        this.setSize(900, 900);
+        this.setBackground(new Color(0, 0, 0, 0));
+        jPanel4.setBackground(new Color(0, 0, 0, 0));
+        this.setSize(1380, 1100);
     }
-
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -188,69 +183,66 @@ public class LoginScreen extends javax.swing.JFrame {
         // Get Password
         char[] passwordCharArray = paswordTextField.getPassword();
         String password = String.valueOf(passwordCharArray);
-        
+
         //Step1: Check in the system admin user account directory if you have the user
-        UserAccount userAccount=system.getUserAccountDirectory().authenticateUser(userName, password);
-        
-        Enterprise inEnterprise=null;
-        Organization inOrganization=null;
-        Network inNetwork=null;
-        
-        if(userAccount==null){
+        UserAccount userAccount = system.getUserAccountDirectory().authenticateUser(userName, password);
+
+        Enterprise inEnterprise = null;
+        Organization inOrganization = null;
+        Network inNetwork = null;
+
+        if (userAccount == null) {
             //Step 2: Go inside each network and check each enterprise
-            for(Network network:system.getNetworkList()){
+            for (Network network : system.getNetworkList()) {
                 //Step 2.a: check against each enterprise
-                for(Enterprise enterprise:network.getEnterpriseDirectory().getEnterpriseList()){
-                    userAccount=enterprise.getUserAccountDirectory().authenticateUser(userName, password);
-                    if(userAccount==null){
-                       //Step 3:check against each organization for each enterprise
-                       for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList()){
-                           userAccount=organization.getUserAccountDirectory().authenticateUser(userName, password);
-                           if(userAccount!=null){
-                               inEnterprise=enterprise;
-                               inOrganization=organization;
-                               inNetwork = network;
-                               break;
-                           }
-                       }
-                        
-                    }
-                    else{
-                       inEnterprise=enterprise;
-                       break;
-                    }
-                    if(inOrganization!=null){
+                for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
+                    userAccount = enterprise.getUserAccountDirectory().authenticateUser(userName, password);
+                    if (userAccount == null) {
+                        //Step 3:check against each organization for each enterprise
+                        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
+                            userAccount = organization.getUserAccountDirectory().authenticateUser(userName, password);
+                            if (userAccount != null) {
+                                inEnterprise = enterprise;
+                                inOrganization = organization;
+                                inNetwork = network;
+                                break;
+                            }
+                        }
+
+                    } else {
+                        inEnterprise = enterprise;
                         break;
-                    }  
+                    }
+                    if (inOrganization != null) {
+                        break;
+                    }
                 }
-                if(inEnterprise!=null){
+                if (inEnterprise != null) {
                     break;
                 }
             }
         }
-        
-        if(userAccount==null){
-        JOptionPane.showMessageDialog(null, new JLabel("<html><h2><I><font color='red'>Invalid</font> credentials!</I></h2></html>"));
-            
-            
+
+        if (userAccount == null) {
+            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><I><font color='red'>Invalid</font> credentials!</I></h2></html>"));
+
             //JOptionPane.showMessageDialog(null, "Invalid credentials!");
             return;
-        }
-        else{
-            CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        } else {
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             System.out.println(inEnterprise);
             System.out.println(userAccount.getRole());
             System.out.println(system);
-            userProcessContainer.add("workArea",userAccount.getRole().createWorkArea(userProcessContainer, userAccount, inOrganization, inEnterprise, system, inNetwork));
-            
+            userProcessContainer.add("workArea", userAccount.getRole().createWorkArea(userProcessContainer, userAccount, inOrganization, inEnterprise, system, inNetwork));
+
             layout.next(userProcessContainer);
         }
-        
+
         signInButtonLabel.setEnabled(false);
         //logoutJButton.setEnabled(true);
         userNameTextField.setEnabled(false);
         paswordTextField.setEnabled(false);
-        
+
     }//GEN-LAST:event_signInButtonLabelMousePressed
 
     private void userNameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userNameTextFieldActionPerformed

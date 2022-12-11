@@ -6,6 +6,7 @@ package HomeScreens;
 
 import HealthCentre.EcoSystem;
 import UserInterface.DonationCoordinator.NewDonorJPanel;
+import UserInterface.OrganTransplantCentre.NewReceiverJPanel;
 import java.awt.CardLayout;
 import java.awt.Dimension;
 import java.awt.HeadlessException;
@@ -37,12 +38,12 @@ public class OrganDonorFrame extends javax.swing.JFrame {
         }
         else{
               this.setSize(1380, 1100);
-//            userProcessContainer.remove(this);
-//            CardLayout layout=(CardLayout)userProcessContainer.getLayout();
-//            NewReceiverJPanel newdpanel = new NewReceiverJPanel(system);
-//            userProcessContainer.add("workArea", newdpanel);
-//            
-//            layout.next(userProcessContainer);
+            userProcessContainer.remove(this);
+            CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+            NewReceiverJPanel newdpanel = new NewReceiverJPanel(system);
+            userProcessContainer.add("workArea", newdpanel);
+            
+            layout.next(userProcessContainer);
         }   
     }
 
