@@ -151,7 +151,7 @@ public class DonorListJPanel extends javax.swing.JPanel {
         ));
         jScrollPane3.setViewportView(jTable1);
 
-        setBackground(new java.awt.Color(255, 153, 153));
+        setBackground(new java.awt.Color(199, 247, 247));
 
         tblDonors.setBackground(new java.awt.Color(0, 0, 0));
         tblDonors.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N

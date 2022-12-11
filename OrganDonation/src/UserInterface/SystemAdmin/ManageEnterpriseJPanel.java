@@ -130,7 +130,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         jPanel3 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 153, 153));
+        setBackground(new java.awt.Color(199, 247, 247));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         enterpriseJTable.setBackground(new java.awt.Color(0, 0, 0));
@@ -167,7 +167,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 430, 410));
 
-        jPanel2.setBackground(new java.awt.Color(255, 102, 102));
+        jPanel2.setBackground(new java.awt.Color(0, 204, 204));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 255, 204)));
         jPanel2.setForeground(new java.awt.Color(204, 255, 204));
         jPanel2.setPreferredSize(new java.awt.Dimension(250, 400));
@@ -175,11 +175,11 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         jPanel2.setVerifyInputWhenFocusTarget(false);
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel7.setBackground(new java.awt.Color(255, 102, 102));
+        jLabel7.setBackground(new java.awt.Color(0, 204, 204));
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Create Enterprise");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 408, 30));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 408, 30));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -246,7 +246,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         txtEmail.setForeground(new java.awt.Color(255, 255, 255));
         jPanel2.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(234, 299, 163, -1));
 
-        btnCreateEnterprise.setBackground(new java.awt.Color(255, 153, 153));
+        btnCreateEnterprise.setBackground(new java.awt.Color(199, 247, 247));
         btnCreateEnterprise.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         btnCreateEnterprise.setText("CREATE");
         btnCreateEnterprise.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));

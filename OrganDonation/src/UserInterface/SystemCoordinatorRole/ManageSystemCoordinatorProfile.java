@@ -77,8 +77,9 @@ public class ManageSystemCoordinatorProfile extends javax.swing.JPanel {
         btnSave = new javax.swing.JButton();
         comboGender = new javax.swing.JComboBox();
         jLabel9 = new javax.swing.JLabel();
+        label1 = new java.awt.Label();
 
-        setBackground(new java.awt.Color(255, 153, 153));
+        setBackground(new java.awt.Color(199, 247, 247));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -180,6 +181,12 @@ public class ManageSystemCoordinatorProfile extends javax.swing.JPanel {
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Specialization:");
         add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
+
+        label1.setAlignment(java.awt.Label.CENTER);
+        label1.setBackground(new java.awt.Color(255, 255, 255));
+        label1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        label1.setText("Manage Profile");
+        add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 200, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
@@ -213,6 +220,7 @@ public class ManageSystemCoordinatorProfile extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private java.awt.Label label1;
     private javax.swing.JTextField txtAddress;
     private javax.swing.JTextField txtCity;
     private javax.swing.JTextField txtContact;

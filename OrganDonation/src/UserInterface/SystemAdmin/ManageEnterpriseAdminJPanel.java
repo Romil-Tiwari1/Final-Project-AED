@@ -158,7 +158,7 @@ private boolean checkUserIdExists(String userName) {
         ));
         jScrollPane2.setViewportView(jTable1);
 
-        setBackground(new java.awt.Color(255, 153, 153));
+        setBackground(new java.awt.Color(199, 247, 247));
         setPreferredSize(new java.awt.Dimension(1550, 900));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -217,12 +217,13 @@ private boolean checkUserIdExists(String userName) {
 
         add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 490, 250));
 
-        jPanel2.setBackground(new java.awt.Color(255, 102, 102));
+        jPanel2.setBackground(new java.awt.Color(0, 204, 204));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 255, 204)));
         jPanel2.setPreferredSize(new java.awt.Dimension(250, 400));
         jPanel2.setRequestFocusEnabled(false);
         jPanel2.setVerifyInputWhenFocusTarget(false);
 
+        jLabel3.setBackground(new java.awt.Color(0, 204, 204));
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Create Admin");
@@ -263,7 +264,7 @@ private boolean checkUserIdExists(String userName) {
         txtPassword.setForeground(new java.awt.Color(255, 255, 255));
         txtPassword.setEnabled(false);
 
-        btnCreateAdmin.setBackground(new java.awt.Color(255, 153, 153));
+        btnCreateAdmin.setBackground(new java.awt.Color(199, 247, 247));
         btnCreateAdmin.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         btnCreateAdmin.setText("CREATE");
         btnCreateAdmin.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));

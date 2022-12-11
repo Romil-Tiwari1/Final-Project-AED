@@ -135,7 +135,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        setBackground(new java.awt.Color(255, 153, 153));
+        setBackground(new java.awt.Color(199, 247, 247));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back_32px.png"))); // NOI18N
@@ -171,7 +171,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
 
         add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1470, -1));
 
-        jPanel2.setBackground(new java.awt.Color(255, 102, 102));
+        jPanel2.setBackground(new java.awt.Color(0, 204, 204));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel2.setPreferredSize(new java.awt.Dimension(250, 400));
         jPanel2.setRequestFocusEnabled(false);
@@ -240,7 +240,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         roleJComboBox.setForeground(new java.awt.Color(255, 255, 255));
         jPanel2.add(roleJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 160, -1));
 
-        createUserJButton.setBackground(new java.awt.Color(255, 153, 153));
+        createUserJButton.setBackground(new java.awt.Color(199, 247, 247));
         createUserJButton.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         createUserJButton.setText("SUBMIT");
         createUserJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));

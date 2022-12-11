@@ -95,7 +95,7 @@ public class InspireCuredPatientsJPanel extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         messageTextField = new javax.swing.JTextArea();
 
-        setBackground(new java.awt.Color(255, 153, 153));
+        setBackground(new java.awt.Color(199, 247, 247));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblCuredPatient.setBackground(new java.awt.Color(0, 0, 0));

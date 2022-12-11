@@ -95,7 +95,7 @@ public class DonorStatusJPanel extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         donorRequestTable1 = new javax.swing.JTable();
 
-        setBackground(new java.awt.Color(255, 153, 153));
+        setBackground(new java.awt.Color(199, 247, 247));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         donorRequestTable.setBackground(new java.awt.Color(0, 0, 0));

@@ -180,7 +180,7 @@ public class OrganDonorJPanel extends javax.swing.JPanel {
         organTypeTextField = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 153, 153));
+        setBackground(new java.awt.Color(199, 247, 247));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblGoogleSheet.setBackground(new java.awt.Color(0, 0, 0));
