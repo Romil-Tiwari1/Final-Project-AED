@@ -46,6 +46,10 @@ public class EnterpriseInventory {
             enterprise=new OrganTransplantCentre(name);
             enterpriseList.add(enterprise);
         }
+        else if(type==Enterprise.EnterpriseType.OrganBank){
+            enterprise=new OrganBankEnterprise(name);
+            enterpriseList.add(enterprise);
+        }
        
         return enterprise;
     }   
