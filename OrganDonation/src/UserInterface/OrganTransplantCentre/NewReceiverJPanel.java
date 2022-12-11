@@ -495,183 +495,6 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         add(emailSuccessLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 270, 30, 30));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        if ( lblProfilePicture == null ){
-            lblProfilePicture.setBorder(BorderFactory.createLineBorder(Color.RED));
-            lblProfilePicture.setForeground(Color.red);
-            btnAddPhoto.setBorder(BorderFactory.createLineBorder(Color.RED));
-            btnAddPhoto.setForeground(Color.red);       
-        }
-        if ( stateJComboBox.getSelectedItem().equals("") ){
-            stateJComboBox.setBorder(BorderFactory.createLineBorder(Color.RED));
-            stateJComboBox.setForeground(Color.red);
-        }
-        if ( genderJComboBox.getSelectedItem().equals("") ){
-            genderJComboBox.setBorder(BorderFactory.createLineBorder(Color.RED));
-            genderJComboBox.setForeground(Color.red);
-        }
-        if ( bloodGroupJComboBox.getSelectedItem().equals("") ){
-            bloodGroupJComboBox.setBorder(BorderFactory.createLineBorder(Color.RED));
-            bloodGroupJComboBox.setForeground(Color.red);
-        }
-        if (nameText.getText().isEmpty()) {
-            nameText.setBorder(BorderFactory.createLineBorder(Color.RED));
-            nameText.setForeground(Color.red);
-        }
-        if (uidText.getText().isEmpty()) {
-            uidText.setBorder(BorderFactory.createLineBorder(Color.RED));
-            uidText.setForeground(Color.red);
-        }        
-        if (emailText.getText().isEmpty()) {
-            emailText.setBorder(BorderFactory.createLineBorder(Color.RED));
-            emailText.setForeground(Color.red);
-        }
-        if (contactText.getText().isEmpty()) {
-            contactText.setBorder(BorderFactory.createLineBorder(Color.RED));
-            contactText.setForeground(Color.red);
-        }
-        if (zipText.getText().isEmpty()) {
-            zipText.setBorder(BorderFactory.createLineBorder(Color.RED));
-            zipText.setForeground(Color.red);
-        }
-        if (cityText.getText().isEmpty()) {
-            cityText.setBorder(BorderFactory.createLineBorder(Color.RED));
-            cityText.setForeground(Color.red);
-        }
-        if (streetText.getText().isEmpty()) {
-            streetText.setBorder(BorderFactory.createLineBorder(Color.RED));
-            streetText.setForeground(Color.red);
-        }
-         if (diagnosedDateChooser.getDate() == null ) {
-            diagnosedDateChooser.setBorder(BorderFactory.createLineBorder(Color.RED));
-            diagnosedDateChooser.setForeground(Color.red);
-        }
-        if (dobDateField.getDate() == null ) {
-            dobDateField.setBorder(BorderFactory.createLineBorder(Color.RED));
-            dobDateField.setForeground(Color.red);
-        }
-         if (ageText.getText().isEmpty()) {
-            ageText.setBorder(BorderFactory.createLineBorder(Color.RED));
-            ageText.setForeground(Color.red);
-        }
-        
-         
-        //
-        //
-        if (    nameText.getText().isEmpty() || emailText.getText().isEmpty() || cityText.getText().isEmpty() ||contactText.getText().isEmpty() ||
-                zipText.getText().isEmpty() || streetText.getText().isEmpty() || uidText.getText().isEmpty() ||
-                dobDateField.getDate() == null || diagnosedDateChooser.getDate() == null || ageText.getText().isEmpty() ||
-                String.valueOf(genderJComboBox.getSelectedItem()).equals("") || 
-                String.valueOf(bloodGroupJComboBox.getSelectedItem()).equals("") || 
-                String.valueOf(stateJComboBox.getSelectedItem()).equals("") ||
-                lblProfilePicture == null
-                )
-                
-            { 
-                JOptionPane.showMessageDialog(null,new JLabel(  "<html><h2><I>All fields are</I><font color='red'> mandatory</font>!</h2></html>") , "Error", JOptionPane.ERROR_MESSAGE);
-             return ;
-        //    JOptionPane.showMessageDialog(null, "All fields are mandatory!", "Error", JOptionPane.ERROR_MESSAGE);
-          //   return ;
-            }
-         
-       else if(  !buttonNo.isSelected()  &&  !buttonYes.isSelected())
-        {
-            JOptionPane.showMessageDialog(null,new JLabel(  "<html><h2><I>All fields are</I><font color='red'> mandatory</font>!</h2></html>") , "Error", JOptionPane.ERROR_MESSAGE);
-             return ;
-        //JOptionPane.showMessageDialog(null, "All fields are mandatory!", "Error", JOptionPane.ERROR_MESSAGE);
-        
-        }
-        
-       else   if ( !phoneNumberValidator(contactText.getText())   ){
-           contactText.setBorder(BorderFactory.createLineBorder(Color.RED));
-            contactText.setForeground(Color.red);
-            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>Contact Number</I></font> should be<font color='green'> 10 digit</font>!</h2></html>") , "Error", JOptionPane.ERROR_MESSAGE);
-           // return;
-           //JOptionPane.showMessageDialog(null, "Contact number should be 10 digit" , "Error", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-       
-        else   if (  !zipCodeValidator(zipText.getText()) ){
-            zipText.setBorder(BorderFactory.createLineBorder(Color.RED));
-            zipText.setForeground(Color.red);
-            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>Zip</I></font> should be<font color='green'> 5 digit</font>!</h2></html>") , "Error", JOptionPane.ERROR_MESSAGE);
-           return;
-           //JOptionPane.showMessageDialog(null, "Zip should be 5 digit" , "Error", JOptionPane.ERROR_MESSAGE);
-           // return;
-        }
-        
-        else if (!isAlpha(nameText.getText()))
-        {
-         nameText.setBorder(BorderFactory.createLineBorder(Color.RED));
-            nameText.setForeground(Color.red);
-            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>Name</I></font> must contain only<font color='green'> alphabets</font></h2>!</html>") , "Error", JOptionPane.ERROR_MESSAGE);
-            return;
-            //JOptionPane.showMessageDialog(null, "Name must contain only alphabets." , "Error", JOptionPane.ERROR_MESSAGE);
-            //return;
-        }
-        else if (!isAlpha(cityText.getText()))
-        {
-         cityText.setBorder(BorderFactory.createLineBorder(Color.RED));
-            cityText.setForeground(Color.red);
-            JOptionPane.showMessageDialog(null, new JLabel("<html><h2>Name of the<font color='red'><I> City</I></font> must contain only<font color='green'> alphabets</font>!</h2></html>") , "Error", JOptionPane.ERROR_MESSAGE);
-            return;
-            //JOptionPane.showMessageDialog(null, "City name must contain only alphabets." , "Error", JOptionPane.ERROR_MESSAGE);
-            //return;
-        }
-       
-        else   if ( !emailValidator(emailText.getText()) ){
-            emailText.setBorder(BorderFactory.createLineBorder(Color.RED));
-            emailText.setForeground(Color.red);
-            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>Email ID</I></font> must be in<font color='green'> correct format</font>!</h2></html>") , "Error", JOptionPane.ERROR_MESSAGE);
-//           JOptionPane.showMessageDialog(null, "Email ID must be in correct format!" , "Error", JOptionPane.ERROR_MESSAGE);
-           return;
-        } 
-        //
-        //
-        //
-        
-       else{
-        
-//             int n = JOptionPane.showConfirmDialog(null,"Would you like to submit the form?","CONFIRMATION REQUIRED",JOptionPane.YES_NO_OPTION);
-               int n = JOptionPane.showConfirmDialog(null,new JLabel("<html><h2>Would you like to<font color='green'><I> submit</I></font> the form?</h2></html>"),
-                    "CONFIRMATION REQUIRED",JOptionPane.YES_NO_OPTION);
-
-            if(n == 0)
-            { 
-        PatientRequest patientrequest = system.getPatientRequestDirectory().addPatientRequest();
-        
-        patientrequest.setPatientID(uidText.getText()); //UID, receiverID  
-        patientrequest.setName(nameText.getText()); // Name
-        patientrequest.setDob(dobDateField.getDate()); // DOB 
-       
-        patientrequest.setAge(Integer.parseInt(ageText.getText())); // Age
-        patientrequest.setGender((String)genderJComboBox.getSelectedItem()); // gender
-    
-        patientrequest.setStreetAddress(streetText.getText()); // streetAddress
-        patientrequest.setCity(cityText.getText()); // city
-        patientrequest.setState((String) stateJComboBox.getSelectedItem()); // state
-        patientrequest.setZipCode(Integer.parseInt(zipText.getText())); // zipCode
-        patientrequest.setContact(Integer.parseInt(contactText.getText())); // contact
-        patientrequest.setEmailID(emailText.getText()); // emailID
-        patientrequest.setStatus("New Request"); // status
-        patientrequest.setdP(tempdP);
-        
-        
-  
-     
-        //JOptionPane.showMessageDialog(null, "Thank you for registering for HELP! We will soon get back to you. Take Care!");
-        JOptionPane.showMessageDialog(null, new JLabel("<html><h2>Thank you for registering for<font color='green'><I><B> HELP!</B></I></font> We will soon get back to you. <font color='green'><I><B>Take Care!!</B></I></font></h2></html>"));
-        
-        
-        
-        
-        dB4OUtil.storeSystem(system);
-        disableAllButton();
-       }}
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     
     public ImageIcon ResizeImage(String ImagePath)
     {
@@ -695,30 +518,6 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
 }
     
     
-    private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
-        // TODO add your handling code here:
-       
-        JFrame frame = (JFrame) getWindowAncestor(this);
-        frame.dispose();
-        NewReceiverJPanel.super.setVisible(false);
-    }//GEN-LAST:event_jLabel18MouseClicked
-
-    private void contactTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contactTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_contactTextActionPerformed
-
-    private void stateJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stateJComboBoxActionPerformed
-
-    }//GEN-LAST:event_stateJComboBoxActionPerformed
-
-    private void bloodGroupJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bloodGroupJComboBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bloodGroupJComboBoxActionPerformed
-
-    private void genderJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genderJComboBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_genderJComboBoxActionPerformed
-
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
         // TODO add your handling code here:
          Date dob = dobDateField.getDate();
@@ -727,52 +526,62 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_formMouseClicked
 
-    private void ageTextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ageTextMouseClicked
-        // TODO add your handling code here:
-        Date dob = dobDateField.getDate();
-        System.out.println(dob.getYear());
-        ageText.setText((String.valueOf(new Date().getYear()-dob.getYear())));
-        
-    }//GEN-LAST:event_ageTextMouseClicked
-
     private void btnAddPhotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddPhotoActionPerformed
         // TODO add your handling code here:
-        
-       JFileChooser file = new JFileChooser();
-          file.setCurrentDirectory(new File(System.getProperty("user.dir")));
-          //filter the files
-          FileNameExtensionFilter filter = new FileNameExtensionFilter("*.Images", "jpg","gif","png");
-          file.addChoosableFileFilter(filter);
-          int result = file.showSaveDialog(null);
-           //if the user click on save in Jfilechooser
-          if(result == JFileChooser.APPROVE_OPTION){
-              File selectedFile = file.getSelectedFile();
-              tempdP = new byte[(int) selectedFile.length()]; 
-                FileInputStream fis;
-             try {
-                 fis = new FileInputStream(selectedFile);
-                 fis.read(tempdP);
-                 fis.close();
-             } catch (IOException ex) {
-                 //Logger.getLogger(NewDonorJPanel.class.getName()).log(Level.SEVERE, null, ex);
-             }             
-              lblProfilePicture.setIcon(ResizeImage(selectedFile.getAbsolutePath()));
-              lblProfilePicture.setIcon(setPicture(selectedFile.getAbsolutePath(),lblProfilePicture));
-          }
 
-          else if(result == JFileChooser.CANCEL_OPTION){
-              System.out.println("No File Select");
-          }
-        
-        
+        JFileChooser file = new JFileChooser();
+        file.setCurrentDirectory(new File(System.getProperty("user.dir")));
+        //filter the files
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("*.Images", "jpg","gif","png");
+        file.addChoosableFileFilter(filter);
+        int result = file.showSaveDialog(null);
+        //if the user click on save in Jfilechooser
+        if(result == JFileChooser.APPROVE_OPTION){
+            File selectedFile = file.getSelectedFile();
+            tempdP = new byte[(int) selectedFile.length()];
+            FileInputStream fis;
+            try {
+                fis = new FileInputStream(selectedFile);
+                fis.read(tempdP);
+                fis.close();
+            } catch (IOException ex) {
+                //Logger.getLogger(NewDonorJPanel.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            lblProfilePicture.setIcon(ResizeImage(selectedFile.getAbsolutePath()));
+            lblProfilePicture.setIcon(setPicture(selectedFile.getAbsolutePath(),lblProfilePicture));
+        }
+
+        else if(result == JFileChooser.CANCEL_OPTION){
+            System.out.println("No File Select");
+        }
     }//GEN-LAST:event_btnAddPhotoActionPerformed
+
+    private void genderJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genderJComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_genderJComboBoxActionPerformed
+
+    private void bloodGroupJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bloodGroupJComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bloodGroupJComboBoxActionPerformed
+
+    private void stateJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stateJComboBoxActionPerformed
+
+    }//GEN-LAST:event_stateJComboBoxActionPerformed
+
+    private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
+        // TODO add your handling code here:
+
+        JFrame frame = (JFrame) getWindowAncestor(this);
+        frame.dispose();
+        NewReceiverJPanel.super.setVisible(false);
+    }//GEN-LAST:event_jLabel18MouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         lblProfilePicture.setIcon(null);
         radioGroup1.clearSelection();
-       // buttonYes.setSelected(false);
-       // buttonYes.resetKeyboardActions();
+        // buttonYes.setSelected(false);
+        // buttonYes.resetKeyboardActions();
         uidText.setEnabled(true);
         nameText.setEnabled(true);
         dobDateField.setEnabled(true);
@@ -789,7 +598,6 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         buttonYes.setEnabled(true);
         buttonNo.setEnabled(true);
         btnAddPhoto.setEnabled(true);
-      
 
         uidText.setText("");
         nameText.setText("");
@@ -803,27 +611,34 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         genderJComboBox.setSelectedItem("");
         bloodGroupJComboBox.setSelectedItem("");
         stateJComboBox.setSelectedItem("");
-        
 
         dobDateField.setCalendar(null);
         diagnosedDateChooser.setCalendar(null);
-       
-        // ButtonGroup radioGroup1 = new ButtonGroup();       
+
+        // ButtonGroup radioGroup1 = new ButtonGroup();
         lblProfilePicture.removeAll();
-    
+
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void ageTextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ageTextMouseClicked
+        // TODO add your handling code here:
+        Date dob = dobDateField.getDate();
+        System.out.println(dob.getYear());
+        ageText.setText((String.valueOf(new Date().getYear()-dob.getYear())));
+
+    }//GEN-LAST:event_ageTextMouseClicked
 
     private void uEmailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_uEmailKeyTyped
         // TODO add your handling code here:
-        
-         if (!emailValidator(emailText.getText())) {
+
+        if (!emailValidator(emailText.getText())) {
             emailValidateMessage.setVisible(true);
             emailValid = false;
         } else {
             emailText.setBorder(BorderFactory.createLineBorder(Color.BLACK));
             emailText.setForeground(Color.WHITE);
             emailValidateMessage.setVisible(false);
-           emailSuccessLabel.setVisible(true);
+            emailSuccessLabel.setVisible(true);
             emailValid = true;
             int delay = 2500; //milliseconds
             ActionListener taskPerformer = new ActionListener() {
@@ -835,13 +650,182 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
             tick.setRepeats(false);
             tick.start();
         }
-        
-        
-        
-        
-        
-        
+
     }//GEN-LAST:event_uEmailKeyTyped
+
+    private void contactTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contactTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_contactTextActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        if ( lblProfilePicture == null ){
+            lblProfilePicture.setBorder(BorderFactory.createLineBorder(Color.RED));
+            lblProfilePicture.setForeground(Color.red);
+            btnAddPhoto.setBorder(BorderFactory.createLineBorder(Color.RED));
+            btnAddPhoto.setForeground(Color.red);
+        }
+        if ( stateJComboBox.getSelectedItem().equals("") ){
+            stateJComboBox.setBorder(BorderFactory.createLineBorder(Color.RED));
+            stateJComboBox.setForeground(Color.red);
+        }
+        if ( genderJComboBox.getSelectedItem().equals("") ){
+            genderJComboBox.setBorder(BorderFactory.createLineBorder(Color.RED));
+            genderJComboBox.setForeground(Color.red);
+        }
+        if ( bloodGroupJComboBox.getSelectedItem().equals("") ){
+            bloodGroupJComboBox.setBorder(BorderFactory.createLineBorder(Color.RED));
+            bloodGroupJComboBox.setForeground(Color.red);
+        }
+        if (nameText.getText().isEmpty()) {
+            nameText.setBorder(BorderFactory.createLineBorder(Color.RED));
+            nameText.setForeground(Color.red);
+        }
+        if (uidText.getText().isEmpty()) {
+            uidText.setBorder(BorderFactory.createLineBorder(Color.RED));
+            uidText.setForeground(Color.red);
+        }
+        if (emailText.getText().isEmpty()) {
+            emailText.setBorder(BorderFactory.createLineBorder(Color.RED));
+            emailText.setForeground(Color.red);
+        }
+        if (contactText.getText().isEmpty()) {
+            contactText.setBorder(BorderFactory.createLineBorder(Color.RED));
+            contactText.setForeground(Color.red);
+        }
+        if (zipText.getText().isEmpty()) {
+            zipText.setBorder(BorderFactory.createLineBorder(Color.RED));
+            zipText.setForeground(Color.red);
+        }
+        if (cityText.getText().isEmpty()) {
+            cityText.setBorder(BorderFactory.createLineBorder(Color.RED));
+            cityText.setForeground(Color.red);
+        }
+        if (streetText.getText().isEmpty()) {
+            streetText.setBorder(BorderFactory.createLineBorder(Color.RED));
+            streetText.setForeground(Color.red);
+        }
+        if (diagnosedDateChooser.getDate() == null ) {
+            diagnosedDateChooser.setBorder(BorderFactory.createLineBorder(Color.RED));
+            diagnosedDateChooser.setForeground(Color.red);
+        }
+        if (dobDateField.getDate() == null ) {
+            dobDateField.setBorder(BorderFactory.createLineBorder(Color.RED));
+            dobDateField.setForeground(Color.red);
+        }
+        if (ageText.getText().isEmpty()) {
+            ageText.setBorder(BorderFactory.createLineBorder(Color.RED));
+            ageText.setForeground(Color.red);
+        }
+
+        //
+        //
+        if (    nameText.getText().isEmpty() || emailText.getText().isEmpty() || cityText.getText().isEmpty() ||contactText.getText().isEmpty() ||
+            zipText.getText().isEmpty() || streetText.getText().isEmpty() || uidText.getText().isEmpty() ||
+            dobDateField.getDate() == null || diagnosedDateChooser.getDate() == null || ageText.getText().isEmpty() ||
+            String.valueOf(genderJComboBox.getSelectedItem()).equals("") ||
+            String.valueOf(bloodGroupJComboBox.getSelectedItem()).equals("") ||
+            String.valueOf(stateJComboBox.getSelectedItem()).equals("") ||
+            lblProfilePicture == null
+        )
+
+        {
+            JOptionPane.showMessageDialog(null,new JLabel(  "<html><h2><I>All fields are</I><font color='red'> mandatory</font>!</h2></html>") , "Error", JOptionPane.ERROR_MESSAGE);
+            return ;
+            //    JOptionPane.showMessageDialog(null, "All fields are mandatory!", "Error", JOptionPane.ERROR_MESSAGE);
+            //   return ;
+        }
+
+        else if(  !buttonNo.isSelected()  &&  !buttonYes.isSelected())
+        {
+            JOptionPane.showMessageDialog(null,new JLabel(  "<html><h2><I>All fields are</I><font color='red'> mandatory</font>!</h2></html>") , "Error", JOptionPane.ERROR_MESSAGE);
+            return ;
+            //JOptionPane.showMessageDialog(null, "All fields are mandatory!", "Error", JOptionPane.ERROR_MESSAGE);
+
+        }
+
+        else   if ( !phoneNumberValidator(contactText.getText())   ){
+            contactText.setBorder(BorderFactory.createLineBorder(Color.RED));
+            contactText.setForeground(Color.red);
+            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>Contact Number</I></font> should be<font color='green'> 10 digit</font>!</h2></html>") , "Error", JOptionPane.ERROR_MESSAGE);
+            // return;
+            //JOptionPane.showMessageDialog(null, "Contact number should be 10 digit" , "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        else   if (  !zipCodeValidator(zipText.getText()) ){
+            zipText.setBorder(BorderFactory.createLineBorder(Color.RED));
+            zipText.setForeground(Color.red);
+            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>Zip</I></font> should be<font color='green'> 5 digit</font>!</h2></html>") , "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+            //JOptionPane.showMessageDialog(null, "Zip should be 5 digit" , "Error", JOptionPane.ERROR_MESSAGE);
+            // return;
+        }
+
+        else if (!isAlpha(nameText.getText()))
+        {
+            nameText.setBorder(BorderFactory.createLineBorder(Color.RED));
+            nameText.setForeground(Color.red);
+            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>Name</I></font> must contain only<font color='green'> alphabets</font></h2>!</html>") , "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+            //JOptionPane.showMessageDialog(null, "Name must contain only alphabets." , "Error", JOptionPane.ERROR_MESSAGE);
+            //return;
+        }
+        else if (!isAlpha(cityText.getText()))
+        {
+            cityText.setBorder(BorderFactory.createLineBorder(Color.RED));
+            cityText.setForeground(Color.red);
+            JOptionPane.showMessageDialog(null, new JLabel("<html><h2>Name of the<font color='red'><I> City</I></font> must contain only<font color='green'> alphabets</font>!</h2></html>") , "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+            //JOptionPane.showMessageDialog(null, "City name must contain only alphabets." , "Error", JOptionPane.ERROR_MESSAGE);
+            //return;
+        }
+
+        else   if ( !emailValidator(emailText.getText()) ){
+            emailText.setBorder(BorderFactory.createLineBorder(Color.RED));
+            emailText.setForeground(Color.red);
+            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>Email ID</I></font> must be in<font color='green'> correct format</font>!</h2></html>") , "Error", JOptionPane.ERROR_MESSAGE);
+            //           JOptionPane.showMessageDialog(null, "Email ID must be in correct format!" , "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        //
+        //
+        //
+
+        else{
+
+            //             int n = JOptionPane.showConfirmDialog(null,"Would you like to submit the form?","CONFIRMATION REQUIRED",JOptionPane.YES_NO_OPTION);
+            int n = JOptionPane.showConfirmDialog(null,new JLabel("<html><h2>Would you like to<font color='green'><I> submit</I></font> the form?</h2></html>"),
+                "CONFIRMATION REQUIRED",JOptionPane.YES_NO_OPTION);
+
+            if(n == 0)
+            {
+                PatientRequest patientrequest = system.getPatientRequestDirectory().addPatientRequest();
+
+                patientrequest.setPatientID(uidText.getText()); //UID, receiverID
+                patientrequest.setName(nameText.getText()); // Name
+                patientrequest.setDob(dobDateField.getDate()); // DOB
+
+                patientrequest.setAge(Integer.parseInt(ageText.getText())); // Age
+                patientrequest.setGender((String)genderJComboBox.getSelectedItem()); // gender
+
+                patientrequest.setStreetAddress(streetText.getText()); // streetAddress
+                patientrequest.setCity(cityText.getText()); // city
+                patientrequest.setState((String) stateJComboBox.getSelectedItem()); // state
+                patientrequest.setZipCode(Integer.parseInt(zipText.getText())); // zipCode
+                patientrequest.setContact(Integer.parseInt(contactText.getText())); // contact
+                patientrequest.setEmailID(emailText.getText()); // emailID
+                patientrequest.setStatus("New Request"); // status
+                patientrequest.setdP(tempdP);
+
+                //JOptionPane.showMessageDialog(null, "Thank you for registering for HELP! We will soon get back to you. Take Care!");
+                JOptionPane.showMessageDialog(null, new JLabel("<html><h2>Thank you for registering for<font color='green'><I><B> HELP!</B></I></font> We will soon get back to you. <font color='green'><I><B>Take Care!!</B></I></font></h2></html>"));
+
+                dB4OUtil.storeSystem(system);
+                disableAllButton();
+            }}
+
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
