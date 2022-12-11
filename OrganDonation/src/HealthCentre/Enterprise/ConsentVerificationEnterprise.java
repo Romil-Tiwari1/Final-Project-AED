@@ -4,8 +4,6 @@
  */
 package HealthCentre.Enterprise;
 
-
-
 import HealthCentre.UserRole.UserRole;
 import java.util.ArrayList;
 /**
