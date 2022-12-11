@@ -7,10 +7,6 @@ package UserInterface.Admin;
 import HealthCentre.DB4OUtil.DB4OUtil;
 import HealthCentre.EcoSystem;
 import HealthCentre.Enterprise.Enterprise;
-import static HealthCentre.Enterprise.Enterprise.EnterpriseType.CovidCentre;
-import static HealthCentre.Enterprise.Enterprise.EnterpriseType.Government;
-import static HealthCentre.Enterprise.Enterprise.EnterpriseType.Legal;
-import static HealthCentre.Enterprise.Enterprise.EnterpriseType.PlasmaBank;
 import HealthCentre.Organization.Organization;
 import HealthCentre.Organization.Organization.CovidCentreType;
 import HealthCentre.Organization.Organization.GovernmentType;
@@ -62,51 +58,8 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         //        organizationJComboBox.addItem(type);
        // }
        
-       System.out.println(enterprise.getEnterpriseType());
-       System.out.println(enterprise.getEnterpriseType().toString().equals(PlasmaBank.toString()));
-       if(enterprise.getEnterpriseType().toString().equals(Legal.toString())){
-        for(Organization.LegalType legalType: Organization.LegalType.values()){
-            if (legalType.getValue().equals(Organization.LegalType.LegalOfficer.getValue())){
-                organizationJComboBox.addItem(legalType);
-            }
-        }
-        }
-       
-       else if(enterprise.getEnterpriseType().toString().equals(PlasmaBank.toString())){
-           System.out.println("1");
-//        for(Organization.PlasmaBankType plasmaType: Organization.PlasmaBankType.values()){
-//            System.out.println("1");
-//            System.out.println(plasmaType.getValue());
-//            System.out.println(Organization.PlasmaBankType.PlasmaBank.getValue());
-//            if (plasmaType.getValue().equals(Organization.PlasmaBankType.PlasmaBank.getValue())){
-//                organizationJComboBox.addItem(plasmaType);
-//            }
-//        }
-        }
-       else if(enterprise.getEnterpriseType().toString().equals(CovidCentre.toString())){
-        for(Organization.CovidCentreType covidType: Organization.CovidCentreType.values()){
-            if (covidType.getValue().equals(Organization.CovidCentreType.CovidCentre.getValue())){
-                organizationJComboBox.addItem(covidType);
-            }
-        }
-        }
-       else if(enterprise.getEnterpriseType().toString().equals(Government.toString())){
-        for(Organization.GovernmentType govtType: Organization.GovernmentType.values()){
-            if (govtType.getValue().equals(Organization.GovernmentType.Government.getValue())){
-                organizationJComboBox.addItem(govtType);
-            }
-        }
-        }
-       else{
-        for (Organization.Type type : Organization.Type.values()){            
-            if (type.getValue().equals(Organization.Type.SystemCoordinator.getValue())
-                    ||type.getValue().equals(Organization.Type.Doctor.getValue())
-                    ||type.getValue().equals(Organization.Type.LabCoordinator.getValue())
-                    )
-                organizationJComboBox.addItem(type);
-        }
-       
-    }
+      
+
     }
     private void populateTable(){
         DefaultTableModel model = (DefaultTableModel) organizationJTable.getModel();

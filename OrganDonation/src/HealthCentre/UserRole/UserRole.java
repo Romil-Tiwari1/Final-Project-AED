@@ -24,7 +24,8 @@ public abstract class UserRole {
         LegalOfficer("LegalOfficer"),
         Pathologist("Pathologist"),
         PlasmaBankCoordinator("PlasmaBankCoordinator"),
-        SystemCoordinator("SystemCoordinator");
+        SystemCoordinator("SystemCoordinator"),
+        ConsentVerificationRole("ConsentVerificationRole");
         
         private String value;
         private RoleType(String value){

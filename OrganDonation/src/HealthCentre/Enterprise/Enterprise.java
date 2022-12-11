@@ -24,11 +24,7 @@ public abstract class Enterprise extends Organization{
     
     public enum EnterpriseType{
         Hospital("Hospital"),
-        PlasmaBank("PlasmaBank"),
-        OrganBank("OrganBank"),
-        Legal("Legal"),
-        CovidCentre("CovidCentre"),
-        Government("Government");
+        OrganBank("OrganBank");
         
         
         
