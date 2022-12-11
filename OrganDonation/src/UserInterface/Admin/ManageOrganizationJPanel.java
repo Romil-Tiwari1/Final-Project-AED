@@ -7,7 +7,6 @@ package UserInterface.Admin;
 import HealthCentre.DB4OUtil.DB4OUtil;
 import HealthCentre.EcoSystem;
 import HealthCentre.Enterprise.Enterprise;
-import static HealthCentre.Enterprise.Enterprise.EnterpriseType.Donation;
 import HealthCentre.Organization.Organization;
 
 import HealthCentre.Organization.Organization.DonationType;

@@ -32,7 +32,8 @@ public abstract class Organization {
         Admin("Admin Organization"),
         SystemCoordinator("System Coorinator Organization"),
         Doctor("Doctor Organization"), 
-        LabCoordinator(" LabCoordinator Organization");
+        LabCoordinator(" LabCoordinator Organization"),
+        ConsentVerification("Consent Verification Organization ");
         private String value;
         private Type(String value) {
             this.value = value;
@@ -55,7 +56,19 @@ public abstract class Organization {
             return value;
         }
      }
+   public enum ConsentVerificationType {
+         
+        ConsentVerification("Consent Verification");
+        private String value;
 
+        private ConsentVerificationType(String value) {
+            this.value = value;
+        }
+
+        public String getValue() {
+            return value;
+        }
+     }
     
     public enum DonationType {
          
