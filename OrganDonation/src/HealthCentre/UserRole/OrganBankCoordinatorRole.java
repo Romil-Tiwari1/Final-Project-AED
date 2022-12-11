@@ -27,5 +27,4 @@ public class OrganBankCoordinatorRole extends UserRole {
                 (OrganBankOrganization) organization, enterprise,
                 ecoSystem, network);
     }
-
 }
