@@ -6,13 +6,14 @@ package HealthCentre.Enterprise;
 
 import HealthCentre.UserRole.UserRole;
 import java.util.ArrayList;
+
 /**
  *
  * @author shrutisrivastava
  */
-public class ConsentVerificationEnterprise extends Enterprise{
-public ConsentVerificationEnterprise(String name){
-        super(name,EnterpriseType.ConsentVerification);
+public class OrganTransplantCentre extends Enterprise {
+public OrganTransplantCentre(String name){
+        super(name,EnterpriseType.OrganTransplantCentre);
     }
     @Override
     public ArrayList<UserRole> getSupportedRole() {

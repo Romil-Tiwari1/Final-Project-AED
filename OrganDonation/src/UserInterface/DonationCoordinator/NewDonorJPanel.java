@@ -50,7 +50,6 @@ public class NewDonorJPanel extends javax.swing.JPanel {
     /**
      * Creates new form NewDonorJPanel
      */
-    
     private boolean emailValid;
     private EcoSystem system;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
@@ -59,73 +58,71 @@ public class NewDonorJPanel extends javax.swing.JPanel {
     private ButtonGroup radioGroup2;
     private ButtonGroup radioGroup3;
     private ButtonGroup radioGroup4;
-            
-    public NewDonorJPanel(EcoSystem system)
-    {
+
+    public NewDonorJPanel(EcoSystem system) {
         initComponents();
         this.system = system;
         this.radioGroup1 = new ButtonGroup();
         this.radioGroup2 = new ButtonGroup();
         this.radioGroup3 = new ButtonGroup();
         this.radioGroup4 = new ButtonGroup();
-       
-        
-        
-       
+
         emailSuccessLabel.setVisible(false);
         emailValidateMessage.setVisible(false);
-        
-       // ButtonGroup radioGroup1 = new ButtonGroup();
+
+        // ButtonGroup radioGroup1 = new ButtonGroup();
         radioGroup1.add(buttonYesGroup1);
         radioGroup1.add(buttonNoGroup1);
-  
-      //  ButtonGroup radioGroup2 = new ButtonGroup();
+
+        //  ButtonGroup radioGroup2 = new ButtonGroup();
         radioGroup2.add(buttonYesGroup2);
         radioGroup2.add(buttonNoGroup2);
-        
-      //  ButtonGroup radioGroup3 = new ButtonGroup();
+
+        //  ButtonGroup radioGroup3 = new ButtonGroup();
         radioGroup3.add(buttonYesGroup3);
         radioGroup3.add(buttonNoGroup3);
-        
-       // ButtonGroup radioGroup4 = new ButtonGroup();
+
+        // ButtonGroup radioGroup4 = new ButtonGroup();
         radioGroup4.add(buttonYesGroup4);
         radioGroup4.add(buttonNoGroup4);
-        
+
         populateOrganTypeComboBox();
         populateGenderComboBox();
         populateStateComboBox();
-    
-    
+
     }
 
-  private void populateOrganTypeComboBox(){
-           
-           OrganTypeJComboBox.addItem("eye");
-           OrganTypeJComboBox.addItem("kidney");
-           OrganTypeJComboBox.addItem("lungs");
-           OrganTypeJComboBox.addItem("intestine");
-           OrganTypeJComboBox.addItem("liver");
-           OrganTypeJComboBox.addItem("tissue");
-           OrganTypeJComboBox.addItem("heart");
-           OrganTypeJComboBox.addItem("pancreas");
-           
-        }
-  
-  private void populateGenderComboBox(){
-           genderJComboBox.addItem("Male");
-           genderJComboBox.addItem("Female");
-           genderJComboBox.addItem("Other");
-        }
-  
-  private void populateStateComboBox(){
-           stateJComboBox.addItem("California");
-           stateJComboBox.addItem("Massachusetts");
-           stateJComboBox.addItem("Georgia");
-           stateJComboBox.addItem("Arizona");
-           stateJComboBox.addItem("Texas");
-           stateJComboBox.addItem("Florida");
-           stateJComboBox.addItem("Illinois");
-      }
+    private void populateOrganTypeComboBox() {
+        OrganTypeJComboBox.addItem("");
+        OrganTypeJComboBox.addItem("eye");
+        OrganTypeJComboBox.addItem("kidney");
+        OrganTypeJComboBox.addItem("lungs");
+        OrganTypeJComboBox.addItem("intestine");
+        OrganTypeJComboBox.addItem("liver");
+        OrganTypeJComboBox.addItem("tissue");
+        OrganTypeJComboBox.addItem("heart");
+        OrganTypeJComboBox.addItem("pancreas");
+
+    }
+
+    private void populateGenderComboBox() {
+        genderJComboBox.addItem("");
+        genderJComboBox.addItem("Male");
+        genderJComboBox.addItem("Female");
+        genderJComboBox.addItem("Other");
+    }
+
+    private void populateStateComboBox() {
+        stateJComboBox.addItem("");
+        stateJComboBox.addItem("California");
+        stateJComboBox.addItem("Massachusetts");
+        stateJComboBox.addItem("Georgia");
+        stateJComboBox.addItem("Arizona");
+        stateJComboBox.addItem("Texas");
+        stateJComboBox.addItem("Florida");
+        stateJComboBox.addItem("Illinois");
+    }
+
     public static boolean phoneNumberValidator(String contact) {
         Pattern pattern;
         Matcher matcher;
@@ -133,7 +130,8 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         pattern = Pattern.compile(PHONE_PATTERN);
         matcher = pattern.matcher(contact);
         return matcher.matches();
-        }
+    }
+
     public static boolean zipCodeValidator(String zip) {
         Pattern pattern;
         Matcher matcher;
@@ -141,7 +139,8 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         pattern = Pattern.compile(zip_pattern);
         matcher = pattern.matcher(zip);
         return matcher.matches();
-        } 
+    }
+
     public static boolean emailValidator(String email) {
         Pattern pattern;
         Matcher matcher;
@@ -149,13 +148,14 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         pattern = Pattern.compile(EMAIL_PATTERN);
         matcher = pattern.matcher(email);
         return matcher.matches();
-        }
+    }
+
     public boolean isAlpha(String name) {
         return name.matches("[a-zA-Z]+");
-        }
+    }
 
-    private void disableAllButton(){
-    
+    private void disableAllButton() {
+
         uidText.setEnabled(false);
         nameText.setEnabled(false);
         dobDateField.setEnabled(false);
@@ -177,9 +177,9 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         buttonYesGroup4.setEnabled(false);
         buttonNoGroup4.setEnabled(false);
         addPhotoButton.setEnabled(false);
-    
-    
+
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -236,6 +236,12 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         emailValidateMessage = new javax.swing.JLabel();
         emailSuccessLabel = new javax.swing.JLabel();
         dobDateField = new com.toedter.calendar.JDateChooser();
+        jSeparator3 = new javax.swing.JSeparator();
+        jLabel1 = new javax.swing.JLabel();
+        jSeparator4 = new javax.swing.JSeparator();
+        jSeparator5 = new javax.swing.JSeparator();
+        jSeparator6 = new javax.swing.JSeparator();
+        jSeparator7 = new javax.swing.JSeparator();
 
         setBackground(new java.awt.Color(199, 247, 247));
         addMouseListener(new java.awt.event.MouseAdapter() {
@@ -246,44 +252,34 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Name");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, -1, -1));
 
-        nameText.setBackground(new java.awt.Color(0, 0, 0));
         nameText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        nameText.setForeground(new java.awt.Color(255, 255, 255));
         nameText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nameTextActionPerformed(evt);
             }
         });
-        add(nameText, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 180, -1));
+        add(nameText, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 150, 180, -1));
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(676, 218, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("UID");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 180, -1, -1));
+        jLabel5.setText("Unique ID");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 150, -1, 30));
 
-        uidText.setBackground(new java.awt.Color(0, 0, 0));
         uidText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        uidText.setForeground(new java.awt.Color(255, 255, 255));
-        add(uidText, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 180, 180, -1));
+        add(uidText, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 150, 180, -1));
 
         jLabel6.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("DOB");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, -1, -1));
+        jLabel6.setText("Date of Birth");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Age");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 220, -1, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 200, -1, 30));
 
-        ageText.setBackground(new java.awt.Color(0, 0, 0));
         ageText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        ageText.setForeground(new java.awt.Color(255, 255, 255));
         ageText.setEnabled(false);
         ageText.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -295,80 +291,61 @@ public class NewDonorJPanel extends javax.swing.JPanel {
                 ageTextKeyPressed(evt);
             }
         });
-        add(ageText, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 220, 180, -1));
+        add(ageText, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 200, 180, -1));
 
         jLabel8.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Gender");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 320, -1, -1));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, -1, 30));
 
         jLabel9.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("OrganType");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 320, -1, 20));
+        jLabel9.setText("Organ Choice");
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 310, -1, 30));
 
-        streetText.setBackground(new java.awt.Color(0, 0, 0));
         streetText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        streetText.setForeground(new java.awt.Color(255, 255, 255));
-        add(streetText, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 490, 180, -1));
+        add(streetText, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 460, 180, -1));
 
         jLabel10.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Do you have any inherited disease?");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 440, 360, -1));
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 470, 360, -1));
 
         jLabel11.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 480, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Street address");
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 490, -1, -1));
+        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 460, -1, 30));
 
         jLabel13.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("City");
-        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 530, -1, -1));
+        jLabel13.setText("Current City");
+        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 520, -1, 30));
 
-        cityText.setBackground(new java.awt.Color(0, 0, 0));
         cityText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        cityText.setForeground(new java.awt.Color(255, 255, 255));
-        add(cityText, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 530, 180, -1));
+        add(cityText, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 520, 180, -1));
 
         jLabel14.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("State");
-        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 580, -1, -1));
+        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 580, -1, 30));
 
         jLabel15.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setText("ZipCode");
-        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 630, -1, -1));
+        jLabel15.setText("Zip Code");
+        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 640, -1, 30));
 
-        zipText.setBackground(new java.awt.Color(0, 0, 0));
         zipText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        zipText.setForeground(new java.awt.Color(255, 255, 255));
-        add(zipText, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 630, 180, -1));
+        add(zipText, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 640, 180, -1));
 
         jLabel16.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Contact Number");
-        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 270, -1, -1));
+        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 254, -1, 30));
 
-        contactText.setBackground(new java.awt.Color(0, 0, 0));
         contactText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        contactText.setForeground(new java.awt.Color(255, 255, 255));
-        add(contactText, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 270, 180, -1));
+        add(contactText, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 250, 180, -1));
 
         jLabel17.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Email ID");
-        add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, -1, -1));
+        add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, -1, 30));
 
-        emailText.setBackground(new java.awt.Color(0, 0, 0));
         emailText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        emailText.setForeground(new java.awt.Color(255, 255, 255));
         emailText.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 emailTextMouseClicked(evt);
@@ -379,22 +356,19 @@ public class NewDonorJPanel extends javax.swing.JPanel {
                 uEmailKeyTyped(evt);
             }
         });
-        add(emailText, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, 170, -1));
+        add(emailText, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, 180, -1));
 
         jLabel19.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("Do you have history of substance abuse?");
-        add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 510, -1, -1));
+        add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 530, -1, -1));
 
         jLabel20.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setText("Are you drug addict? ");
-        add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 570, -1, -1));
+        add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 580, -1, -1));
 
         jLabel22.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("Do you have any history of accidents?");
-        add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 650, 600, 20));
+        add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 650, 380, 20));
 
         btnSubmit.setBackground(new java.awt.Color(31, 31, 31));
         btnSubmit.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -406,7 +380,7 @@ public class NewDonorJPanel extends javax.swing.JPanel {
                 btnSubmitActionPerformed(evt);
             }
         });
-        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 800, 110, 40));
+        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 410, 120, 40));
 
         addPhotoButton.setBackground(new java.awt.Color(31, 31, 31));
         addPhotoButton.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -418,72 +392,64 @@ public class NewDonorJPanel extends javax.swing.JPanel {
                 addPhotoButtonActionPerformed(evt);
             }
         });
-        add(addPhotoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 250, 120, 40));
+        add(addPhotoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 310, 130, 40));
 
         buttonYesGroup2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        buttonYesGroup2.setForeground(new java.awt.Color(255, 255, 255));
         buttonYesGroup2.setText("Yes");
-        add(buttonYesGroup2, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 550, -1, -1));
+        add(buttonYesGroup2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 530, -1, -1));
 
         buttonNoGroup2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        buttonNoGroup2.setForeground(new java.awt.Color(255, 255, 255));
         buttonNoGroup2.setText("No");
-        add(buttonNoGroup2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 550, -1, -1));
+        add(buttonNoGroup2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 530, -1, -1));
 
         buttonNoGroup1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        buttonNoGroup1.setForeground(new java.awt.Color(255, 255, 255));
         buttonNoGroup1.setText("No");
-        add(buttonNoGroup1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 470, -1, -1));
+        add(buttonNoGroup1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 470, -1, -1));
 
         buttonYesGroup1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        buttonYesGroup1.setForeground(new java.awt.Color(255, 255, 255));
         buttonYesGroup1.setText("Yes");
-        add(buttonYesGroup1, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 470, -1, -1));
+        add(buttonYesGroup1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 470, -1, -1));
 
         buttonNoGroup3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        buttonNoGroup3.setForeground(new java.awt.Color(255, 255, 255));
         buttonNoGroup3.setText("No");
-        add(buttonNoGroup3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 610, -1, -1));
+        add(buttonNoGroup3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 590, -1, -1));
 
         buttonYesGroup3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        buttonYesGroup3.setForeground(new java.awt.Color(255, 255, 255));
         buttonYesGroup3.setText("Yes");
         buttonYesGroup3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonYesGroup3ActionPerformed(evt);
             }
         });
-        add(buttonYesGroup3, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 610, -1, -1));
+        add(buttonYesGroup3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 590, -1, -1));
 
         buttonNoGroup4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        buttonNoGroup4.setForeground(new java.awt.Color(255, 255, 255));
         buttonNoGroup4.setText("No");
-        add(buttonNoGroup4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 690, -1, -1));
+        add(buttonNoGroup4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 650, -1, -1));
 
         buttonYesGroup4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        buttonYesGroup4.setForeground(new java.awt.Color(255, 255, 255));
         buttonYesGroup4.setText("Yes");
         buttonYesGroup4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonYesGroup4ActionPerformed(evt);
             }
         });
-        add(buttonYesGroup4, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 690, -1, -1));
+        add(buttonYesGroup4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 650, -1, -1));
 
         lblProfilePicture.setBackground(new java.awt.Color(0, 0, 0));
-        lblProfilePicture.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 255, 204)));
-        add(lblProfilePicture, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 100, 130, 130));
+        lblProfilePicture.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        add(lblProfilePicture, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 150, 130, 130));
 
         lblBack.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lblBack.setForeground(new java.awt.Color(255, 255, 255));
-        lblBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back_32px.png"))); // NOI18N
+        lblBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back.png"))); // NOI18N
         lblBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblBack.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblBackMouseClicked(evt);
             }
         });
-        add(lblBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 790, -1, 54));
+        add(lblBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 590, -1, 60));
 
         jButton2.setBackground(new java.awt.Color(31, 31, 31));
         jButton2.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -495,40 +461,34 @@ public class NewDonorJPanel extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 750, 120, 40));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 500, 120, 40));
 
-        stateJComboBox.setBackground(new java.awt.Color(0, 0, 0));
         stateJComboBox.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        stateJComboBox.setForeground(new java.awt.Color(255, 255, 255));
         stateJComboBox.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         stateJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 stateJComboBoxActionPerformed(evt);
             }
         });
-        add(stateJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 580, 180, -1));
+        add(stateJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 580, 180, -1));
 
-        OrganTypeJComboBox.setBackground(new java.awt.Color(0, 0, 0));
         OrganTypeJComboBox.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        OrganTypeJComboBox.setForeground(new java.awt.Color(255, 255, 255));
         OrganTypeJComboBox.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         OrganTypeJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 OrganTypeJComboBoxActionPerformed(evt);
             }
         });
-        add(OrganTypeJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 320, 180, -1));
+        add(OrganTypeJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 310, 180, -1));
 
-        genderJComboBox.setBackground(new java.awt.Color(0, 0, 0));
         genderJComboBox.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        genderJComboBox.setForeground(new java.awt.Color(255, 255, 255));
         genderJComboBox.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         genderJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 genderJComboBoxActionPerformed(evt);
             }
         });
-        add(genderJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, 170, -1));
+        add(genderJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 310, 170, -1));
 
         jPanel3.setBackground(new java.awt.Color(31, 31, 31));
         jPanel3.setPreferredSize(new java.awt.Dimension(926, 70));
@@ -543,9 +503,8 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, 1666, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 1395, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 295, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -556,33 +515,33 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         );
 
         add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1690, -1));
-        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 1140, 20));
+        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 740, 1150, 20));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("BIO Details");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, -1, -1));
+        jLabel2.setText("BIO DETAILS");
+        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 80, 140, 40));
 
         jLabel23.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("Address Details");
-        add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 420, -1, -1));
+        jLabel23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 390, -1, 40));
 
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 370, 20, 360));
+        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 370, 20, 370));
 
         jLabel24.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setText("Donor Details");
-        add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 390, -1, -1));
+        jLabel24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 390, -1, -1));
 
         emailValidateMessage.setBackground(new java.awt.Color(0, 0, 0));
         emailValidateMessage.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         emailValidateMessage.setText("Email format incorrect!");
-        add(emailValidateMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
+        add(emailValidateMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
 
         emailSuccessLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/tick.gif"))); // NOI18N
-        add(emailSuccessLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 270, 30, 30));
+        add(emailSuccessLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, 30, 30));
 
         dobDateField.setBackground(new java.awt.Color(0, 0, 0));
         dobDateField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -608,27 +567,43 @@ public class NewDonorJPanel extends javax.swing.JPanel {
                 dobDateFielduDobKeyTyped(evt);
             }
         });
-        add(dobDateField, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 170, -1));
+        add(dobDateField, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, 180, -1));
+
+        jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 10, 370));
+
+        jLabel1.setText("Back");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 660, 50, 40));
+        add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 1150, 20));
+
+        jSeparator5.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 370, 20, 370));
+
+        jSeparator6.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 370, 20, 370));
+
+        jSeparator7.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 370, 20, 370));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
         // TODO add your handling code here:
-        Date currentDate = new Date(); 
-         if ( lblProfilePicture == null ){
+        Date currentDate = new Date();
+        if (lblProfilePicture == null) {
             lblProfilePicture.setBorder(BorderFactory.createLineBorder(Color.RED));
             lblProfilePicture.setForeground(Color.red);
             addPhotoButton.setBorder(BorderFactory.createLineBorder(Color.RED));
-            addPhotoButton.setForeground(Color.red);       
+            addPhotoButton.setForeground(Color.red);
         }
-        if ( stateJComboBox.getSelectedItem().equals("") ){
+        if (stateJComboBox.getSelectedItem().equals("")) {
             stateJComboBox.setBorder(BorderFactory.createLineBorder(Color.RED));
             stateJComboBox.setForeground(Color.red);
         }
-        if ( genderJComboBox.getSelectedItem().equals("") ){
+        if (genderJComboBox.getSelectedItem().equals("")) {
             genderJComboBox.setBorder(BorderFactory.createLineBorder(Color.RED));
             genderJComboBox.setForeground(Color.red);
         }
-        if ( OrganTypeJComboBox.getSelectedItem().equals("") ){
+        if (OrganTypeJComboBox.getSelectedItem().equals("")) {
             OrganTypeJComboBox.setBorder(BorderFactory.createLineBorder(Color.RED));
             OrganTypeJComboBox.setForeground(Color.red);
         }
@@ -639,7 +614,7 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         if (uidText.getText().isEmpty()) {
             uidText.setBorder(BorderFactory.createLineBorder(Color.RED));
             uidText.setForeground(Color.red);
-        } 
+        }
         if (emailText.getText().isEmpty()) {
             emailText.setBorder(BorderFactory.createLineBorder(Color.RED));
             emailText.setForeground(Color.red);
@@ -660,150 +635,126 @@ public class NewDonorJPanel extends javax.swing.JPanel {
             streetText.setBorder(BorderFactory.createLineBorder(Color.RED));
             streetText.setForeground(Color.red);
         }
-   
-        if (dobDateField.getDate() == null ) {
+
+        if (dobDateField.getDate() == null) {
             dobDateField.setBorder(BorderFactory.createLineBorder(Color.RED));
             dobDateField.setForeground(Color.red);
         }
-         if (ageText.getText().isEmpty()) {
+        if (ageText.getText().isEmpty()) {
             ageText.setBorder(BorderFactory.createLineBorder(Color.RED));
             ageText.setForeground(Color.red);
         }
-       //
-       //
-       //
-       //
-       
-        if (    nameText.getText().isEmpty()        || emailText.getText().isEmpty()        || cityText.getText().isEmpty() ||
-                contactText.getText().isEmpty()     || zipText.getText().isEmpty()          || streetText.getText().isEmpty() || 
-                uidText.getText().isEmpty()         || 
-                dobDateField.getDate() == null      || 
-                ageText.getText().isEmpty()         ||
-                String.valueOf(genderJComboBox.getSelectedItem()).equals("") || 
-                String.valueOf(OrganTypeJComboBox.getSelectedItem()).equals("") || 
-                String.valueOf(stateJComboBox.getSelectedItem()).equals(""))
-            { 
-            JOptionPane.showMessageDialog(null,new JLabel(  "<html><h2><I>All fields are</I><font color='red'> mandatory</font>!</h2></html>") , "Error", JOptionPane.ERROR_MESSAGE);
-             return ;
-            }
-   
-        
-        else if(  !buttonNoGroup1.isSelected()  &&  !buttonYesGroup1.isSelected()   ||
-                  !buttonNoGroup2.isSelected()  &&  !buttonYesGroup2.isSelected()   ||
-                  !buttonNoGroup3.isSelected()  &&  !buttonYesGroup3.isSelected()   ||
-                  !buttonNoGroup4.isSelected()  &&  !buttonYesGroup4.isSelected()   )
-        {
-        JOptionPane.showMessageDialog(null,new JLabel("<html><h2><I>All fields are</I><font color='red'> mandatory</font>!</h2></html>"), "Error", JOptionPane.ERROR_MESSAGE);
-        return;
-        }
-        
-    
-        else if (!isAlpha(nameText.getText()))
-        {
-         nameText.setBorder(BorderFactory.createLineBorder(Color.RED));
-            nameText.setForeground(Color.red);
-            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>Name</I></font> must contain only<font color='green'> alphabets</font></h2>!</html>") , "Error", JOptionPane.ERROR_MESSAGE);
+        //
+        //
+        //
+        //
+
+        if (nameText.getText().isEmpty() || emailText.getText().isEmpty() || cityText.getText().isEmpty()
+                || contactText.getText().isEmpty() || zipText.getText().isEmpty() || streetText.getText().isEmpty()
+                || uidText.getText().isEmpty()
+                || dobDateField.getDate() == null
+                || ageText.getText().isEmpty()
+                || String.valueOf(genderJComboBox.getSelectedItem()).equals("")
+                || String.valueOf(OrganTypeJComboBox.getSelectedItem()).equals("")
+                || String.valueOf(stateJComboBox.getSelectedItem()).equals("")) {
+            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><I>All fields are</I><font color='red'> mandatory</font>!</h2></html>"), "Error", JOptionPane.ERROR_MESSAGE);
             return;
-        }
-        else if (!isAlpha(cityText.getText()))
-        {
-         cityText.setBorder(BorderFactory.createLineBorder(Color.RED));
+        } else if (!buttonNoGroup1.isSelected() && !buttonYesGroup1.isSelected()
+                || !buttonNoGroup2.isSelected() && !buttonYesGroup2.isSelected()
+                || !buttonNoGroup3.isSelected() && !buttonYesGroup3.isSelected()
+                || !buttonNoGroup4.isSelected() && !buttonYesGroup4.isSelected()) {
+            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><I>All fields are</I><font color='red'> mandatory</font>!</h2></html>"), "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        } else if (!isAlpha(nameText.getText())) {
+            nameText.setBorder(BorderFactory.createLineBorder(Color.RED));
+            nameText.setForeground(Color.red);
+            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>Name</I></font> must contain only<font color='green'> alphabets</font></h2>!</html>"), "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        } else if (!isAlpha(cityText.getText())) {
+            cityText.setBorder(BorderFactory.createLineBorder(Color.RED));
             cityText.setForeground(Color.red);
-         JOptionPane.showMessageDialog(null, new JLabel("<html><h2>Name of the<font color='red'><I> City</I></font> must contain only<font color='green'> alphabets</font>!</h2></html>") , "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, new JLabel("<html><h2>Name of the<font color='red'><I> City</I></font> must contain only<font color='green'> alphabets</font>!</h2></html>"), "Error", JOptionPane.ERROR_MESSAGE);
             return;
             //JOptionPane.showMessageDialog(null, "City name must contain only alphabets." , "Error", JOptionPane.ERROR_MESSAGE);
             //return;
-        }
-        
-        else   if ( !phoneNumberValidator(contactText.getText())   ){
-           //JOptionPane.showMessageDialog(null, "Contact number should be 10 digit and Zip should be 5 digit" , "Error", JOptionPane.ERROR_MESSAGE);
-           JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>Contact Number</I></font> should be<font color='green'> 10 digit</font>!</h2></html>") , "Error", JOptionPane.ERROR_MESSAGE);
-           // return;
-           return;
-        }
-        else   if ( !zipCodeValidator(zipText.getText()) ){
-           //JOptionPane.showMessageDialog(null, "Contact number should be 10 digit and Zip should be 5 digit" , "Error", JOptionPane.ERROR_MESSAGE);
-           JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>Zip</I></font> should be<font color='green'> 5 digit</font>!</h2></html>") , "Error", JOptionPane.ERROR_MESSAGE);
-           return;
-        }
-        else   if ( !emailValidator(emailText.getText()) ){
-           //JOptionPane.showMessageDialog(null, "Email ID must be in correct format!" , "Error", JOptionPane.ERROR_MESSAGE);
-JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>Email ID</I></font> must be in<font color='green'> correct format</font>!</h2></html>") , "Error", JOptionPane.ERROR_MESSAGE);
+        } else if (!phoneNumberValidator(contactText.getText())) {
+            //JOptionPane.showMessageDialog(null, "Contact number should be 10 digit and Zip should be 5 digit" , "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>Contact Number</I></font> should be<font color='green'> 10 digit</font>!</h2></html>"), "Error", JOptionPane.ERROR_MESSAGE);
+            // return;
+            return;
+        } else if (!zipCodeValidator(zipText.getText())) {
+            //JOptionPane.showMessageDialog(null, "Contact number should be 10 digit and Zip should be 5 digit" , "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>Zip</I></font> should be<font color='green'> 5 digit</font>!</h2></html>"), "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        } else if (!emailValidator(emailText.getText())) {
+            //JOptionPane.showMessageDialog(null, "Email ID must be in correct format!" , "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>Email ID</I></font> must be in<font color='green'> correct format</font>!</h2></html>"), "Error", JOptionPane.ERROR_MESSAGE);
 
-           return;
-        } 
-        
-    
-          
-          
-          else{
+            return;
+        } else {
 
-            int n = JOptionPane.showConfirmDialog(null,new JLabel("<html><h2>Would you like to<font color='green'><I> submit</I></font> the form?</h2></html>"),
-                    "CONFIRMATION REQUIRED",JOptionPane.YES_NO_OPTION);
+            int n = JOptionPane.showConfirmDialog(null, new JLabel("<html><h2>Would you like to<font color='green'><I> submit</I></font> the form?</h2></html>"),
+                    "CONFIRMATION REQUIRED", JOptionPane.YES_NO_OPTION);
 
-            if(n == 0)
-            { 
-            
-        DonorRequest donorRequest = system.getDonorRequestDirectory().addDonorRequest(); 
-        donorRequest.setDonorID(uidText.getText()); // UID
-        donorRequest.setName(nameText.getText()); // Name
-        donorRequest.setDob(dobDateField.getDate()); // DOB 
-        donorRequest.setAge(Integer.parseInt(ageText.getText())); // Age
-        donorRequest.setGender((String) genderJComboBox.getSelectedItem()); // gender
-        donorRequest.setOrganType((String) OrganTypeJComboBox.getSelectedItem()); //organType
-        donorRequest.setStreetAddress(streetText.getText()); // streetAddress
-        donorRequest.setCity(cityText.getText()); // city
-        donorRequest.setState((String) stateJComboBox.getSelectedItem()); // state
-        donorRequest.setZipCode(Integer.parseInt(zipText.getText())); // zipCode
-        donorRequest.setContact(Integer.parseInt(contactText.getText())); // contact
-        donorRequest.setEmailID(emailText.getText()); // emailID
-        donorRequest.setStatus("New Request"); // status
-        //donorRequest.setImagePath(photoTextField.getText()); 
-        donorRequest.setdP(tempdP);
-        
-        for(DonorRequest dnr : system.getDonorRequestDirectory().getDonorRequestList()){
-            //System.out.println("PRINITNG IT HERE!!");
-           // System.out.println(dnr.getName());
-        }
-        
-        if(buttonYesGroup1.isSelected())
-        {donorRequest.setInheritedDisease(true); //  inheritedDisease
-        }
-        else if(buttonNoGroup1.isSelected())
-        {donorRequest.setInheritedDisease(false); //  inheritedDisease
-        }
-        
-        if(buttonYesGroup2.isSelected())
-        {donorRequest.setSubstanceAbuse(true); //  SubstanceAbuse
-        }
-        else if(buttonNoGroup2.isSelected())
-        {donorRequest.setSubstanceAbuse(false); //  SubstanceAbuse
-        }
-        
-        if(buttonYesGroup3.isSelected())
-        {donorRequest.setDrugAddict(true); //  DrugAddict
-        }
-        else if(buttonNoGroup3.isSelected())
-        {donorRequest.setDrugAddict(false); //  DrugAddict
-        }
-        
-        if(buttonYesGroup4.isSelected())
-        {donorRequest.setAccidentHistory(true); //   AccidentHistory
-        }
-        else if(buttonNoGroup4.isSelected())
-        {donorRequest.setAccidentHistory(false); //  AccidentHistory
-        }
+            if (n == 0) {
 
-        JOptionPane.showMessageDialog(null, new JLabel("<html><h2>Thank you for registering to<font color='green'><I><B> HELP</B></I></font>!</h2></html>"));
-        
-        dB4OUtil.storeSystem(system);
-        disableAllButton();
-        }}
+                DonorRequest donorRequest = system.getDonorRequestDirectory().addDonorRequest();
+                donorRequest.setDonorID(uidText.getText()); // UID
+                donorRequest.setName(nameText.getText()); // Name
+                donorRequest.setDob(dobDateField.getDate()); // DOB 
+                donorRequest.setAge(Integer.parseInt(ageText.getText())); // Age
+                donorRequest.setGender((String) genderJComboBox.getSelectedItem()); // gender
+                donorRequest.setOrganType((String) OrganTypeJComboBox.getSelectedItem()); //organType
+                donorRequest.setStreetAddress(streetText.getText()); // streetAddress
+                donorRequest.setCity(cityText.getText()); // city
+                donorRequest.setState((String) stateJComboBox.getSelectedItem()); // state
+                donorRequest.setZipCode(Integer.parseInt(zipText.getText())); // zipCode
+                donorRequest.setContact(Integer.parseInt(contactText.getText())); // contact
+                donorRequest.setEmailID(emailText.getText()); // emailID
+                donorRequest.setStatus("New Request"); // status
+                //donorRequest.setImagePath(photoTextField.getText()); 
+                donorRequest.setdP(tempdP);
+
+                for (DonorRequest dnr : system.getDonorRequestDirectory().getDonorRequestList()) {
+                    //System.out.println("PRINITNG IT HERE!!");
+                    // System.out.println(dnr.getName());
+                }
+
+                if (buttonYesGroup1.isSelected()) {
+                    donorRequest.setInheritedDisease(true); //  inheritedDisease
+                } else if (buttonNoGroup1.isSelected()) {
+                    donorRequest.setInheritedDisease(false); //  inheritedDisease
+                }
+
+                if (buttonYesGroup2.isSelected()) {
+                    donorRequest.setSubstanceAbuse(true); //  SubstanceAbuse
+                } else if (buttonNoGroup2.isSelected()) {
+                    donorRequest.setSubstanceAbuse(false); //  SubstanceAbuse
+                }
+
+                if (buttonYesGroup3.isSelected()) {
+                    donorRequest.setDrugAddict(true); //  DrugAddict
+                } else if (buttonNoGroup3.isSelected()) {
+                    donorRequest.setDrugAddict(false); //  DrugAddict
+                }
+
+                if (buttonYesGroup4.isSelected()) {
+                    donorRequest.setAccidentHistory(true); //   AccidentHistory
+                } else if (buttonNoGroup4.isSelected()) {
+                    donorRequest.setAccidentHistory(false); //  AccidentHistory
+                }
+
+                JOptionPane.showMessageDialog(null, new JLabel("<html><h2>Thank you for registering to<font color='green'><I><B> HELP</B></I></font>!</h2></html>"));
+
+                dB4OUtil.storeSystem(system);
+                disableAllButton();
+            }
+        }
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     private void addPhotoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPhotoButtonActionPerformed
         // TODO add your handling code here:
-       /* JFileChooser chooser1 = new JFileChooser();
+        /* JFileChooser chooser1 = new JFileChooser();
         chooser1.showOpenDialog(null);
         File f = chooser1.getSelectedFile();
         String filename = f.getAbsolutePath();
@@ -812,50 +763,43 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>E
         ImageIcon icon = new ImageIcon(filename);
         Image image = icon.getImage().getScaledInstance(jLabel23.getWidth(), jLabel23.getHeight(), Image.SCALE_SMOOTH);
         jLabel23.setIcon(icon);*/
-       
-       
-       JFileChooser file = new JFileChooser();
-          file.setCurrentDirectory(new File(System.getProperty("user.dir")));
-          //filter the files
-          FileNameExtensionFilter filter = new FileNameExtensionFilter("*.Images", "jpg","gif","png");
-          file.addChoosableFileFilter(filter);
-          int result = file.showSaveDialog(null);
-           //if the user click on save in Jfilechooser
-          if(result == JFileChooser.APPROVE_OPTION){
-              File selectedFile = file.getSelectedFile();
-              tempdP = new byte[(int) selectedFile.length()]; 
-                FileInputStream fis;
-             try {
-                 fis = new FileInputStream(selectedFile);
-                 fis.read(tempdP);
-                 fis.close();
-             } catch (IOException ex) {
-                 Logger.getLogger(NewDonorJPanel.class.getName()).log(Level.SEVERE, null, ex);
-             }             
-              lblProfilePicture.setIcon(ResizeImage(selectedFile.getAbsolutePath()));
-              lblProfilePicture.setIcon(setPicture(selectedFile.getAbsolutePath(),lblProfilePicture));
-          }
 
-          else if(result == JFileChooser.CANCEL_OPTION){
-             // System.out.println("No File Select");
-          }
-       
-          
-       
+        JFileChooser file = new JFileChooser();
+        file.setCurrentDirectory(new File(System.getProperty("user.dir")));
+        //filter the files
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("*.Images", "jpg", "gif", "png");
+        file.addChoosableFileFilter(filter);
+        int result = file.showSaveDialog(null);
+        //if the user click on save in Jfilechooser
+        if (result == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = file.getSelectedFile();
+            tempdP = new byte[(int) selectedFile.length()];
+            FileInputStream fis;
+            try {
+                fis = new FileInputStream(selectedFile);
+                fis.read(tempdP);
+                fis.close();
+            } catch (IOException ex) {
+                Logger.getLogger(NewDonorJPanel.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            lblProfilePicture.setIcon(ResizeImage(selectedFile.getAbsolutePath()));
+            lblProfilePicture.setIcon(setPicture(selectedFile.getAbsolutePath(), lblProfilePicture));
+        } else if (result == JFileChooser.CANCEL_OPTION) {
+            // System.out.println("No File Select");
+        }
+
+
     }//GEN-LAST:event_addPhotoButtonActionPerformed
 
     private void lblBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblBackMouseClicked
         // TODO add your handling code here:
-        
-        
-        
-        
+
         JFrame frame = (JFrame) getWindowAncestor(this);
         frame.dispose();
         NewDonorJPanel.super.setVisible(false);
         dB4OUtil.storeSystem(system);
-        
-        
+
+
     }//GEN-LAST:event_lblBackMouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -886,7 +830,7 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>E
         buttonYesGroup4.setEnabled(true);
         buttonNoGroup4.setEnabled(true);
         addPhotoButton.setEnabled(true);
-        
+
         uidText.setText("");
         nameText.setText("");
         ageText.setText("");
@@ -895,14 +839,13 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>E
         streetText.setText("");
         cityText.setText("");
         zipText.setText("");
-        
+
         genderJComboBox.setSelectedItem("");
         OrganTypeJComboBox.setSelectedItem("");
         stateJComboBox.setSelectedItem("");
-        
+
         dobDateField.setCalendar(null);
-       
-        
+
         buttonYesGroup1.setSelected(false);
         buttonNoGroup1.setSelected(false);
         buttonYesGroup2.setSelected(false);
@@ -911,17 +854,16 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>E
         buttonNoGroup3.setSelected(false);
         buttonYesGroup4.setSelected(false);
         buttonNoGroup4.setSelected(false);
-        
+
         lblProfilePicture.removeAll();
-        
+
         //JOptionPane.showMessageDialog(null, new JLabel(  "<html><h2><font color='red'>Hello</font>, world </h2></html>"));
-            
-       
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void stateJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stateJComboBoxActionPerformed
-       
-        
+
+
     }//GEN-LAST:event_stateJComboBoxActionPerformed
 
     private void OrganTypeJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrganTypeJComboBoxActionPerformed
@@ -946,16 +888,15 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>E
             int delay = 2500; //milliseconds
             ActionListener taskPerformer = new ActionListener() {
                 public void actionPerformed(ActionEvent evt) {
-                   emailSuccessLabel.setVisible(false);
+                    emailSuccessLabel.setVisible(false);
                 }
             };
             javax.swing.Timer tick = new javax.swing.Timer(delay, taskPerformer);
             tick.setRepeats(false);
             tick.start();
         }
-        
-        
-        
+
+
     }//GEN-LAST:event_uEmailKeyTyped
 
     private void nameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameTextActionPerformed
@@ -965,7 +906,7 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>E
     private void uDobKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_uDobKeyTyped
         // TODO add your handling code here:
         // System.out.println("date");
-    /*
+        /*
 
         Date dob = dobDateField.getDate();
     
@@ -981,15 +922,15 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>E
     }
 
     
-*/
-  /*  public  int calculateAge(LocalDate birthDate, LocalDate currentDate) {
+         */
+ /*  public  int calculateAge(LocalDate birthDate, LocalDate currentDate) {
         if ((birthDate != null) && (currentDate != null)) {
             return Period.between(birthDate, currentDate).getYears();
         } else {
             return 0;
         }
   
-      */
+         */
     }//GEN-LAST:event_uDobKeyTyped
 
     private void ageTextKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ageTextKeyPressed
@@ -1000,9 +941,9 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>E
         // TODO add your handling code here:
         Date dob = dobDateField.getDate();
         //System.out.println(dob.getYear());
-        ageText.setText((String.valueOf(new Date().getYear()-dob.getYear())));
-    
-      /*  LocalDate today = LocalDate.now();                          //Today's date
+        ageText.setText((String.valueOf(new Date().getYear() - dob.getYear())));
+
+        /*  LocalDate today = LocalDate.now();                          //Today's date
         LocalDate birthday;  //Birth date
         birthday = LocalDate.of(dob);
  
@@ -1010,15 +951,15 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>E
         
         ageText.setText(String.valueOf(p.getYears()));
         String dobq=  calculateAge(dob, today);  
-        */
-        
+         */
+
     }//GEN-LAST:event_ageTextMouseClicked
 
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
         // TODO add your handling code here:
         Date dob = dobDateField.getDate();
-       // System.out.println(dob.getYear());
-        ageText.setText((String.valueOf(new Date().getYear()-dob.getYear())));
+        // System.out.println(dob.getYear());
+        ageText.setText((String.valueOf(new Date().getYear() - dob.getYear())));
     }//GEN-LAST:event_formMouseClicked
 
     private void dobDateFieldMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dobDateFieldMouseExited
@@ -1027,31 +968,30 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>E
         //    ageText.setText((String.valueOf(new Date().getYear()-dob.getYear())));
     }//GEN-LAST:event_dobDateFieldMouseExited
 
-    public ImageIcon ResizeImage(String ImagePath)
-    {
+    public ImageIcon ResizeImage(String ImagePath) {
         ImageIcon MyImage = new ImageIcon(ImagePath);
         Image img = MyImage.getImage();
         Image newImg = img.getScaledInstance(lblProfilePicture.getWidth(), lblProfilePicture.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon image = new ImageIcon(newImg);
         return image;
     }
-    
-     private ImageIcon setPicture(String carImageLocation, JLabel carImage){
+
+    private ImageIcon setPicture(String carImageLocation, JLabel carImage) {
 
         ImageIcon imageCar;
         imageCar = new ImageIcon(carImageLocation);
         Image picCar = imageCar.getImage();
         Image resizedImage = picCar.getScaledInstance(carImage.getWidth(), carImage.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon selectedCarPicture = new ImageIcon(resizedImage);
-        
-        return selectedCarPicture;  
-}    
-    
+
+        return selectedCarPicture;
+    }
+
     private void dobDateFieldMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dobDateFieldMousePressed
 
     }//GEN-LAST:event_dobDateFieldMousePressed
 
-    
+
     private void dobDateFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dobDateFieldFocusLost
         // TODO add your handling code here:
 
@@ -1061,16 +1001,16 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>E
         // TODO add your handling code here:
         Date dob = dobDateField.getDate();
         System.out.println(dob.getYear());
-        ageText.setText((String.valueOf(new Date().getYear()-dob.getYear())));
-        
+        ageText.setText((String.valueOf(new Date().getYear() - dob.getYear())));
+
     }//GEN-LAST:event_agePop
 
     private void emailTextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailTextMouseClicked
         // TODO add your handling code here:
-        
+
         Date dob = dobDateField.getDate();
-      //  System.out.println(dob.getYear());
-        ageText.setText((String.valueOf(new Date().getYear()-dob.getYear())));
+        //  System.out.println(dob.getYear());
+        ageText.setText((String.valueOf(new Date().getYear() - dob.getYear())));
     }//GEN-LAST:event_emailTextMouseClicked
 
     private void buttonYesGroup3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonYesGroup3ActionPerformed
@@ -1085,7 +1025,7 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>E
         // TODO add your handling code here:
         Date dob = dobDateField.getDate();
         System.out.println(dob.getYear());
-        ageText.setText((String.valueOf(new Date().getYear()-dob.getYear())));
+        ageText.setText((String.valueOf(new Date().getYear() - dob.getYear())));
 
     }//GEN-LAST:event_dobDateFieldagePop
 
@@ -1107,15 +1047,15 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>E
 
         }
 
-        */
-        /*  public  int calculateAge(LocalDate birthDate, LocalDate currentDate) {
+         */
+ /*  public  int calculateAge(LocalDate birthDate, LocalDate currentDate) {
             if ((birthDate != null) && (currentDate != null)) {
                 return Period.between(birthDate, currentDate).getYears();
             } else {
                 return 0;
             }
 
-            */
+         */
     }//GEN-LAST:event_dobDateFielduDobKeyTyped
 
 
@@ -1140,6 +1080,7 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>E
     private javax.swing.JLabel emailValidateMessage;
     private javax.swing.JComboBox genderJComboBox;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -1165,6 +1106,11 @@ JOptionPane.showMessageDialog(null, new JLabel("<html><h2><font color='red'><I>E
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
     private javax.swing.JLabel lblBack;
     private javax.swing.JLabel lblProfilePicture;
     private javax.swing.JTextField nameText;

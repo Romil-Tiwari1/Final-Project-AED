@@ -21,7 +21,8 @@ public abstract class UserRole {
         Admin("Admin"),
         Doctor("Doctor"),
         SystemCoordinator("SystemCoordinator"),
-        DonationCoordinator("DonationCoordinator");
+        DonationCoordinator("DonationCoordinator"),
+        OrganBankCoordinator("OrganBankCoordinator");
         
         private String value;
         private RoleType(String value){

@@ -79,7 +79,7 @@ public class MainHomePage extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel4.setText("TEAM");
 
-        jLabel17.setIcon(new javax.swing.ImageIcon("/Users/romiltiwari/Desktop/Mitochondria/Final-Project-AED/OrganDonation/src/Images_1/employees.png")); // NOI18N
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images_1/employees.png"))); // NOI18N
 
         javax.swing.GroupLayout EmployeesLayout = new javax.swing.GroupLayout(Employees);
         Employees.setLayout(EmployeesLayout);
@@ -117,7 +117,7 @@ public class MainHomePage extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel2.setText("Enterprise Admin");
 
-        jLabel13.setIcon(new javax.swing.ImageIcon("/Users/romiltiwari/Desktop/Mitochondria/Final-Project-AED/OrganDonation/src/Images_1/planning.png")); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images_1/planning.png"))); // NOI18N
 
         javax.swing.GroupLayout EnterpriseAdminLayout = new javax.swing.GroupLayout(EnterpriseAdmin);
         EnterpriseAdmin.setLayout(EnterpriseAdminLayout);
@@ -155,7 +155,7 @@ public class MainHomePage extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel3.setText("Admin");
 
-        jLabel15.setIcon(new javax.swing.ImageIcon("/Users/romiltiwari/Desktop/Mitochondria/Final-Project-AED/OrganDonation/src/Images_1/admin.png")); // NOI18N
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images_1/admin.png"))); // NOI18N
 
         javax.swing.GroupLayout SystemAdminLayout = new javax.swing.GroupLayout(SystemAdmin);
         SystemAdmin.setLayout(SystemAdminLayout);
@@ -194,7 +194,7 @@ public class MainHomePage extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel6.setText("RECEIVER");
 
-        jLabel21.setIcon(new javax.swing.ImageIcon("/Users/romiltiwari/Desktop/Mitochondria/Final-Project-AED/OrganDonation/src/Images_1/liver_small.png")); // NOI18N
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images_1/liver_small.png"))); // NOI18N
 
         javax.swing.GroupLayout OrganReceiverLayout = new javax.swing.GroupLayout(OrganReceiver);
         OrganReceiver.setLayout(OrganReceiverLayout);
@@ -233,7 +233,7 @@ public class MainHomePage extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel5.setText("DONOR");
 
-        jLabel19.setIcon(new javax.swing.ImageIcon("/Users/romiltiwari/Desktop/Mitochondria/Final-Project-AED/OrganDonation/src/Images_1/donor.png")); // NOI18N
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images_1/donor.png"))); // NOI18N
 
         javax.swing.GroupLayout OrganDonorLayout = new javax.swing.GroupLayout(OrganDonor);
         OrganDonor.setLayout(OrganDonorLayout);
@@ -259,7 +259,7 @@ public class MainHomePage extends javax.swing.JFrame {
 
         jPanel1.add(OrganDonor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 540, 200, 140));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("/Users/romiltiwari/Desktop/Mitochondria/Final-Project-AED/OrganDonation/src/Images_1/organ.jpeg")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images_1/organ.jpeg"))); // NOI18N
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 990, 710));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));

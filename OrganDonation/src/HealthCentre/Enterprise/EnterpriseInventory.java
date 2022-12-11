@@ -29,8 +29,25 @@ public class EnterpriseInventory {
     //Create enterprise
     public Enterprise createAndAddEnterprise(String name,Enterprise.EnterpriseType type){
         Enterprise enterprise=null;
-        if(type==Enterprise.EnterpriseType.Donation){
+      if(type==Enterprise.EnterpriseType.Hospital){
+            enterprise=new HospitalEnterprise(name);
+            enterpriseList.add(enterprise);
+        }
+        else if(type==Enterprise.EnterpriseType.ConsentVerification){
+            enterprise=new ConsentVerificationEnterprise(name);
+            enterpriseList.add(enterprise);
+        }
+        else if(type==Enterprise.EnterpriseType.Donation){
             enterprise=new DonationEnterprise(name);
+            enterpriseList.add(enterprise);
+        }
+
+        else if(type==Enterprise.EnterpriseType.OrganTransplantCentre){
+            enterprise=new OrganTransplantCentre(name);
+            enterpriseList.add(enterprise);
+        }
+        else if(type==Enterprise.EnterpriseType.OrganBank){
+            enterprise=new OrganBankEnterprise(name);
             enterpriseList.add(enterprise);
         }
        
