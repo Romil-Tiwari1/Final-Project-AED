@@ -13,6 +13,8 @@ import HealthCentre.Organization.Organization;
 import HealthCentre.Person.DonorRequestDirectory;
 
 import HealthCentre.Person.DonorDirectory;
+import HealthCentre.Person.PatientRequestDirectory;
+import HealthCentre.Person.PatientDirectory;
 import HealthCentre.UserAccount.UserAccountInventory;
 
 
@@ -26,12 +28,37 @@ import HealthCentre.UserRole.UserRole;
 public class EcoSystem extends Organization{
     private static EcoSystem business;
     
+private PatientDirectory patientDirectory;
 
+    public PatientDirectory getPatientDirectory() {
+        return patientDirectory;
+    }
+
+    public void setPatientDirectory(PatientDirectory patientDirectory) {
+        this.patientDirectory = patientDirectory;
+    }
     private  UserAccountInventory userAccountDirectory;
 
     private DonorRequestDirectory donorRequestDirectory;
 
     private DonorDirectory donorDirectory;
+private PatientRequestDirectory patientRequestDirectory;
+
+    public DonorDirectory getDonorDirectory() {
+        return donorDirectory;
+    }
+
+    public void setDonorDirectory(DonorDirectory donorDirectory) {
+        this.donorDirectory = donorDirectory;
+    }
+
+    public PatientRequestDirectory getPatientRequestDirectory() {
+        return patientRequestDirectory;
+    }
+
+    public void setPatientRequestDirectory(PatientRequestDirectory patientRequestDirectory) {
+        this.patientRequestDirectory = patientRequestDirectory;
+    }
 
 
     public UserAccountInventory getUserAccountDirectory() {return userAccountDirectory; }

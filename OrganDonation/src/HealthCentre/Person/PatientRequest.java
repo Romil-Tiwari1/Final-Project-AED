@@ -14,7 +14,7 @@ public class PatientRequest {
     private String patientID;
     private String name;
     private String gender;
-    private String bloodGroup;
+
     private String streetAddress;
     private int zipCode;
     private int contact;
@@ -53,13 +53,7 @@ public class PatientRequest {
         this.gender = gender;
     }
 
-    public String getBloodGroup() {
-        return bloodGroup;
-    }
 
-    public void setBloodGroup(String bloodGroup) {
-        this.bloodGroup = bloodGroup;
-    }
 
     public String getStreetAddress() {
         return streetAddress;

@@ -227,7 +227,7 @@ public class ManageDoctorJPanel extends javax.swing.JPanel {
 
         add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1680, -1));
 
-        doctorIcon.setIcon(new javax.swing.ImageIcon("/Users/romiltiwari/Desktop/AED_Final/Final-Project-AED/OrganDonation/src/Images_1/doctor.png")); // NOI18N
+        doctorIcon.setIcon(new javax.swing.ImageIcon("/Users/romiltiwari/Desktop/Mitochondria/Final-Project-AED/OrganDonation/src/Images_1/doctor.png")); // NOI18N
         add(doctorIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 480, 740));
     }// </editor-fold>//GEN-END:initComponents
 

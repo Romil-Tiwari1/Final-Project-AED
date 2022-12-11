@@ -32,7 +32,9 @@ public abstract class Organization {
         Admin("Admin Organization"),
         SystemCoordinator("System Coorinator Organization"),
         Doctor("Doctor Organization"), 
-        LabCoordinator(" LabCoordinator Organization");
+        LabCoordinator(" LabCoordinator Organization"),
+        ConsentVerification("Consent Verification Organization "),
+TransplantCentreOrganization("Transplant Centre Organization");
         private String value;
         private Type(String value) {
             this.value = value;
@@ -42,6 +44,19 @@ public abstract class Organization {
         }
     }
     
+     public enum TransplantCentreOrganizationType {
+         
+        TransplantCentreOrganization("Transplant Centre Organization");
+        private String value;
+
+        private TransplantCentreOrganizationType(String value) {
+            this.value = value;
+        }
+
+        public String getValue() {
+            return value;
+        }
+     }
      public enum LabCoordinatorType {
          
         LabCoordinator("LabCoordinator Organization");
@@ -55,7 +70,19 @@ public abstract class Organization {
             return value;
         }
      }
+   public enum ConsentVerificationType {
+         
+        ConsentVerification("Consent Verification");
+        private String value;
 
+        private ConsentVerificationType(String value) {
+            this.value = value;
+        }
+
+        public String getValue() {
+            return value;
+        }
+     }
     
     public enum DonationType {
          
@@ -86,6 +113,20 @@ public abstract class Organization {
         
         ++counter;
     }
+    
+    public enum OrganBankType {
+         
+        OrganBank("Organ Bank Coordinator Organization");
+        private String value;
+
+        private OrganBankType(String value) {
+            this.value = value;
+        }
+
+        public String getValue() {
+            return value;
+        }
+     }
 
     public abstract ArrayList<UserRole> getSupportedRole();
     
