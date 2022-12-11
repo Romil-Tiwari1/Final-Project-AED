@@ -84,7 +84,7 @@ public class PatientListJPanel extends javax.swing.JPanel {
         for(WorkRequest request : systorganization.getWorkQueue().getWorkRequestList()){
             Object[] row = new Object[6];
             row[0] = request;
-            row[1] = request.getSummary();
+            row[1] = request.getDoctorRequestSummary();
             row[2] = request.getPatient();
             row[3] = request.getEnterprise();
             row[4] = request.getStatus();

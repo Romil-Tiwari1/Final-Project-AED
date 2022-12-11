@@ -427,7 +427,7 @@ public class DonorRequestJPanel extends javax.swing.JPanel {
         
         request.setPatient(patient);
         request.setActionDate(new Date());
-        request.setSummary("Requested for Organ Reception");
+        request.setDoctorRequestSummary("Requested for Organ Reception");
         request.setStatus("Assigned to Concent Verification");
         
         request.setUserAccount(userAccount);
