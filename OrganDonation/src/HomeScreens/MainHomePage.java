@@ -27,11 +27,11 @@ public class MainHomePage extends javax.swing.JFrame {
         initComponents();
         // for making the background transparent
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2- this.getSize().height/2);
-        this.setBackground(new Color(0,0,0,0));
+//        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2- this.getSize().height/2);
+//        this.setBackground(new Color(0,0,0,0));
         jPanel1.setBackground(new Color(0,0,0,0));
         ecoSystem = dB4OUtil.retrieveSystem();
-        this.setSize(1680, 1050);
+        this.setSize(1380, 1050);
     }
 
     /**
@@ -44,9 +44,6 @@ public class MainHomePage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        Home = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         Employees = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
@@ -71,44 +68,7 @@ public class MainHomePage extends javax.swing.JFrame {
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Home.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        Home.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Home.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                HomeMousePressed(evt);
-            }
-        });
-
-        jLabel11.setIcon(new javax.swing.ImageIcon("/Users/romiltiwari/Desktop/Mitochondria/Final-Project-AED/OrganDonation/src/Images_1/nursing-home.png")); // NOI18N
-
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel1.setText("HOME");
-
-        javax.swing.GroupLayout HomeLayout = new javax.swing.GroupLayout(Home);
-        Home.setLayout(HomeLayout);
-        HomeLayout.setHorizontalGroup(
-            HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomeLayout.createSequentialGroup()
-                .addContainerGap(13, Short.MAX_VALUE)
-                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
-                .addContainerGap())
-        );
-        HomeLayout.setVerticalGroup(
-            HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomeLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(56, 56, 56))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomeLayout.createSequentialGroup()
-                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        jPanel1.add(Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 540, 200, 140));
-
-        Employees.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Employees.setBackground(new java.awt.Color(255, 255, 255));
         Employees.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Employees.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -129,14 +89,14 @@ public class MainHomePage extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
                 .addContainerGap())
         );
         EmployeesLayout.setVerticalGroup(
             EmployeesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EmployeesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
+                .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(EmployeesLayout.createSequentialGroup()
                 .addGap(52, 52, 52)
@@ -144,7 +104,7 @@ public class MainHomePage extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(Employees, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 540, 230, 140));
+        jPanel1.add(Employees, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, 230, 140));
 
         EnterpriseAdmin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         EnterpriseAdmin.setOpaque(false);
@@ -223,7 +183,7 @@ public class MainHomePage extends javax.swing.JFrame {
 
         jPanel1.add(SystemAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 30, 150, 110));
 
-        OrganReceiver.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        OrganReceiver.setBackground(new java.awt.Color(255, 255, 255));
         OrganReceiver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         OrganReceiver.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -242,7 +202,7 @@ public class MainHomePage extends javax.swing.JFrame {
             OrganReceiverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OrganReceiverLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 120, Short.MAX_VALUE)
+                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 122, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
                 .addContainerGap())
@@ -254,15 +214,16 @@ public class MainHomePage extends javax.swing.JFrame {
                 .addComponent(jLabel6)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OrganReceiverLayout.createSequentialGroup()
-                .addContainerGap(8, Short.MAX_VALUE)
+                .addContainerGap(10, Short.MAX_VALUE)
                 .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        jPanel1.add(OrganReceiver, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 540, 210, 140));
+        jPanel1.add(OrganReceiver, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 540, 210, 140));
 
-        OrganDonor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        OrganDonor.setBackground(new java.awt.Color(255, 255, 255));
         OrganDonor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        OrganDonor.setOpaque(false);
         OrganDonor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 OrganDonorMousePressed(evt);
@@ -289,14 +250,14 @@ public class MainHomePage extends javax.swing.JFrame {
             OrganDonorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OrganDonorLayout.createSequentialGroup()
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 6, Short.MAX_VALUE))
+                .addGap(0, 8, Short.MAX_VALUE))
             .addGroup(OrganDonorLayout.createSequentialGroup()
                 .addGap(57, 57, 57)
                 .addComponent(jLabel5)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(OrganDonor, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 540, 200, 140));
+        jPanel1.add(OrganDonor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 540, 200, 140));
 
         jLabel7.setIcon(new javax.swing.ImageIcon("/Users/romiltiwari/Desktop/Mitochondria/Final-Project-AED/OrganDonation/src/Images_1/organ.jpeg")); // NOI18N
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 990, 710));
@@ -305,11 +266,6 @@ public class MainHomePage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void HomeMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeMousePressed
-        // TODO add your handling code here:
-        new Home().show();
-    }//GEN-LAST:event_HomeMousePressed
 
     private void EmployeesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EmployeesMousePressed
         // TODO add your handling code here:
@@ -376,12 +332,9 @@ public class MainHomePage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Employees;
     private javax.swing.JPanel EnterpriseAdmin;
-    private javax.swing.JPanel Home;
     private javax.swing.JPanel OrganDonor;
     private javax.swing.JPanel OrganReceiver;
     private javax.swing.JPanel SystemAdmin;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel17;
