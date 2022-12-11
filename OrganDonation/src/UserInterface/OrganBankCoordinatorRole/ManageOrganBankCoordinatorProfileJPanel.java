@@ -169,7 +169,7 @@ public class ManageOrganBankCoordinatorProfileJPanel extends javax.swing.JPanel 
         mainHeadingLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         add(mainHeadingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 20, 440, 40));
 
-        iconLabel.setIcon(new javax.swing.ImageIcon("/Users/romiltiwari/Desktop/AED_Final/Final-Project-AED/OrganDonation/src/Images_1/mental-health.png")); // NOI18N
+        iconLabel.setIcon(new javax.swing.ImageIcon("/Users/romiltiwari/Desktop/Mitochondria/Final-Project-AED/OrganDonation/src/Images_1/mental-health.png")); // NOI18N
         add(iconLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 130, 140));
 
         resetButton.setText("Reset");
