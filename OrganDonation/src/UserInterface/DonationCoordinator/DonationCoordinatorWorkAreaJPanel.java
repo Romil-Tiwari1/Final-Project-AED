@@ -564,8 +564,8 @@ public class DonationCoordinatorWorkAreaJPanel extends javax.swing.JPanel {
 
     private void BtnSelfProfileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnSelfProfileMouseClicked
         // TODO add your handling code here:
-//        ManageGovernmentCoordinatorProfile manageGovtCoordinatorProfile = new ManageGovernmentCoordinatorProfile(userAccount,govtorganization,enterprise);
-//        userProcessContainer.add("ManageGovernmentCoordinatorProfile",manageGovtCoordinatorProfile);
+//        ManageDonationCoordinatorProfile manageDonCoordinatorProfile = new ManageDonationCoordinatorProfile(userAccount,donorganization,enterprise);
+//        userProcessContainer.add("ManageDonCoordinatorProfile",manageDonCoordinatorProfile);
 //        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
 //        layout.next(userProcessContainer);
     }//GEN-LAST:event_BtnSelfProfileMouseClicked
