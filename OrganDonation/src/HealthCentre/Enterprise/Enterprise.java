@@ -27,7 +27,7 @@ public abstract class Enterprise extends Organization{
         Donation("DonationCentre"),
         OrganBank("OrganBank"),
         Legal("Legal"),
-    ConsentVerification("ConsentVerification");
+        ConsentVerification("ConsentVerification");
 
         
         
