@@ -101,7 +101,6 @@ public class LabCordinatorWorkArea extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSpinField1 = new com.toedter.components.JSpinField();
         Header = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         ButtonClose = new javax.swing.JPanel();
@@ -483,7 +482,6 @@ public class LabCordinatorWorkArea extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel9;
-    private com.toedter.components.JSpinField jSpinField1;
     private javax.swing.JPanel menu;
     private javax.swing.JPanel userProcessContainer;
     // End of variables declaration//GEN-END:variables

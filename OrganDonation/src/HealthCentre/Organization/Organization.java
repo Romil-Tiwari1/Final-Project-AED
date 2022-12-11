@@ -99,6 +99,20 @@ public abstract class Organization {
         
         ++counter;
     }
+    
+    public enum OrganBankType {
+         
+        OrganBank("Organ Bank Coordinator Organization");
+        private String value;
+
+        private OrganBankType(String value) {
+            this.value = value;
+        }
+
+        public String getValue() {
+            return value;
+        }
+     }
 
     public abstract ArrayList<UserRole> getSupportedRole();
     
