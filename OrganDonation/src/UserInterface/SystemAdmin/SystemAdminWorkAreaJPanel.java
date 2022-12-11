@@ -440,7 +440,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         add(menu, java.awt.BorderLayout.LINE_START);
 
-        panelSysadminWorkContainer.setBackground(new java.awt.Color(255, 153, 153));
+        panelSysadminWorkContainer.setBackground(new java.awt.Color(199, 247, 247));
         panelSysadminWorkContainer.setLayout(new java.awt.CardLayout());
         add(panelSysadminWorkContainer, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents

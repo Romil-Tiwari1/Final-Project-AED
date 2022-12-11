@@ -237,7 +237,7 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         emailSuccessLabel = new javax.swing.JLabel();
         dobDateField = new com.toedter.calendar.JDateChooser();
 
-        setBackground(new java.awt.Color(255, 153, 153));
+        setBackground(new java.awt.Color(199, 247, 247));
         addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 formMouseClicked(evt);
