@@ -40,6 +40,7 @@ public class LoginScreen extends javax.swing.JFrame {
        // this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2- this.getSize().height/2);
         this.setBackground(new Color(0,0,0,0));
         jPanel4.setBackground(new Color(0,0,0,0));
+        this.setSize(900, 900);
     }
 
     
@@ -56,14 +57,13 @@ public class LoginScreen extends javax.swing.JFrame {
         userProcessContainer = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
+        signInButtonLabel = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        txtPassword = new javax.swing.JPasswordField();
-        txtUserName = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
+        userNameTextLabel = new javax.swing.JLabel();
+        userPasswordTextLabel = new javax.swing.JLabel();
+        paswordTextField = new javax.swing.JPasswordField();
+        userNameTextField = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
@@ -82,59 +82,57 @@ public class LoginScreen extends javax.swing.JFrame {
         jPanel2.setRequestFocusEnabled(false);
         jPanel2.setLayout(new java.awt.BorderLayout());
 
+        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel11.setBackground(new java.awt.Color(245,66,93));
-        jLabel11.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(245,66,93));
-        jLabel11.setText("Sign In");
-        jLabel11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+        signInButtonLabel.setBackground(new java.awt.Color(245,66,93));
+        signInButtonLabel.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        signInButtonLabel.setForeground(new java.awt.Color(245,66,93));
+        signInButtonLabel.setText("Sign In");
+        signInButtonLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        signInButtonLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jLabel11MousePressed(evt);
+                signInButtonLabelMousePressed(evt);
             }
         });
-        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 640, 110, 40));
+        jPanel4.add(signInButtonLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 640, 110, 40));
 
         jSeparator1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanel4.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 580, 420, 30));
         jPanel4.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 460, 430, 30));
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel1.setText("UserName:");
-        jPanel4.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 380, 100, 50));
+        userNameTextLabel.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        userNameTextLabel.setText("UserName:");
+        jPanel4.add(userNameTextLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 380, 100, 50));
 
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel2.setText("Password:");
-        jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 500, 100, 60));
+        userPasswordTextLabel.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        userPasswordTextLabel.setText("Password:");
+        jPanel4.add(userPasswordTextLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 500, 100, 60));
 
-        txtPassword.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtPassword.setBorder(null);
-        jPanel4.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 560, 420, 20));
+        paswordTextField.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        paswordTextField.setBorder(null);
+        jPanel4.add(paswordTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 560, 420, 20));
 
-        txtUserName.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtUserName.setBorder(null);
-        txtUserName.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        txtUserName.addActionListener(new java.awt.event.ActionListener() {
+        userNameTextField.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        userNameTextField.setBorder(null);
+        userNameTextField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        userNameTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUserNameActionPerformed(evt);
+                userNameTextFieldActionPerformed(evt);
             }
         });
-        jPanel4.add(txtUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 440, 420, 20));
+        jPanel4.add(userNameTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 440, 420, 20));
 
-        jLabel10.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel10.setText("Login");
-        jPanel4.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 340, 180, -1));
-
-        jLabel9.setBackground(new java.awt.Color(255, 153, 153));
-        jLabel9.setForeground(new java.awt.Color(245, 66, 93));
+        jLabel9.setBackground(new java.awt.Color(199, 247, 247));
         jLabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel9.setOpaque(true);
         jLabel9.setVerifyInputWhenFocusTarget(false);
-        jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 620, 210, 80));
+        jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 620, 210, 80));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/white.jpg"))); // NOI18N
-        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 720, 390));
+        jLabel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "LOGIN", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 3, 24))); // NOI18N
+        jLabel6.setOpaque(true);
+        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 330, 500, 400));
 
         jPanel5.setOpaque(false);
 
@@ -142,7 +140,7 @@ public class LoginScreen extends javax.swing.JFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 70, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,11 +149,10 @@ public class LoginScreen extends javax.swing.JFrame {
 
         jPanel4.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 70, -1));
 
-        jLabel7.setBackground(new java.awt.Color(255, 204, 204));
         jLabel7.setForeground(new java.awt.Color(51, 0, 0));
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/orgnew.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon("/Users/romiltiwari/Desktop/Mitochondria/Final-Project-AED/OrganDonation/src/Images_1/heart.jpeg")); // NOI18N
         jLabel7.setOpaque(true);
-        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 370));
+        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 630, 360));
 
         jPanel1.setOpaque(false);
 
@@ -163,11 +160,11 @@ public class LoginScreen extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 80, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 60, Short.MAX_VALUE)
         );
 
         jPanel4.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 0, 80, 60));
@@ -185,11 +182,11 @@ public class LoginScreen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel11MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MousePressed
+    private void signInButtonLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signInButtonLabelMousePressed
         // TODO add your handling code here:
-        String userName = txtUserName.getText();
+        String userName = userNameTextField.getText();
         // Get Password
-        char[] passwordCharArray = txtPassword.getPassword();
+        char[] passwordCharArray = paswordTextField.getPassword();
         String password = String.valueOf(passwordCharArray);
         
         //Step1: Check in the system admin user account directory if you have the user
@@ -249,16 +246,16 @@ public class LoginScreen extends javax.swing.JFrame {
             layout.next(userProcessContainer);
         }
         
-        jLabel11.setEnabled(false);
+        signInButtonLabel.setEnabled(false);
         //logoutJButton.setEnabled(true);
-        txtUserName.setEnabled(false);
-        txtPassword.setEnabled(false);
+        userNameTextField.setEnabled(false);
+        paswordTextField.setEnabled(false);
         
-    }//GEN-LAST:event_jLabel11MousePressed
+    }//GEN-LAST:event_signInButtonLabelMousePressed
 
-    private void txtUserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUserNameActionPerformed
+    private void userNameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userNameTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtUserNameActionPerformed
+    }//GEN-LAST:event_userNameTextFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -299,10 +296,6 @@ public class LoginScreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -313,8 +306,11 @@ public class LoginScreen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JPasswordField txtPassword;
-    private javax.swing.JTextField txtUserName;
+    private javax.swing.JPasswordField paswordTextField;
+    private javax.swing.JLabel signInButtonLabel;
+    private javax.swing.JTextField userNameTextField;
+    private javax.swing.JLabel userNameTextLabel;
+    private javax.swing.JLabel userPasswordTextLabel;
     private javax.swing.JPanel userProcessContainer;
     // End of variables declaration//GEN-END:variables
 }

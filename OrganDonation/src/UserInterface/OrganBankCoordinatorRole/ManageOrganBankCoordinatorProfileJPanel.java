@@ -1,52 +1,54 @@
+package UserInterface.OrganBankCoordinatorRole;
+
+import HealthCentre.Enterprise.Enterprise;
+import HealthCentre.Organization.OrganBankOrganization;
+import HealthCentre.UserAccount.UserAccount;
+import java.util.Date;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package UserInterface.CareSystemCoordinatorRole;
-
-import HealthCentre.Enterprise.Enterprise;
-import HealthCentre.Organization.CareSystemCoordinatorOrganisation;
-import HealthCentre.UserAccount.UserAccount;
-import java.util.Date;
-
 /**
  *
  * @author romiltiwari
  */
-public class ManageSystemCoordinatorProfileJPanel extends javax.swing.JPanel {
+public class ManageOrganBankCoordinatorProfileJPanel extends javax.swing.JPanel {
+
+    private UserAccount userAccount;
+    private Enterprise enterprise;
+    private OrganBankOrganization organBankOrganisation;
 
     /**
-     * Creates new form ManageSystemCoordinatorProfile
+     * Creates new form ManageOrganBankCoordinatorProfileJPanel
      */
-    private UserAccount userAccount;
-    private Enterprise enterprise ;
-    private CareSystemCoordinatorOrganisation systemOrganisation;
-    
-    public ManageSystemCoordinatorProfileJPanel(UserAccount userAccount, 
-            CareSystemCoordinatorOrganisation systemOrganisation, Enterprise enterprise) {
+    public ManageOrganBankCoordinatorProfileJPanel(UserAccount userAccount,
+            OrganBankOrganization oraganBankOrg, Enterprise enterprise) {
         initComponents();
         this.userAccount = userAccount;
         this.enterprise = enterprise;
-        this.systemOrganisation = systemOrganisation;
-        populatePanelTextField();
+        this.organBankOrganisation = oraganBankOrg;
+        populateProfileFields();
     }
-    
+
     /**
-     * Description : Populate Panel Text Fields
+     * Description : Populate Organ Bank Coordinator Form Text Fields
      */
-    private void populatePanelTextField(){
+    private void populateProfileFields() {
         genderComboBox.removeAllItems();
         genderComboBox.addItem("Male");
         genderComboBox.addItem("Female");
         addressTextField.setText(userAccount.getEmployee().getAddress());
         cityTextField.setText(userAccount.getEmployee().getCity());
-        contactTextField.setText(String.valueOf(userAccount.getEmployee().getContactNumber()));
-        dateOfBirthTextField.setText(String.valueOf(userAccount.getEmployee().getDateOfBirth()));
+        contactTextField.setText(String.valueOf(userAccount
+                .getEmployee().getContactNumber()));
+        dateOfBirthTextField.setText(String.valueOf(userAccount
+                .getEmployee().getDateOfBirth()));
         nameTextField.setText(userAccount.getEmployee().getName());
-        specializationTextField.setText(userAccount.getEmployee().getSpecialization());
-        stateTextField.setText(userAccount.getEmployee().getState());     
+        specializationTextField.setText(userAccount.getEmployee()
+                .getSpecialization());
+        stateTextField.setText(userAccount.getEmployee().getState());
     }
-
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -162,13 +164,13 @@ public class ManageSystemCoordinatorProfileJPanel extends javax.swing.JPanel {
         add(specializationFieldLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, -1, 30));
 
         mainHeadingLabel.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        mainHeadingLabel.setText("Manage System Coordinator Profile");
+        mainHeadingLabel.setText("Manage Organ Bank Coordinator Profile");
         mainHeadingLabel.setAlignmentX(0.5F);
         mainHeadingLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        add(mainHeadingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 20, 380, 40));
+        add(mainHeadingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 20, 440, 40));
 
-        iconLabel.setIcon(new javax.swing.ImageIcon("/Users/romiltiwari/Desktop/Mitochondria/Final-Project-AED/OrganDonation/src/Images_1/healthcare.png")); // NOI18N
-        add(iconLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 80, 130, 140));
+        iconLabel.setIcon(new javax.swing.ImageIcon("/Users/romiltiwari/Desktop/Mitochondria/Final-Project-AED/OrganDonation/src/Images_1/mental-health.png")); // NOI18N
+        add(iconLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 130, 140));
 
         resetButton.setText("Reset");
         resetButton.addActionListener(new java.awt.event.ActionListener() {
@@ -186,10 +188,14 @@ public class ManageSystemCoordinatorProfileJPanel extends javax.swing.JPanel {
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
         // TODO add your handling code here:
         userAccount.getEmployee().setCity(cityTextField.getText());
-        userAccount.getEmployee().setContactNumber(Integer.parseInt(contactTextField.getText()));
-        userAccount.getEmployee().setSpecialization(specializationTextField.getText());
-        userAccount.getEmployee().setDateOfBirth(new Date(dateOfBirthTextField.getText()));
-        userAccount.getEmployee().setGender((String) genderComboBox.getSelectedItem());
+        userAccount.getEmployee().setContactNumber(Integer
+                .parseInt(contactTextField.getText()));
+        userAccount.getEmployee().setSpecialization(
+                specializationTextField.getText());
+        userAccount.getEmployee().setDateOfBirth(new Date(
+                dateOfBirthTextField.getText()));
+        userAccount.getEmployee().setGender((String) genderComboBox
+                .getSelectedItem());
         userAccount.getEmployee().setAddress(addressTextField.getText());
         userAccount.getEmployee().setState(cityTextField.getText());
     }//GEN-LAST:event_saveButtonActionPerformed
@@ -201,10 +207,13 @@ public class ManageSystemCoordinatorProfileJPanel extends javax.swing.JPanel {
         genderComboBox.addItem("Female");
         addressTextField.setText(userAccount.getEmployee().getAddress());
         cityTextField.setText(userAccount.getEmployee().getCity());
-        contactTextField.setText(String.valueOf(userAccount.getEmployee().getContactNumber()));
-        dateOfBirthTextField.setText(String.valueOf(userAccount.getEmployee().getDateOfBirth()));
+        contactTextField.setText(String.valueOf(
+                userAccount.getEmployee().getContactNumber()));
+        dateOfBirthTextField.setText(String.valueOf(
+                userAccount.getEmployee().getDateOfBirth()));
         nameTextField.setText(userAccount.getEmployee().getName());
-        specializationTextField.setText(userAccount.getEmployee().getSpecialization());
+        specializationTextField.setText(userAccount.getEmployee()
+                .getSpecialization());
         stateTextField.setText(userAccount.getEmployee().getState());
     }//GEN-LAST:event_resetButtonActionPerformed
 
