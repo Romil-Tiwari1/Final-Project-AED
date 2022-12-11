@@ -55,7 +55,7 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
         tblOrgantDonors.getTableHeader().setDefaultRenderer(new TableFormat());
         populateOrganizationDonorTable();
         populateOrganDonorTable();
-        populateBloodGroupComboBox();
+        populateOrganTypeComboBox();
 
         
     }
@@ -79,16 +79,16 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
         }
     }
     
-  private void populateBloodGroupComboBox(){
+  private void populateOrganTypeComboBox(){
            
-           bloodGroupJComboBox.addItem("O+");
-           bloodGroupJComboBox.addItem("AB+");
-           bloodGroupJComboBox.addItem("O-");
-           bloodGroupJComboBox.addItem("AB-");
-           bloodGroupJComboBox.addItem("A+");
-           bloodGroupJComboBox.addItem("B+");
-           bloodGroupJComboBox.addItem("A-");
-           bloodGroupJComboBox.addItem("B-");
+           organTypeJComboBox.addItem("eye");
+           organTypeJComboBox.addItem("kidney");
+           organTypeJComboBox.addItem("lungs");
+           organTypeJComboBox.addItem("intestine");
+           organTypeJComboBox.addItem("liver");
+           organTypeJComboBox.addItem("tissue");
+           organTypeJComboBox.addItem("heart");
+           organTypeJComboBox.addItem("pancreas");
            
         }
     public void populateOrganDonorTable(){
@@ -102,7 +102,7 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
             row[1] = request.getOrganDonor();
             row[2] = request.getOrganDonor().getName();
             //row[3] = request.getDonor().getContact();
-            row[3] = request.getOrganDonor().getBloodGroup();
+            row[3] = request.getOrganDonor().getOrganType();
             row[4] = request.getUserAccount().getUsername();
             row[5] = request.getStatus();
              
@@ -136,7 +136,7 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
         checkTest = new javax.swing.JCheckBox();
         jPanel3 = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
-        bloodGroupJComboBox = new javax.swing.JComboBox();
+        organTypeJComboBox = new javax.swing.JComboBox();
         buttonProcessRequest = new javax.swing.JButton();
         textRequest = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -168,9 +168,7 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
             }
         });
         tblOrganisationDonors.setGridColor(new java.awt.Color(0, 0, 0));
-        tblOrganisationDonors.setIntercellSpacing(new java.awt.Dimension(0, 0));
         tblOrganisationDonors.setRowHeight(30);
-        tblOrganisationDonors.setShowVerticalLines(false);
         jScrollPane1.setViewportView(tblOrganisationDonors);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 1330, 160));
@@ -178,8 +176,8 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("List Of Organ Donors");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, 511, -1));
+        jLabel1.setText("List Of Voluntary Organ Donors");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 90, 511, -1));
 
         btnAssignLabCord.setBackground(new java.awt.Color(31, 31, 31));
         btnAssignLabCord.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -201,7 +199,7 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Request Number", "Donor UID", "Donor Name", "Blood Group", "Assigned to", "Status"
+                "Request Number", "Donor UID", "Donor Name", "Organ Type", "Assigned to", "Status"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -213,14 +211,11 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
             }
         });
         tblOrgantDonors.setGridColor(new java.awt.Color(0, 0, 0));
-        tblOrgantDonors.setIntercellSpacing(new java.awt.Dimension(0, 0));
         tblOrgantDonors.setRowHeight(30);
-        tblOrgantDonors.setShowVerticalLines(false);
         jScrollPane2.setViewportView(tblOrgantDonors);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, 1330, 190));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 1330, 190));
 
-        buttonAddOrgan.setBackground(new java.awt.Color(255, 255, 255));
         buttonAddOrgan.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         buttonAddOrgan.setForeground(new java.awt.Color(255, 255, 255));
         buttonAddOrgan.setText("Add Organ to Bank");
@@ -244,7 +239,6 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
         jLabel4.setText("Pulse Check");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 670, -1, 20));
 
-        buttonOrganDonate.setBackground(new java.awt.Color(255, 255, 255));
         buttonOrganDonate.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         buttonOrganDonate.setForeground(new java.awt.Color(255, 255, 255));
         buttonOrganDonate.setText("Organ Donated by the donor");
@@ -268,7 +262,6 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
         jLabel6.setText("Tests on Patient for any infection");
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 810, 360, -1));
 
-        buttonOrganDiscard.setBackground(new java.awt.Color(255, 255, 255));
         buttonOrganDiscard.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         buttonOrganDiscard.setForeground(new java.awt.Color(255, 255, 255));
         buttonOrganDiscard.setText("Discard the donated organ");
@@ -336,16 +329,16 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
 
         add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1660, -1));
 
-        bloodGroupJComboBox.setBackground(new java.awt.Color(31, 31, 31));
-        bloodGroupJComboBox.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        bloodGroupJComboBox.setForeground(new java.awt.Color(255, 255, 255));
-        bloodGroupJComboBox.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bloodGroupJComboBox.addActionListener(new java.awt.event.ActionListener() {
+        organTypeJComboBox.setBackground(new java.awt.Color(31, 31, 31));
+        organTypeJComboBox.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        organTypeJComboBox.setForeground(new java.awt.Color(255, 255, 255));
+        organTypeJComboBox.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        organTypeJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bloodGroupJComboBoxActionPerformed(evt);
+                organTypeJComboBoxActionPerformed(evt);
             }
         });
-        add(bloodGroupJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 670, 110, 30));
+        add(organTypeJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 670, 110, 30));
 
         buttonProcessRequest.setBackground(new java.awt.Color(31, 31, 31));
         buttonProcessRequest.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -367,7 +360,7 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Blood Group");
+        jLabel2.setText("OrganType");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 670, -1, 30));
 
         checkInfection.setBackground(new java.awt.Color(0, 0, 0));
@@ -427,7 +420,7 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
 
     private void buttonAddOrganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAddOrganActionPerformed
         // TODO add your handling code here:
-        // BloodGroup bloodGroup = new BloodGroup(txtBloodGroup.getText());
+        
         
         if(!checkInfection.isSelected()){
             checkInfection.setBorder(BorderFactory.createLineBorder(Color.RED));
@@ -436,11 +429,11 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, new JLabel(  "<html><h2><I>Kindly do the<font color='red'> Test</font> for other infections!</I></h2></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
            
         }
-        else if(bloodGroupJComboBox.getSelectedItem().equals(null)){
-            bloodGroupJComboBox.setBorder(BorderFactory.createLineBorder(Color.RED));
-            bloodGroupJComboBox.setForeground(Color.red);
-           // JOptionPane.showMessageDialog(null, "Kindly select a Blood Group!", "Error", JOptionPane.ERROR_MESSAGE);
-            JOptionPane.showMessageDialog(null, new JLabel(  "<html><h2><I>Kindly select a<font color='red'> Blood Group!</font><I></h2></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
+        else if(organTypeJComboBox.getSelectedItem().equals(null)){
+            organTypeJComboBox.setBorder(BorderFactory.createLineBorder(Color.RED));
+            organTypeJComboBox.setForeground(Color.red);
+           // JOptionPane.showMessageDialog(null, "Kindly select an Organ Type Group!", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, new JLabel(  "<html><h2><I>Kindly select a<font color='red'> Organ Type!</font><I></h2></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
            
         }
         else{
@@ -457,7 +450,7 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
         }
           
         try
-          {organ.getBloodGroup().addOrganType(String.valueOf(bloodGroupJComboBox.getSelectedItem()));
+          {organ.getOrganType().addOrganType(String.valueOf(organTypeJComboBox.getSelectedItem()));
           }
         catch( NullPointerException ex   )
           { System.out.println("");
@@ -550,7 +543,7 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
             }
         }
         buttonOrganDonate.setEnabled(false);
-        bloodGroupJComboBox.setEnabled(true);
+        organTypeJComboBox.setEnabled(true);
         buttonAddOrgan.setEnabled(true);
         buttonOrganDiscard.setEnabled(true);
         checkInfection.setEnabled(true);
@@ -561,9 +554,9 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
         dB4OUtil.storeSystem(system);
     }//GEN-LAST:event_buttonOrganDonateActionPerformed
 
-    private void bloodGroupJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bloodGroupJComboBoxActionPerformed
+    private void organTypeJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organTypeJComboBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bloodGroupJComboBoxActionPerformed
+    }//GEN-LAST:event_organTypeJComboBoxActionPerformed
 
     private void buttonProcessRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonProcessRequestActionPerformed
         // TODO add your handling code here:
@@ -627,7 +620,6 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox bloodGroupJComboBox;
     private javax.swing.JButton btnAssignLabCord;
     private javax.swing.JButton buttonAddOrgan;
     private javax.swing.JButton buttonOrganDiscard;
@@ -650,6 +642,7 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JComboBox organTypeJComboBox;
     private javax.swing.JTable tblOrganisationDonors;
     private javax.swing.JTable tblOrgantDonors;
     private javax.swing.JTextField textRequest;
