@@ -123,7 +123,6 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         enterpriseNameTextField1 = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         userJTable = new javax.swing.JTable();
-        jLabel6 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -160,17 +159,17 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 1830, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 966, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(498, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
 
-        add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1830, -1));
+        add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1470, -1));
 
         jPanel2.setBackground(new java.awt.Color(255, 102, 102));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
@@ -187,18 +186,18 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         jLabel12.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Username");
-        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 100, 21));
+        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, 100, 21));
 
         nameSeparator.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel2.add(nameSeparator, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 290, 10));
+        jPanel2.add(nameSeparator, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 290, 10));
 
         jLabel13.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Password");
-        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 100, 26));
+        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 100, 26));
 
         nameSeparator1.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel2.add(nameSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 380, 290, 10));
+        jPanel2.add(nameSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 380, 290, 10));
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -219,7 +218,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
                 organizationJComboBoxActionPerformed(evt);
             }
         });
-        jPanel2.add(organizationJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 80, 160, -1));
+        jPanel2.add(organizationJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 80, 160, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -229,7 +228,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         employeeJComboBox.setBackground(new java.awt.Color(0, 0, 0));
         employeeJComboBox.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         employeeJComboBox.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel2.add(employeeJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 160, -1));
+        jPanel2.add(employeeJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, 160, -1));
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -239,7 +238,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         roleJComboBox.setBackground(new java.awt.Color(0, 0, 0));
         roleJComboBox.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         roleJComboBox.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel2.add(roleJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 180, 160, -1));
+        jPanel2.add(roleJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 160, -1));
 
         createUserJButton.setBackground(new java.awt.Color(255, 153, 153));
         createUserJButton.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -250,35 +249,35 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
                 createUserJButtonActionPerformed(evt);
             }
         });
-        jPanel2.add(createUserJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, 110, 35));
+        jPanel2.add(createUserJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 400, 110, 35));
 
         nameJTextField.setBackground(new java.awt.Color(0, 0, 0));
         nameJTextField.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         nameJTextField.setForeground(new java.awt.Color(255, 255, 255));
         nameJTextField.setBorder(null);
-        jPanel2.add(nameJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, 290, 30));
+        jPanel2.add(nameJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 290, 30));
 
         passwordJTextField.setBackground(new java.awt.Color(0, 0, 0));
         passwordJTextField.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         passwordJTextField.setForeground(new java.awt.Color(255, 255, 255));
         passwordJTextField.setBorder(null);
-        jPanel2.add(passwordJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 344, 290, 30));
+        jPanel2.add(passwordJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, 290, 30));
 
-        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 80, 470, 470));
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 80, 430, 470));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Enterprise:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 80, -1, 30));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, -1, 30));
 
         nameSeparator4.setForeground(new java.awt.Color(0, 0, 0));
-        add(nameSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 140, 230, 10));
+        add(nameSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 160, 0));
 
         enterpriseNameTextField1.setBackground(new java.awt.Color(0, 0, 0));
         enterpriseNameTextField1.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         enterpriseNameTextField1.setForeground(new java.awt.Color(255, 255, 255));
         enterpriseNameTextField1.setBorder(null);
-        add(enterpriseNameTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 110, 230, 30));
+        add(enterpriseNameTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 100, 160, 30));
 
         userJTable.setBackground(new java.awt.Color(0, 0, 0));
         userJTable.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(204, 255, 204)));
@@ -305,10 +304,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         userJTable.setRowHeight(30);
         jScrollPane2.setViewportView(userJTable);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 700, 450));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/login.png"))); // NOI18N
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 140, 150, 220));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 330, 450));
     }// </editor-fold>//GEN-END:initComponents
 
     private void createUserJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createUserJButtonActionPerformed
@@ -467,7 +463,6 @@ private boolean checkUserIdExists(String userName) {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel2;
