@@ -84,7 +84,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         jPanel3 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 153, 153));
+        setBackground(new java.awt.Color(199, 247, 247));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jScrollPane1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
@@ -122,7 +122,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 430, 420));
 
-        jPanel2.setBackground(new java.awt.Color(255, 102, 102));
+        jPanel2.setBackground(new java.awt.Color(0, 204, 204));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 255, 204)));
         jPanel2.setPreferredSize(new java.awt.Dimension(250, 400));
         jPanel2.setRequestFocusEnabled(false);
@@ -164,7 +164,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         txtCountry.setForeground(new java.awt.Color(255, 255, 255));
         jPanel2.add(txtCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 197, 141, -1));
 
-        btnCreateNetwork.setBackground(new java.awt.Color(255, 153, 153));
+        btnCreateNetwork.setBackground(new java.awt.Color(199, 247, 247));
         btnCreateNetwork.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         btnCreateNetwork.setText("CREATE");
         btnCreateNetwork.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));

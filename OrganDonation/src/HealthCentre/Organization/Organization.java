@@ -32,9 +32,12 @@ public abstract class Organization {
         Admin("Admin Organization"),
         SystemCoordinator("System Coorinator Organization"),
         Doctor("Doctor Organization"), 
+        ConsentVerification("Consent Verification Organization "),
+        TransplantCentreOrganization("Transplant Centre Organization"),
         LabCoordinator(" LabCoordinator Organization");
   
   
+
         private String value;
         private Type(String value) {
             this.value = value;

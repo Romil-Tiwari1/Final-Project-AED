@@ -116,7 +116,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         nameSeparator4 = new javax.swing.JSeparator();
         enterpriseNameTextField1 = new javax.swing.JTextField();
 
-        setBackground(new java.awt.Color(255, 153, 153));
+        setBackground(new java.awt.Color(199, 247, 247));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         organizationJTable.setBackground(new java.awt.Color(0, 0, 0));
@@ -163,7 +163,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         });
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 690, -1, 46));
 
-        panel1.setBackground(new java.awt.Color(255, 102, 102));
+        panel1.setBackground(new java.awt.Color(0, 204, 204));
         panel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 255, 204)));
         panel1.setPreferredSize(new java.awt.Dimension(250, 400));
         panel1.setRequestFocusEnabled(false);
@@ -216,7 +216,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         jLabel1.setText("Select Organization Type ");
         panel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 250, -1));
 
-        addJButton.setBackground(new java.awt.Color(255, 153, 153));
+        addJButton.setBackground(new java.awt.Color(199, 247, 247));
         addJButton.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         addJButton.setText("CREATE");
         addJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
