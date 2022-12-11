@@ -529,7 +529,7 @@ public class DonorRequestJPanel extends javax.swing.JPanel {
             dobDateField.setDate(patientRequest.getDob());
             ageText.setText(String.valueOf(patientRequest.getAge()));
             genderText.setText(patientRequest.getGender());
-            bloodText.setText(patientRequest.getBloodGroup());
+         
             streetText.setText(patientRequest.getStreetAddress());
             cityText.setText(patientRequest.getCity());
             stateText.setText(patientRequest.getState());
