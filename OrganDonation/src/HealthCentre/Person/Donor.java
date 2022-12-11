@@ -17,7 +17,6 @@ public class Donor {
     private String donorID;
     private String name;
     private String gender;
-    private String bloodGroup;
     private String streetAddress;
     private String city;
     private String state;
@@ -25,8 +24,11 @@ public class Donor {
     private int contact;
     private String emailID;
     private String status;
+    private boolean inheritedDisease;
+    private boolean substanceAbuse;
+    private boolean drugAddict;
+    private boolean accidentHistory;
     private Date  lastDonationDate;
-    private boolean labConfirmation; 
 
     private boolean followUpTest;  
     private byte[] dP; 
@@ -58,14 +60,9 @@ public class Donor {
         this.gender = gender;
     }
 
-    public String getBloodGroup() {
-        return bloodGroup;
-    }
-
-    public void setBloodGroup(String bloodGroup) {
-        this.bloodGroup = bloodGroup;
-    }
-
+    public Date getLastDonationDate() {        return lastDonationDate;}
+    public void setLastDonationDate(Date lastDonationDate) {        this.lastDonationDate = lastDonationDate;    }
+ 
     public String getStreetAddress() {
         return streetAddress;
     }
@@ -122,28 +119,36 @@ public class Donor {
         this.status = status;
     }
 
-    public Date getLastDonationDate() {
-        return lastDonationDate;
+    public boolean isInheritedDisease() {
+        return inheritedDisease;
     }
 
-    public void setLastDonationDate(Date lastDonationDate) {
-        this.lastDonationDate = lastDonationDate;
+    public void setInheritedDisease(boolean inheritedDisease) {
+        this.inheritedDisease = inheritedDisease;
+    }
+    
+    public boolean isSubstanceAbuse() {
+        return substanceAbuse;
     }
 
-    public boolean isLabConfirmation() {
-        return labConfirmation;
+    public void setSubstanceAbuse(boolean substanceAbuse) {
+        this.substanceAbuse = substanceAbuse;
+    }
+    
+    public boolean isDrugAddict() {
+        return drugAddict;
     }
 
-    public void setLabConfirmation(boolean labConfirmation) {
-        this.labConfirmation = labConfirmation;
+    public void setDrugAddict(boolean drugAddict) {
+        this.drugAddict = drugAddict;
+    }
+    
+    public boolean isAccidentHistory() {
+        return accidentHistory;
     }
 
-    public boolean isFollowUpTest() {
-        return followUpTest;
-    }
-
-    public void setFollowUpTest(boolean followUpTest) {
-        this.followUpTest = followUpTest;
+    public void setAccidentHistory(boolean accidentHistory) {
+        this.accidentHistory = accidentHistory;
     }
 
     public byte[] getdP() {

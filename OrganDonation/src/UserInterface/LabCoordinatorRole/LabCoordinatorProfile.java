@@ -168,7 +168,7 @@ public class LabCoordinatorProfile extends javax.swing.JPanel {
         comboGender.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         comboGender.setForeground(new java.awt.Color(255, 255, 255));
         comboGender.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(comboGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, -1, -1));
+        add(comboGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, 150, -1));
 
         jLabel9.setBackground(new java.awt.Color(255, 255, 255));
         jLabel9.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N

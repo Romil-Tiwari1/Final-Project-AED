@@ -23,6 +23,5 @@ public class CareSystemCoordinatorOrganisation extends Organization{
         ArrayList<UserRole> userRole = new ArrayList();
         userRole.add(new CareSystemCoordinatorRole());
         return userRole;
-    }
-    
+    } 
 }

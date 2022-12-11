@@ -16,7 +16,7 @@ public class ConsentVerificationOrganization extends Organization {
 
 
     public ConsentVerificationOrganization() {
-        super(Organization.LegalType.LegalOfficer.getValue());
+        super(Organization.ConsentVerificationType.ConsentVerification.getValue());
     }
     
     @Override

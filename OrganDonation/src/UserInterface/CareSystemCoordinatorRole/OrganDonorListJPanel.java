@@ -358,10 +358,7 @@ public class OrganDonorListJPanel extends javax.swing.JPanel {
                 } else {
                     JOptionPane.showMessageDialog(null, "No organization present", "Error", JOptionPane.ERROR_MESSAGE);
                 }
-            }
-            //else{
-            //    JOptionPane.showMessageDialog(null,"Donor is already assigned to a Hospital.", "Info", JOptionPane.INFORMATION_MESSAGE);
-            //}    
+            }  
         }
         dB4OUtil.storeSystem(ecoSystem);
     }//GEN-LAST:event_assignButtonActionPerformed

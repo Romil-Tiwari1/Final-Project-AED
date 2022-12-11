@@ -14,6 +14,7 @@ import java.util.ArrayList;
  */
 public class OrganizationInventory {
      
+    
     private ArrayList<Organization> organizationList;
 
     public OrganizationInventory() {
@@ -26,21 +27,18 @@ public class OrganizationInventory {
     
     public Organization createOrganization(Type type, String realName){
         Organization organization = null;
-//        if (type.getValue().equals(Type.Doctor.getValue())){
-//            organization = new DoctorOrganization();
-//            organization.setRealName(realName);
-//            organizationList.add(organization);
-//        }
-//        else if (type.getValue().equals(Type.SystemCoordinator.getValue())){
-//            organization = new SystemCoordinatorOrganization();
-//            organization.setRealName(realName);
-//            organizationList.add(organization);
-//        }
-//        else if (type.getValue().equals(Type.Pathologist.getValue())){
-//            organization = new PathologistOrganization();
-//            organization.setRealName(realName);
-//            organizationList.add(organization);
-//        }
+
+        return organization;
+    }
+ 
+     
+      public Organization createDonationOrganization(Organization.DonationType donType, String realName){
+        Organization organization = null;
+        if (donType.getValue().equals(Organization.DonationType.Donation.getValue())){
+            organization = new DonationOrganization();
+            organization.setRealName(realName);
+            organizationList.add(organization);
+        }
         return organization;
     }
     

@@ -178,7 +178,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
             organizationJTable.getColumnModel().getColumn(1).setResizable(false);
         }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 450, 450));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 360, 450));
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -296,18 +296,18 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         nameSeparator3.setForeground(new java.awt.Color(0, 0, 0));
         jPanel2.add(nameSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 300, 10));
 
-        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 80, 370, 450));
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 80, 370, 450));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Enterprise:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 80, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 80, -1, -1));
 
         enterpriseNameTextField1.setBackground(new java.awt.Color(0, 0, 0));
         enterpriseNameTextField1.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         enterpriseNameTextField1.setForeground(new java.awt.Color(255, 255, 255));
         enterpriseNameTextField1.setBorder(null);
-        add(enterpriseNameTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 110, 190, 30));
+        add(enterpriseNameTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, 170, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
