@@ -204,11 +204,9 @@ public class PaitentListJPanel extends javax.swing.JPanel {
         );
 
         add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 0, 1640, -1));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("/Users/romiltiwari/Desktop/AED_Final/Final-Project-AED/OrganDonation/src/Images_1/intensive-care-unit.png")); // NOI18N
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 450, 200, 200));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("/Users/romiltiwari/Desktop/AED_Final/Final-Project-AED/OrganDonation/src/Images_1/patient.png")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon("/Users/romiltiwari/Desktop/Mitochondria/Final-Project-AED/OrganDonation/src/Images_1/patient.png")); // NOI18N
         jLabel4.setBorder(javax.swing.BorderFactory.createCompoundBorder(null, javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2), javax.swing.BorderFactory.createCompoundBorder()))));
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 80, 150, 150));
     }// </editor-fold>//GEN-END:initComponents

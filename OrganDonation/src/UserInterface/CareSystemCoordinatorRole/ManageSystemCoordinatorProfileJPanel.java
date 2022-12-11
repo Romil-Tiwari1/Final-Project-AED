@@ -167,7 +167,7 @@ public class ManageSystemCoordinatorProfileJPanel extends javax.swing.JPanel {
         mainHeadingLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         add(mainHeadingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 20, 380, 40));
 
-        iconLabel.setIcon(new javax.swing.ImageIcon("/Users/romiltiwari/Desktop/AED_Final/Final-Project-AED/OrganDonation/src/Images_1/healthcare.png")); // NOI18N
+        iconLabel.setIcon(new javax.swing.ImageIcon("/Users/romiltiwari/Desktop/Mitochondria/Final-Project-AED/OrganDonation/src/Images_1/healthcare.png")); // NOI18N
         add(iconLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 80, 130, 140));
 
         resetButton.setText("Reset");
