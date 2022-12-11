@@ -564,43 +564,43 @@ public class DonationCoordinatorWorkAreaJPanel extends javax.swing.JPanel {
 
     private void BtnSelfProfileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnSelfProfileMouseClicked
         // TODO add your handling code here:
-//        ManageDonationCoordinatorProfile manageDonCoordinatorProfile = new ManageDonationCoordinatorProfile(userAccount,donorganization,enterprise);
-//        userProcessContainer.add("ManageDonCoordinatorProfile",manageDonCoordinatorProfile);
-//        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-//        layout.next(userProcessContainer);
+       ManageDonationCoordinatorProfile manageDonCoordinatorProfile = new ManageDonationCoordinatorProfile(userAccount,donorganization,enterprise);
+        userProcessContainer.add("ManageDonCoordinatorProfile",manageDonCoordinatorProfile);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_BtnSelfProfileMouseClicked
 
     private void BtnCreateDonorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCreateDonorMouseClicked
-//        // TODO add your handling code here:
-//        CreateDonorJPanel Profile = null;
-//        try {
-//            Profile = new CreateDonorJPanel(system);
-//        } catch (GeneralSecurityException ex) {
-//            Logger.getLogger(DonationCoordinatorWorkAreaJPanel.class.getName()).log(Level.SEVERE, null, ex);
-//        } catch (IOException ex) {
-//            Logger.getLogger(DonationCoordinatorWorkAreaJPanel.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//        userProcessContainer.add("CreateDonorJPanel", Profile);
-//        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-//        layout.next(userProcessContainer);
+        // TODO add your handling code here:
+        OrganDonorJPanel Profile = null;
+        try {
+            Profile = new OrganDonorJPanel(system);
+        } catch (GeneralSecurityException ex) {
+            Logger.getLogger(DonationCoordinatorWorkAreaJPanel.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(DonationCoordinatorWorkAreaJPanel.class.getName()).log(Level.SEVERE, null, ex);
+       }
+        userProcessContainer.add("CreateDonorJPanel", Profile);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_BtnCreateDonorMouseClicked
 
     private void BtnDonorStatusMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnDonorStatusMouseClicked
         // TODO add your handling code here:
         
-//        DonorStatusJPanel Profile = new DonorStatusJPanel(system);
-//        userProcessContainer.add("DonorStatusJPanel", Profile);
-//        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-//        layout.next(userProcessContainer);
+       DonorStatusJPanel Profile = new DonorStatusJPanel(system);
+       userProcessContainer.add("DonorStatusJPanel", Profile);
+       CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_BtnDonorStatusMouseClicked
 
     private void BtnDonorRequestsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnDonorRequestsMouseClicked
         // TODO add your handling code here:
-//        
-//        VolunteerDonorRequestJPanel Profile = new VolunteerDonorRequestJPanel(system);
-//        userProcessContainer.add("VolunteerDonorRequestJPanel", Profile);
-//        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-//        layout.next(userProcessContainer);
+        
+        VolunteerDonorRequestJPanel Profile = new VolunteerDonorRequestJPanel(system);
+        userProcessContainer.add("VolunteerDonorRequestJPanel", Profile);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_BtnDonorRequestsMouseClicked
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
