@@ -556,10 +556,10 @@ public class DonationCoordinatorWorkAreaJPanel extends javax.swing.JPanel {
     private void BtnCuredPatientsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCuredPatientsMouseClicked
         // TODO add your handling code here:
         
-//        EncourageCuredPatientsJPanel Profile = new EncourageCuredPatientsJPanel();
-//        userProcessContainer.add("CheckOldPatientsJPanel", Profile);
-//        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-//        layout.next(userProcessContainer);
+        InspireCuredPatientsJPanel Profile = new InspireCuredPatientsJPanel();
+        userProcessContainer.add("CheckOldPatientsJPanel", Profile);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_BtnCuredPatientsMouseClicked
 
     private void BtnSelfProfileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnSelfProfileMouseClicked
