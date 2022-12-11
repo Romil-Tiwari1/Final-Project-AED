@@ -237,8 +237,13 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         emailSuccessLabel = new javax.swing.JLabel();
         dobDateField = new com.toedter.calendar.JDateChooser();
         jSeparator3 = new javax.swing.JSeparator();
+        jLabel1 = new javax.swing.JLabel();
+        jSeparator4 = new javax.swing.JSeparator();
+        jSeparator5 = new javax.swing.JSeparator();
+        jSeparator6 = new javax.swing.JSeparator();
+        jSeparator7 = new javax.swing.JSeparator();
 
-        setBackground(new java.awt.Color(255, 153, 153));
+        setBackground(new java.awt.Color(199, 247, 247));
         addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 formMouseClicked(evt);
@@ -247,44 +252,34 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Name");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, -1, -1));
 
-        nameText.setBackground(new java.awt.Color(0, 0, 0));
         nameText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        nameText.setForeground(new java.awt.Color(255, 255, 255));
         nameText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nameTextActionPerformed(evt);
             }
         });
-        add(nameText, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 180, -1));
+        add(nameText, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 150, 180, -1));
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(676, 218, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("UID");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 180, -1, -1));
+        jLabel5.setText("Unique ID");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 150, -1, 30));
 
-        uidText.setBackground(new java.awt.Color(0, 0, 0));
         uidText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        uidText.setForeground(new java.awt.Color(255, 255, 255));
-        add(uidText, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 180, 180, -1));
+        add(uidText, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 150, 180, -1));
 
         jLabel6.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("DOB");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, -1, -1));
+        jLabel6.setText("Date of Birth");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Age");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 220, -1, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 200, -1, 30));
 
-        ageText.setBackground(new java.awt.Color(0, 0, 0));
         ageText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        ageText.setForeground(new java.awt.Color(255, 255, 255));
         ageText.setEnabled(false);
         ageText.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -296,80 +291,61 @@ public class NewDonorJPanel extends javax.swing.JPanel {
                 ageTextKeyPressed(evt);
             }
         });
-        add(ageText, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 220, 180, -1));
+        add(ageText, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 200, 180, -1));
 
         jLabel8.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Gender");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 320, -1, -1));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, -1, 30));
 
         jLabel9.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("OrganType");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 320, -1, 20));
+        jLabel9.setText("Organ Choice");
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 310, -1, 30));
 
-        streetText.setBackground(new java.awt.Color(0, 0, 0));
         streetText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        streetText.setForeground(new java.awt.Color(255, 255, 255));
-        add(streetText, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 490, 180, -1));
+        add(streetText, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 460, 180, -1));
 
         jLabel10.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Do you have any inherited disease?");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 440, 360, -1));
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 470, 360, -1));
 
         jLabel11.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 480, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Street address");
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 490, -1, -1));
+        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 460, -1, 30));
 
         jLabel13.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("City");
-        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 530, -1, -1));
+        jLabel13.setText("Current City");
+        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 520, -1, 30));
 
-        cityText.setBackground(new java.awt.Color(0, 0, 0));
         cityText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        cityText.setForeground(new java.awt.Color(255, 255, 255));
-        add(cityText, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 530, 180, -1));
+        add(cityText, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 520, 180, -1));
 
         jLabel14.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("State");
-        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 580, -1, -1));
+        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 580, -1, 30));
 
         jLabel15.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setText("ZipCode");
-        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 630, -1, -1));
+        jLabel15.setText("Zip Code");
+        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 640, -1, 30));
 
-        zipText.setBackground(new java.awt.Color(0, 0, 0));
         zipText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        zipText.setForeground(new java.awt.Color(255, 255, 255));
-        add(zipText, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 630, 180, -1));
+        add(zipText, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 640, 180, -1));
 
         jLabel16.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Contact Number");
-        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 270, -1, -1));
+        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 254, -1, 30));
 
-        contactText.setBackground(new java.awt.Color(0, 0, 0));
         contactText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        contactText.setForeground(new java.awt.Color(255, 255, 255));
-        add(contactText, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 270, 180, -1));
+        add(contactText, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 250, 180, -1));
 
         jLabel17.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Email ID");
-        add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, -1, -1));
+        add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, -1, 30));
 
-        emailText.setBackground(new java.awt.Color(0, 0, 0));
         emailText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        emailText.setForeground(new java.awt.Color(255, 255, 255));
         emailText.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 emailTextMouseClicked(evt);
@@ -380,22 +356,19 @@ public class NewDonorJPanel extends javax.swing.JPanel {
                 uEmailKeyTyped(evt);
             }
         });
-        add(emailText, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, 170, -1));
+        add(emailText, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, 180, -1));
 
         jLabel19.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("Do you have history of substance abuse?");
-        add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 510, -1, -1));
+        add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 530, -1, -1));
 
         jLabel20.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setText("Are you drug addict? ");
-        add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 570, -1, -1));
+        add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 580, -1, -1));
 
         jLabel22.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("Do you have any history of accidents?");
-        add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 650, 600, 20));
+        add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 650, 380, 20));
 
         btnSubmit.setBackground(new java.awt.Color(31, 31, 31));
         btnSubmit.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -419,61 +392,53 @@ public class NewDonorJPanel extends javax.swing.JPanel {
                 addPhotoButtonActionPerformed(evt);
             }
         });
-        add(addPhotoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 250, 120, 40));
+        add(addPhotoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 310, 130, 40));
 
         buttonYesGroup2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        buttonYesGroup2.setForeground(new java.awt.Color(255, 255, 255));
         buttonYesGroup2.setText("Yes");
-        add(buttonYesGroup2, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 550, -1, -1));
+        add(buttonYesGroup2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 530, -1, -1));
 
         buttonNoGroup2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        buttonNoGroup2.setForeground(new java.awt.Color(255, 255, 255));
         buttonNoGroup2.setText("No");
-        add(buttonNoGroup2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 550, -1, -1));
+        add(buttonNoGroup2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 530, -1, -1));
 
         buttonNoGroup1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        buttonNoGroup1.setForeground(new java.awt.Color(255, 255, 255));
         buttonNoGroup1.setText("No");
-        add(buttonNoGroup1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 470, -1, -1));
+        add(buttonNoGroup1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 470, -1, -1));
 
         buttonYesGroup1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        buttonYesGroup1.setForeground(new java.awt.Color(255, 255, 255));
         buttonYesGroup1.setText("Yes");
-        add(buttonYesGroup1, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 470, -1, -1));
+        add(buttonYesGroup1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 470, -1, -1));
 
         buttonNoGroup3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        buttonNoGroup3.setForeground(new java.awt.Color(255, 255, 255));
         buttonNoGroup3.setText("No");
-        add(buttonNoGroup3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 610, -1, -1));
+        add(buttonNoGroup3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 590, -1, -1));
 
         buttonYesGroup3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        buttonYesGroup3.setForeground(new java.awt.Color(255, 255, 255));
         buttonYesGroup3.setText("Yes");
         buttonYesGroup3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonYesGroup3ActionPerformed(evt);
             }
         });
-        add(buttonYesGroup3, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 610, -1, -1));
+        add(buttonYesGroup3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 590, -1, -1));
 
         buttonNoGroup4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        buttonNoGroup4.setForeground(new java.awt.Color(255, 255, 255));
         buttonNoGroup4.setText("No");
-        add(buttonNoGroup4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 690, -1, -1));
+        add(buttonNoGroup4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 650, -1, -1));
 
         buttonYesGroup4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        buttonYesGroup4.setForeground(new java.awt.Color(255, 255, 255));
         buttonYesGroup4.setText("Yes");
         buttonYesGroup4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonYesGroup4ActionPerformed(evt);
             }
         });
-        add(buttonYesGroup4, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 690, -1, -1));
+        add(buttonYesGroup4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 650, -1, -1));
 
         lblProfilePicture.setBackground(new java.awt.Color(0, 0, 0));
-        lblProfilePicture.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 255, 204)));
-        add(lblProfilePicture, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 100, 130, 130));
+        lblProfilePicture.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        add(lblProfilePicture, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 150, 130, 130));
 
         lblBack.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lblBack.setForeground(new java.awt.Color(255, 255, 255));
@@ -484,7 +449,7 @@ public class NewDonorJPanel extends javax.swing.JPanel {
                 lblBackMouseClicked(evt);
             }
         });
-        add(lblBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 590, -1, 54));
+        add(lblBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 590, -1, 60));
 
         jButton2.setBackground(new java.awt.Color(31, 31, 31));
         jButton2.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -498,38 +463,32 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         });
         add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 500, 120, 40));
 
-        stateJComboBox.setBackground(new java.awt.Color(0, 0, 0));
         stateJComboBox.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        stateJComboBox.setForeground(new java.awt.Color(255, 255, 255));
         stateJComboBox.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         stateJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 stateJComboBoxActionPerformed(evt);
             }
         });
-        add(stateJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 580, 180, -1));
+        add(stateJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 580, 180, -1));
 
-        OrganTypeJComboBox.setBackground(new java.awt.Color(0, 0, 0));
         OrganTypeJComboBox.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        OrganTypeJComboBox.setForeground(new java.awt.Color(255, 255, 255));
         OrganTypeJComboBox.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         OrganTypeJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 OrganTypeJComboBoxActionPerformed(evt);
             }
         });
-        add(OrganTypeJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 320, 180, -1));
+        add(OrganTypeJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 310, 180, -1));
 
-        genderJComboBox.setBackground(new java.awt.Color(0, 0, 0));
         genderJComboBox.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        genderJComboBox.setForeground(new java.awt.Color(255, 255, 255));
         genderJComboBox.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         genderJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 genderJComboBoxActionPerformed(evt);
             }
         });
-        add(genderJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, 170, -1));
+        add(genderJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 310, 170, -1));
 
         jPanel3.setBackground(new java.awt.Color(31, 31, 31));
         jPanel3.setPreferredSize(new java.awt.Dimension(926, 70));
@@ -544,9 +503,8 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, 1666, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 1395, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 295, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -557,33 +515,33 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         );
 
         add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1690, -1));
-        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 1140, 20));
+        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 740, 1150, 20));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("BIO Details");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, -1, -1));
+        jLabel2.setText("BIO DETAILS");
+        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 80, 140, 40));
 
         jLabel23.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("Address Details");
-        add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 420, -1, -1));
+        jLabel23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 390, -1, 40));
 
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 380, 20, 360));
+        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 370, 20, 370));
 
         jLabel24.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setText("Donor Details");
-        add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 390, -1, -1));
+        jLabel24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 390, -1, -1));
 
         emailValidateMessage.setBackground(new java.awt.Color(0, 0, 0));
         emailValidateMessage.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         emailValidateMessage.setText("Email format incorrect!");
-        add(emailValidateMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
+        add(emailValidateMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
 
         emailSuccessLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/tick.gif"))); // NOI18N
-        add(emailSuccessLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 270, 30, 30));
+        add(emailSuccessLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, 30, 30));
 
         dobDateField.setBackground(new java.awt.Color(0, 0, 0));
         dobDateField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -609,10 +567,23 @@ public class NewDonorJPanel extends javax.swing.JPanel {
                 dobDateFielduDobKeyTyped(evt);
             }
         });
-        add(dobDateField, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 170, -1));
+        add(dobDateField, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, 180, -1));
 
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 370, 20, 360));
+        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 10, 370));
+
+        jLabel1.setText("Back");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 660, 50, 40));
+        add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 1150, 20));
+
+        jSeparator5.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 370, 20, 370));
+
+        jSeparator6.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 370, 20, 370));
+
+        jSeparator7.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 370, 20, 370));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
@@ -1109,6 +1080,7 @@ public class NewDonorJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel emailValidateMessage;
     private javax.swing.JComboBox genderJComboBox;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -1135,6 +1107,10 @@ public class NewDonorJPanel extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
     private javax.swing.JLabel lblBack;
     private javax.swing.JLabel lblProfilePicture;
     private javax.swing.JTextField nameText;

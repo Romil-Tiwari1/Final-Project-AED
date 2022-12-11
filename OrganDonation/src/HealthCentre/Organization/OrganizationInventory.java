@@ -64,10 +64,21 @@ if (type.getValue().equals(Type.Doctor.getValue())){
         }
         return organization;
     }
-     public Organization createCovidCentreOrganization(Organization.TransplantCentreOrganizationType centreType, String realName){
+     public Organization createTransplantCentreOrganization(Organization.TransplantCentreOrganizationType centreType, String realName){
         Organization organization = null;
         if (centreType.getValue().equals(Organization.TransplantCentreOrganizationType.TransplantCentreOrganization.getValue())){
             organization = new TransplantCentreOrganization();
+            organization.setRealName(realName);
+            organizationList.add(organization);
+        }
+        return organization;
+    }
+     
+     public Organization createOrganBankOrganization(Organization.OrganBankType 
+             centreType, String realName){
+        Organization organization = null;
+        if (centreType.getValue().equals(Organization.OrganBankType.OrganBank.getValue())){
+            organization = new OrganBankOrganization();
             organization.setRealName(realName);
             organizationList.add(organization);
         }
