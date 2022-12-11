@@ -32,7 +32,7 @@ public abstract class Organization {
         Admin("Admin Organization"),
         SystemCoordinator("System Coorinator Organization"),
         Doctor("Doctor Organization"), 
-        Pathologist("Pathologist Organization");
+        LabCoordinator(" LabCoordinator Organization");
         private String value;
         private Type(String value) {
             this.value = value;
@@ -42,7 +42,20 @@ public abstract class Organization {
         }
     }
     
-   
+     public enum LabCoordinatorType {
+         
+        LabCoordinator("LabCoordinator Organization");
+        private String value;
+
+        private LabCoordinatorType(String value) {
+            this.value = value;
+        }
+
+        public String getValue() {
+            return value;
+        }
+     }
+
     
     public enum DonationType {
          

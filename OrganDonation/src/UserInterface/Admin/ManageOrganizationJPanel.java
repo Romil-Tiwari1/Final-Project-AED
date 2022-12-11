@@ -9,7 +9,9 @@ import HealthCentre.EcoSystem;
 import HealthCentre.Enterprise.Enterprise;
 import static HealthCentre.Enterprise.Enterprise.EnterpriseType.Donation;
 import HealthCentre.Organization.Organization;
+
 import HealthCentre.Organization.Organization.DonationType;
+
 import HealthCentre.Organization.Organization.Type;
 import HealthCentre.Organization.OrganizationInventory;
 import HomeScreens.TableFormat;
@@ -20,11 +22,11 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author fakhr
  */
-
 public class ManageOrganizationJPanel extends javax.swing.JPanel {
 
     private OrganizationInventory directory;
@@ -33,11 +35,10 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
     EcoSystem system;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
 
-    
     /**
      * Creates new form ManageOrganizationJPanel
      */
-    public ManageOrganizationJPanel(JPanel userProcessContainer,OrganizationInventory directory, Enterprise enterprise, EcoSystem system ) {
+    public ManageOrganizationJPanel(JPanel userProcessContainer, OrganizationInventory directory, Enterprise enterprise, EcoSystem system) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.directory = directory;
@@ -48,41 +49,36 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         populateTable();
         populateCombo();
     }
-    
-    private void populateCombo(){
+
+    private void populateCombo() {
         organizationJComboBox.removeAllItems();
-       // for (Type type : Organization.Type.values()){
+        // for (Type type : Organization.Type.values()){
         //    if (!type.getValue().equals(Type.Admin.getValue()))
         //        organizationJComboBox.addItem(type);
-       // }
+        // }
+
+        System.out.println(enterprise.getEnterpriseType());
+
+        if (enterprise.getEnterpriseType().toString().equals(Donation.toString())) {
+            for (Organization.DonationType donType : Organization.DonationType.values()) {
+                if (donType.getValue().equals(Organization.DonationType.Donation.getValue())) {
+                    organizationJComboBox.addItem(donType);
+              
+      
+      
        
-       System.out.println(enterprise.getEnterpriseType());
-       
-       if(enterprise.getEnterpriseType().toString().equals(Donation.toString())){
-        for(Organization.DonationType donType: Organization.DonationType.values()){
-            if (donType.getValue().equals(Organization.DonationType.Donation.getValue())){
-                organizationJComboBox.addItem(donType);
+                }
             }
         }
-        }
-       else{
-        for (Organization.Type type : Organization.Type.values()){            
-            if (type.getValue().equals(Organization.Type.SystemCoordinator.getValue())
-                    ||type.getValue().equals(Organization.Type.Doctor.getValue())
-                    ||type.getValue().equals(Organization.Type.Pathologist.getValue())
-                    )
-                organizationJComboBox.addItem(type);
-        }
-       
     }
-    }
-    private void populateTable(){
+
+    private void populateTable() {
         System.out.println("In populate table");
         DefaultTableModel model = (DefaultTableModel) organizationJTable.getModel();
-        
+
         model.setRowCount(0);
-        
-        for (Organization organization : directory.getOrganizationList()){
+
+        for (Organization organization : directory.getOrganizationList()) {
             System.out.println("In loop");
             Object[] row = new Object[2];
             row[0] = organization.getName();
@@ -92,6 +88,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
             model.addRow(row);
         }
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -276,27 +273,25 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
 
     private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
 
-        String check1 = "";    
-        
+        String check1 = "";
+
         if (txtOrgRealName.getText().isEmpty()) {
             txtOrgRealName.setBorder(BorderFactory.createLineBorder(Color.RED));
             txtOrgRealName.setForeground(Color.red);
 
-            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><I>Organization Name<font color='red'> can not </font>be empty!/I<></h2></html>") , "Error", JOptionPane.ERROR_MESSAGE);
-                   
+            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><I>Organization Name<font color='red'> can not </font>be empty!/I<></h2></html>"), "Error", JOptionPane.ERROR_MESSAGE);
 
             //JOptionPane.showMessageDialog(null, "Organization name cannot be empty!");
             check1 = "do not go further!";
             return;
         }
 
-        
         for (Organization organization : directory.getOrganizationList()) {
 
             if (organization.getName().equals(txtOrgRealName.getText())) {
-                
-            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><I>Organization name</I><font color='red'> already</font><I> exists!/I<></h2></html>") , "Error", JOptionPane.ERROR_MESSAGE);
-                   
+
+                JOptionPane.showMessageDialog(null, new JLabel("<html><h2><I>Organization name</I><font color='red'> already</font><I> exists!/I<></h2></html>"), "Error", JOptionPane.ERROR_MESSAGE);
+
                 //JOptionPane.showMessageDialog(null, "Organization name already exists!");
                 check1 = "do not go further!";
                 return;
@@ -304,31 +299,25 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         }
 
 // Main Process after validation checks
-        if(check1.equals("")){
-        if(enterprise.getEnterpriseType().toString().equals(Donation.toString())){
-            directory.createDonationOrganization((DonationType)organizationJComboBox.getSelectedItem(), txtOrgRealName.getText());
-        }
- 
-        else{
-            
-        Type type = (Type) organizationJComboBox.getSelectedItem();
-        directory.createOrganization(type, txtOrgRealName.getText());
-        }
-        System.out.println("data getting stored");
-        populateTable();
-        System.out.println("data stored");
-        
-        
-       JOptionPane.showMessageDialog(null, new JLabel("<html><h2><I>A new Organization</I><font color='green'> created </font><I>successfully!/I<></h2></html>"));
-                   
-        //JOptionPane.showMessageDialog(null, "Organization created successfully!");
-        
-        
-        dB4OUtil.storeSystem(system);
-        
-        
-        txtOrgRealName.setText("");
-        organizationJComboBox.removeItem(organizationJComboBox.getSelectedItem());
+        if (check1.equals("")) {
+            if (enterprise.getEnterpriseType().toString().equals(Donation.toString())) {
+                directory.createDonationOrganization((DonationType) organizationJComboBox.getSelectedItem(), txtOrgRealName.getText());
+            } else {
+
+                Type type = (Type) organizationJComboBox.getSelectedItem();
+                directory.createOrganization(type, txtOrgRealName.getText());
+            }
+            System.out.println("data getting stored");
+            populateTable();
+            System.out.println("data stored");
+
+            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><I>A new Organization</I><font color='green'> created </font><I>successfully!/I<></h2></html>"));
+
+            //JOptionPane.showMessageDialog(null, "Organization created successfully!");
+            dB4OUtil.storeSystem(system);
+
+            txtOrgRealName.setText("");
+            organizationJComboBox.removeItem(organizationJComboBox.getSelectedItem());
         }
     }//GEN-LAST:event_addJButtonActionPerformed
 

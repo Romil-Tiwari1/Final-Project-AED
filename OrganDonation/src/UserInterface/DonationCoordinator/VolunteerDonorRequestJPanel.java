@@ -362,6 +362,11 @@ public class VolunteerDonorRequestJPanel extends javax.swing.JPanel {
         inheritedDiseaseText.setBackground(new java.awt.Color(0, 0, 0));
         inheritedDiseaseText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         inheritedDiseaseText.setForeground(new java.awt.Color(255, 255, 255));
+        inheritedDiseaseText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inheritedDiseaseTextActionPerformed(evt);
+            }
+        });
         add(inheritedDiseaseText, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 640, 170, -1));
 
         substanceAbuse.setBackground(new java.awt.Color(0, 0, 0));
@@ -449,7 +454,7 @@ public class VolunteerDonorRequestJPanel extends javax.swing.JPanel {
         
         else
         {
-        Donor donor = system.getDonorDirectory().addDonor();  
+        Donor donor = system.getOrganDonorDirectory().addDonor();  
         donor.setDonorID(uidText.getText()); // UID
         donor.setName(nameText.getText()); // Name
         donor.setDob(dobDateField.getDate()); // DOB 
@@ -464,10 +469,10 @@ public class VolunteerDonorRequestJPanel extends javax.swing.JPanel {
         donor.setEmailID(statusText.getText()); // emailID
         donor.setStatus("Donation Coordinator Approved"); // status
     
-        donor.setInheritedDiseaseText(true); //  inherited disease
-        donor.setSymptoms(true); //  symptoms
-        donor.setLastDaySymptoms(true); //  lastDaySymptoms
-        donor.setFollowUpTest(true); //  followUpTest     
+        donor.setInheritedDisease(true); //  inherited disease
+        donor.setSubstanceAbuse(true); //  substance abuse
+        donor.setDrugAddict(true); //  drug addict
+        donor.setAccidentHistory(true); //  accident history     
              
         for(DonorRequest donorRequest: system.getDonorRequestDirectory().getDonorRequestList()){            
         
@@ -680,6 +685,10 @@ public class VolunteerDonorRequestJPanel extends javax.swing.JPanel {
 
             */
     }//GEN-LAST:event_dobDateFielduDobKeyTyped
+
+    private void inheritedDiseaseTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inheritedDiseaseTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inheritedDiseaseTextActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
