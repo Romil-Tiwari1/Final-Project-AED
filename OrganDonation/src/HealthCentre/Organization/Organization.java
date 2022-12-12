@@ -50,7 +50,7 @@ public abstract class Organization {
 
      public enum TransplantCentreOrganizationType {
          
-        TransplantCentreOrganization("TransplantCentre Organization Organization");
+        TransplantCentreOrganization("TransplantCentre Organization");
         private String value;
 
         private TransplantCentreOrganizationType (String value) {

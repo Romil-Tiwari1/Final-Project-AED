@@ -16,6 +16,9 @@ import static HealthCentre.Enterprise.Enterprise.EnterpriseType.OrganTransplantC
 import HealthCentre.Organization.Organization;
 
 import HealthCentre.Organization.Organization.DonationType;
+import HealthCentre.Organization.Organization.ConsentVerificationType;
+import HealthCentre.Organization.Organization.OrganBankType;
+import HealthCentre.Organization.Organization.TransplantCentreOrganizationType;
 
 import HealthCentre.Organization.Organization.Type;
 import HealthCentre.Organization.OrganizationInventory;
@@ -338,7 +341,17 @@ else{
         if (check1.equals("")) {
             if (enterprise.getEnterpriseType().toString().equals(Donation.toString())) {
                 directory.createDonationOrganization((DonationType) organizationJComboBox.getSelectedItem(), txtOrgRealName.getText());
-            } else {
+            } 
+ else if(enterprise.getEnterpriseType().toString().equals(ConsentVerification.toString())){
+            directory.createConsentVerificationOrganization((ConsentVerificationType) organizationJComboBox.getSelectedItem(), txtOrgRealName.getText());
+        }
+else if(enterprise.getEnterpriseType().toString().equals(OrganBank.toString())){
+            directory.createOrganBankOrganization((OrganBankType) organizationJComboBox.getSelectedItem(), txtOrgRealName.getText());
+        }
+else if(enterprise.getEnterpriseType().toString().equals(OrganTransplantCentre.toString())){
+            directory.createTransplantCentreOrganization((TransplantCentreOrganizationType) organizationJComboBox.getSelectedItem(), txtOrgRealName.getText());
+        }
+else {
 
                 Type type = (Type) organizationJComboBox.getSelectedItem();
                 directory.createOrganization(type, txtOrgRealName.getText());
