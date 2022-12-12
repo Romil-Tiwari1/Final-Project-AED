@@ -30,5 +30,13 @@ public class PatientRequestDirectory {
     
 //Donor Request Directory
 
-      
+          public DonorRequest removePatientRequest(PatientRequest p)
+    {
+        //DonorRequest donorRequest = new DonorRequest();
+        //this.donor = donor
+        patientRequestList.remove(p);
+        //return donorRequest;
+        return null;
+    }
+    
 }

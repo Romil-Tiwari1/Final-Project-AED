@@ -105,7 +105,7 @@ public class DonorListJPanel extends javax.swing.JPanel {
             row[0] = request;
             
             row[1] = request.getOrganDonor();
-            row[2] = request.getSummary();
+            row[2] = request.getDoctorRequestSummary();
             row[3] = request.getEnterprise();
             row[4] = request.getStatus();
             row[5] = request.getActionDate();
@@ -353,7 +353,7 @@ public class DonorListJPanel extends javax.swing.JPanel {
             {
                 request.setActionDate(new Date());
                 request.setAssignement("Hospital Pool");
-                request.setSummary("Requested for Donation");
+                request.setDoctorRequestSummary("Requested for Donation");
                 request.setStatus("Assigned to Hospital"); // WorkRequest Status changed
                 request.setUserAccount(userAccount);
                 request.setOrganDonor((Donor) tblDonors.getValueAt(row, 0));

@@ -273,6 +273,11 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
 
         organizationEmpJComboBox.setBackground(new java.awt.Color(0, 0, 0));
         organizationEmpJComboBox.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        organizationEmpJComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                organizationEmpJComboBoxActionPerformed(evt);
+            }
+        });
         jPanel2.add(organizationEmpJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 222, 210, 30));
 
         addJButton.setBackground(new java.awt.Color(199, 247, 247));
@@ -409,6 +414,10 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         organizationEmpJComboBox.addItem(organization.getRealName());
         
     }//GEN-LAST:event_organizationJComboBoxItemStateChanged
+
+    private void organizationEmpJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organizationEmpJComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_organizationEmpJComboBoxActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addJButton;

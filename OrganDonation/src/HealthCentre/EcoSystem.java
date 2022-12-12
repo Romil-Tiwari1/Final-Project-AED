@@ -109,8 +109,14 @@ public class EcoSystem extends Organization {
     private EcoSystem() {
         super(null);
         System.out.println("I m in constructor");
-        networkList = new ArrayList<Network>();
-        this.userAccountDirectory = new UserAccountInventory();
+        networkList=new ArrayList<Network>();
+        this.userAccountDirectory  = new UserAccountInventory();
+        this.donorDirectory = new DonorDirectory();
+        this.patientDirectory = new PatientDirectory();
+        this.donorRequestDirectory = new DonorRequestDirectory();
+        this.patientRequestDirectory = new PatientRequestDirectory();
+        this.userAccountDirectory  = new UserAccountInventory();
+  
     }
 
     public ArrayList<Network> getNetworkList() {
