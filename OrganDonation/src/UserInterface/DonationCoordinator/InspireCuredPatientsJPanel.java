@@ -243,7 +243,7 @@ public class InspireCuredPatientsJPanel extends javax.swing.JPanel {
         messageTextField.setText("Hi,\n\nAs per our records you had got organ transplantation.Please do fill this form to donate\n your \norgan so that it can save life of someone else too.\n\nLink to register-\nhttps://docs.google.com/forms/d/1BkQfrK2Y5xUpi9HlhO3pS7IyqBXb4hEp3eX0ZHaqE20/\nviewform?edit_requested=true#response=ACYDBNjTLt8NUEp3AEl9mr9ZwGCzuG67MeM\nHckZIeJpT_Gp5PaeE6pv_-dSDYLc7grNYUeI");
         jScrollPane2.setViewportView(messageTextField);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 600, 790, 260));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 610, 790, 260));
     }// </editor-fold>//GEN-END:initComponents
 
     private void toTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toTextFieldActionPerformed
