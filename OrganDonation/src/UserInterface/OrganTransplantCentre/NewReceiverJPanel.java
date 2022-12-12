@@ -72,26 +72,27 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         
         
     }
-    
-    
-     private void populateBloodGroupComboBox(){
-           bloodGroupJComboBox.addItem("O+");
-           bloodGroupJComboBox.addItem("AB+");
-           bloodGroupJComboBox.addItem("O-");
-           bloodGroupJComboBox.addItem("AB-");
-           bloodGroupJComboBox.addItem("A+");
-           bloodGroupJComboBox.addItem("B+");
-           bloodGroupJComboBox.addItem("A-");
-           bloodGroupJComboBox.addItem("B-");
+    private void populateBloodGroupComboBox(){
+            organGroupComboBox.addItem("");
+           organGroupComboBox.addItem("Eye");
+           organGroupComboBox.addItem("Kidney");
+           organGroupComboBox.addItem("Lungs");
+           organGroupComboBox.addItem("Liver");
+           organGroupComboBox.addItem("Heart");
+           organGroupComboBox.addItem("Tissue");
+           organGroupComboBox.addItem("Pancreas");
+           organGroupComboBox.addItem("Intenstine");
         }
   
     private void populateGenderComboBox(){
+         genderJComboBox.addItem("");
       genderJComboBox.addItem("Male");
       genderJComboBox.addItem("Female");
       genderJComboBox.addItem("Other");
         }
   
      private void populateStateComboBox(){
+         stateJComboBox.addItem("");
       stateJComboBox.addItem("California");
       stateJComboBox.addItem("Massachusetts");
       stateJComboBox.addItem("Georgia");
@@ -133,7 +134,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         emailText.setEnabled(false);
         contactText.setEnabled(false);
         genderJComboBox.setEnabled(false);
-        bloodGroupJComboBox.setEnabled(false);
+        organGroupComboBox.setEnabled(false);
         diagnosedDateChooser.setEnabled(false);
         streetText.setEnabled(false);
         cityText.setEnabled(false);
@@ -187,7 +188,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         jLabel25 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         stateJComboBox = new javax.swing.JComboBox();
-        bloodGroupJComboBox = new javax.swing.JComboBox();
+        organGroupComboBox = new javax.swing.JComboBox();
         genderJComboBox = new javax.swing.JComboBox();
         diagnosedDateChooser = new com.toedter.calendar.JDateChooser();
         lblProfilePicture = new javax.swing.JLabel();
@@ -328,7 +329,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
 
         jLabel9.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Blood group");
+        jLabel9.setText("Organ type");
         add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 330, -1, -1));
 
         streetText.setBackground(new java.awt.Color(0, 0, 0));
@@ -338,7 +339,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
 
         jLabel10.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Covid diagnosed date");
+        jLabel10.setText("Doctor Diagnosis Date");
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 570, -1, -1));
 
         btnAddPhoto.setBackground(new java.awt.Color(31, 31, 31));
@@ -424,16 +425,16 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         });
         add(stateJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 500, 210, -1));
 
-        bloodGroupJComboBox.setBackground(new java.awt.Color(0, 0, 0));
-        bloodGroupJComboBox.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        bloodGroupJComboBox.setForeground(new java.awt.Color(255, 255, 255));
-        bloodGroupJComboBox.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bloodGroupJComboBox.addActionListener(new java.awt.event.ActionListener() {
+        organGroupComboBox.setBackground(new java.awt.Color(0, 0, 0));
+        organGroupComboBox.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        organGroupComboBox.setForeground(new java.awt.Color(255, 255, 255));
+        organGroupComboBox.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        organGroupComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bloodGroupJComboBoxActionPerformed(evt);
+                organGroupComboBoxActionPerformed(evt);
             }
         });
-        add(bloodGroupJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 330, 170, -1));
+        add(organGroupComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 330, 170, -1));
 
         genderJComboBox.setBackground(new java.awt.Color(0, 0, 0));
         genderJComboBox.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -560,9 +561,9 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_genderJComboBoxActionPerformed
 
-    private void bloodGroupJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bloodGroupJComboBoxActionPerformed
+    private void organGroupComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organGroupComboBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bloodGroupJComboBoxActionPerformed
+    }//GEN-LAST:event_organGroupComboBoxActionPerformed
 
     private void stateJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stateJComboBoxActionPerformed
 
@@ -589,7 +590,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         emailText.setEnabled(true);
         contactText.setEnabled(true);
         genderJComboBox.setEnabled(true);
-        bloodGroupJComboBox.setEnabled(true);
+        organGroupComboBox.setEnabled(true);
         diagnosedDateChooser.setEnabled(true);
         streetText.setEnabled(true);
         cityText.setEnabled(true);
@@ -609,7 +610,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
         zipText.setText("");
 
         genderJComboBox.setSelectedItem("");
-        bloodGroupJComboBox.setSelectedItem("");
+        organGroupComboBox.setSelectedItem("");
         stateJComboBox.setSelectedItem("");
 
         dobDateField.setCalendar(null);
@@ -673,9 +674,9 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
             genderJComboBox.setBorder(BorderFactory.createLineBorder(Color.RED));
             genderJComboBox.setForeground(Color.red);
         }
-        if ( bloodGroupJComboBox.getSelectedItem().equals("") ){
-            bloodGroupJComboBox.setBorder(BorderFactory.createLineBorder(Color.RED));
-            bloodGroupJComboBox.setForeground(Color.red);
+        if ( organGroupComboBox.getSelectedItem().equals("") ){
+            organGroupComboBox.setBorder(BorderFactory.createLineBorder(Color.RED));
+            organGroupComboBox.setForeground(Color.red);
         }
         if (nameText.getText().isEmpty()) {
             nameText.setBorder(BorderFactory.createLineBorder(Color.RED));
@@ -724,7 +725,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
             zipText.getText().isEmpty() || streetText.getText().isEmpty() || uidText.getText().isEmpty() ||
             dobDateField.getDate() == null || diagnosedDateChooser.getDate() == null || ageText.getText().isEmpty() ||
             String.valueOf(genderJComboBox.getSelectedItem()).equals("") ||
-            String.valueOf(bloodGroupJComboBox.getSelectedItem()).equals("") ||
+            String.valueOf(organGroupComboBox.getSelectedItem()).equals("") ||
             String.valueOf(stateJComboBox.getSelectedItem()).equals("") ||
             lblProfilePicture == null
         )
@@ -813,7 +814,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
                 patientrequest.setCity(cityText.getText()); // city
                 patientrequest.setState((String) stateJComboBox.getSelectedItem()); // state
                 patientrequest.setZipCode(Integer.parseInt(zipText.getText())); // zipCode
-                patientrequest.setContact(Integer.parseInt(contactText.getText())); // contact
+                patientrequest.setContact(contactText.getText()); // contact
                 patientrequest.setEmailID(emailText.getText()); // emailID
                 patientrequest.setStatus("New Request"); // status
                 patientrequest.setdP(tempdP);
@@ -830,7 +831,6 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField ageText;
-    private javax.swing.JComboBox bloodGroupJComboBox;
     private javax.swing.JButton btnAddPhoto;
     private javax.swing.JRadioButton buttonNo;
     private javax.swing.JRadioButton buttonYes;
@@ -868,6 +868,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lblProfilePicture;
     private javax.swing.JTextField nameText;
+    private javax.swing.JComboBox organGroupComboBox;
     private javax.swing.JComboBox stateJComboBox;
     private javax.swing.JTextField streetText;
     private javax.swing.JTextField uidText;

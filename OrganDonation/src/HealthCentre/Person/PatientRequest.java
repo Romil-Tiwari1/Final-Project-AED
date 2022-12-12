@@ -17,7 +17,7 @@ public class PatientRequest {
 
     private String streetAddress;
     private int zipCode;
-    private int contact;
+    private String contact;
     private String emailID;
     private boolean labReport;
     private String status;
@@ -71,11 +71,11 @@ public class PatientRequest {
         this.zipCode = zipCode;
     }
 
-    public int getContact() {
+    public String getContact() {
         return contact;
     }
 
-    public void setContact(int contact) {
+    public void setContact(String contact) {
         this.contact = contact;
     }
 
