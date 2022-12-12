@@ -27,7 +27,7 @@ public class OrganizationInventory {
     
     public Organization createOrganization(Type type, String realName){
         Organization organization = null;
-if (type.getValue().equals(Type.Doctor.getValue())){
+        if (type.getValue().equals(Type.Doctor.getValue())){
             organization = new DoctorOrganization();
             organization.setRealName(realName);
             organizationList.add(organization);
