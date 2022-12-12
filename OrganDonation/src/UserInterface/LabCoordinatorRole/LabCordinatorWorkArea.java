@@ -441,19 +441,19 @@ public class LabCordinatorWorkArea extends javax.swing.JPanel {
     private void BtnProfileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnProfileMouseClicked
         // TODO add your handling code here:
         
-//        ManagePathologistProfile managePathologistProfile = new ManagePathologistProfile(userAccount,pathoorganization,enterprise);
-//        userProcessContainer.add("ManagePathologistProfile",managePathologistProfile);
-//        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-//        layout.next(userProcessContainer);
+       LabCoordinatorProfile manageProfile = new LabCoordinatorProfile(userAccount,labCoordinatorOrganization,enterprise);
+        userProcessContainer.add("LabCoordinatorProfile",manageProfile);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_BtnProfileMouseClicked
 
     private void BtnManageRequestMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnManageRequestMouseClicked
         // TODO add your handling code here:
-//        ManagePathologistRequests managePathologistRequest = new ManagePathologistRequests(system,userAccount,pathoorganization,enterprise, network);
-//        userProcessContainer.add("ManagePathologistRequests", managePathologistRequest);
-//        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-//        layout.next(userProcessContainer);
-//        
+        LabCoordinatortRequests manageRequest = new LabCoordinatortRequests(system,userAccount,labCoordinatorOrganization,enterprise, network);
+        userProcessContainer.add("LabCoordinatortRequests", manageRequest);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+       
     }//GEN-LAST:event_BtnManageRequestMouseClicked
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
