@@ -16,7 +16,6 @@ import static HealthCentre.Enterprise.Enterprise.EnterpriseType.OrganTransplantC
 import HealthCentre.Organization.Organization;
 
 import HealthCentre.Organization.Organization.DonationType;
-import HealthCentre.Organization.Organization.TransplantCentreOrganizationType;
 
 import HealthCentre.Organization.Organization.Type;
 import HealthCentre.Organization.OrganizationInventory;
@@ -69,6 +68,9 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
             for (Organization.DonationType donType : Organization.DonationType.values()) {
                 if (donType.getValue().equals(Organization.DonationType.Donation.getValue())) {
                     organizationJComboBox.addItem(donType);
+              
+      
+      
        
                 }
             }
@@ -337,7 +339,9 @@ else{
             if (enterprise.getEnterpriseType().toString().equals(Donation.toString())) {
                 directory.createDonationOrganization((DonationType) organizationJComboBox.getSelectedItem(), txtOrgRealName.getText());
             } else {
-                directory.createOrganization((TransplantCentreOrganizationType) organizationJComboBox.getSelectedItem(), txtOrgRealName.getText());
+
+                Type type = (Type) organizationJComboBox.getSelectedItem();
+                directory.createOrganization(type, txtOrgRealName.getText());
             }
             System.out.println("data getting stored");
             populateTable();

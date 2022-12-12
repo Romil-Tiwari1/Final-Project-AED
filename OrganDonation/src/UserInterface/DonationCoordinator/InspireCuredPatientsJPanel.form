@@ -118,7 +118,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="290" y="400" width="-1" height="-1"/>
+          <AbsoluteConstraints x="100" y="400" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -134,7 +134,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="290" y="460" width="-1" height="-1"/>
+          <AbsoluteConstraints x="100" y="450" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -150,7 +150,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="290" y="510" width="-1" height="-1"/>
+          <AbsoluteConstraints x="100" y="490" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -166,7 +166,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="290" y="560" width="-1" height="-1"/>
+          <AbsoluteConstraints x="100" y="560" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -187,7 +187,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="460" y="400" width="330" height="-1"/>
+          <AbsoluteConstraints x="210" y="400" width="330" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -202,14 +202,14 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="aedproject@gmail.com"/>
+        <Property name="text" type="java.lang.String" value="group62.aedteam@gmail.com"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fromTextFieldActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="460" y="450" width="330" height="-1"/>
+          <AbsoluteConstraints x="210" y="450" width="330" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -231,7 +231,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="460" y="500" width="330" height="-1"/>
+          <AbsoluteConstraints x="210" y="500" width="330" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -258,7 +258,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="1060" y="500" width="110" height="40"/>
+          <AbsoluteConstraints x="680" y="450" width="110" height="40"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -339,25 +339,13 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel6">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Images/letter.png"/>
-        </Property>
-      </Properties>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="890" y="460" width="140" height="130"/>
-        </Constraint>
-      </Constraints>
-    </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane2">
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="210" y="600" width="790" height="260"/>
+          <AbsoluteConstraints x="80" y="620" width="790" height="260"/>
         </Constraint>
       </Constraints>
 
@@ -376,7 +364,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Hi,&#xa;&#xa;As per our records you had got organ transplantation.Please do fill this form to donate&#xa; your &#xa;organ so that it can save life of someone else too.&#xa;&#xa;Link to register-&#xa;https://docs.google.com/forms/d/1BkQfrK2Y5xUpi9HlhO3pS7IyqBXb4hEp3eX0ZHaqE20/&#xa;viewform?edit_requested=true#response=ACYDBNjTLt8NUEp3AEl9mr9ZwGCzuG67MeM&#xa;HckZIeJpT_Gp5PaeE6pv_-dSDYLc7grNYUeI"/>
+            <Property name="text" type="java.lang.String" value="Hi,&#xa;&#xa;As per our records you had got organ transplantation.Please do fill this form to donate&#xa; your &#xa;organ so that it can save life of someone else too.&#xa;&#xa;Link to register-&#xa;https://docs.google.com/forms/d/e/1FAIpQLSdmQsO8s6or4MMN4Ial4feTCAzuOZ72le_6sY0fphEyKMSrmQ/viewform?usp=sf_link"/>
           </Properties>
         </Component>
       </SubComponents>
