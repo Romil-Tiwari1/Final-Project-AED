@@ -91,7 +91,6 @@ public class InspireCuredPatientsJPanel extends javax.swing.JPanel {
         jPanel3 = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         messageTextField = new javax.swing.JTextArea();
 
@@ -132,22 +131,22 @@ public class InspireCuredPatientsJPanel extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("To");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 400, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("From");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 460, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 450, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Subject");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 510, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 490, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Message body");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 560, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 560, -1, -1));
 
         toTextField.setBackground(new java.awt.Color(0, 0, 0));
         toTextField.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -157,18 +156,18 @@ public class InspireCuredPatientsJPanel extends javax.swing.JPanel {
                 toTextFieldActionPerformed(evt);
             }
         });
-        add(toTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 400, 330, -1));
+        add(toTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 400, 330, -1));
 
         fromTextField.setBackground(new java.awt.Color(0, 0, 0));
         fromTextField.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         fromTextField.setForeground(new java.awt.Color(255, 255, 255));
-        fromTextField.setText("aedproject@gmail.com");
+        fromTextField.setText("group62.aedteam@gmail.com");
         fromTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fromTextFieldActionPerformed(evt);
             }
         });
-        add(fromTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 450, 330, -1));
+        add(fromTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 450, 330, -1));
 
         subjectTextField.setBackground(new java.awt.Color(0, 0, 0));
         subjectTextField.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -179,7 +178,7 @@ public class InspireCuredPatientsJPanel extends javax.swing.JPanel {
                 subjectTextFieldActionPerformed(evt);
             }
         });
-        add(subjectTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 500, 330, -1));
+        add(subjectTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 500, 330, -1));
 
         sendButton.setBackground(new java.awt.Color(31, 31, 31));
         sendButton.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -191,7 +190,7 @@ public class InspireCuredPatientsJPanel extends javax.swing.JPanel {
                 sendButtonActionPerformed(evt);
             }
         });
-        add(sendButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 500, 110, 40));
+        add(sendButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 450, 110, 40));
 
         jPanel3.setBackground(new java.awt.Color(31, 31, 31));
         jPanel3.setPreferredSize(new java.awt.Dimension(926, 70));
@@ -232,18 +231,15 @@ public class InspireCuredPatientsJPanel extends javax.swing.JPanel {
         });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 340, 130, 40));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/letter.png"))); // NOI18N
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 460, 140, 130));
-
         messageTextField.setBackground(new java.awt.Color(0, 0, 0));
         messageTextField.setColumns(20);
         messageTextField.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         messageTextField.setForeground(new java.awt.Color(255, 255, 255));
         messageTextField.setRows(5);
-        messageTextField.setText("Hi,\n\nAs per our records you had got organ transplantation.Please do fill this form to donate\n your \norgan so that it can save life of someone else too.\n\nLink to register-\nhttps://docs.google.com/forms/d/1BkQfrK2Y5xUpi9HlhO3pS7IyqBXb4hEp3eX0ZHaqE20/\nviewform?edit_requested=true#response=ACYDBNjTLt8NUEp3AEl9mr9ZwGCzuG67MeM\nHckZIeJpT_Gp5PaeE6pv_-dSDYLc7grNYUeI");
+        messageTextField.setText("Hi,\n\nAs per our records you had got organ transplantation.Please do fill this form to donate\n your \norgan so that it can save life of someone else too.\n\nLink to register-\nhttps://docs.google.com/forms/d/e/1FAIpQLSdmQsO8s6or4MMN4Ial4feTCAzuOZ72le_6sY0fphEyKMSrmQ/viewform?usp=sf_link");
         jScrollPane2.setViewportView(messageTextField);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 610, 790, 260));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 620, 790, 260));
     }// </editor-fold>//GEN-END:initComponents
 
     private void toTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toTextFieldActionPerformed
@@ -264,11 +260,9 @@ public class InspireCuredPatientsJPanel extends javax.swing.JPanel {
         }
         else{
         
-//       System.out.println("Preparing to send message ..");
-      
        String toEmail = toTextField.getText();
-       final String fromEmail = fromTextField.getText();
-       final String fromEmailPassword = ""; //your email password
+       final String fromEmail = "group62.aedteam";
+       final String fromEmailPassword = "xstphiczsmzzcwht"; //your email password
        String subject = subjectTextField.getText();
         
         Properties properties = new Properties();
@@ -326,13 +320,9 @@ public class InspireCuredPatientsJPanel extends javax.swing.JPanel {
             //JOptionPane.showMessageDialog(null,"Please select a row from the table first to View Details!","Warning!",JOptionPane.WARNING_MESSAGE);
         }
         else{
-        
-        
         toTextField.setText(String.valueOf(tblCuredPatient.getValueAt(selectedRow, 2)));        
         
         }
-        
-        
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
@@ -345,7 +335,6 @@ public class InspireCuredPatientsJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
