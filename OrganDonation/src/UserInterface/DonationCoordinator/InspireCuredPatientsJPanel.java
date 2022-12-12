@@ -262,7 +262,7 @@ public class InspireCuredPatientsJPanel extends javax.swing.JPanel {
         
        String toEmail = toTextField.getText();
        final String fromEmail = "group62.aedteam";
-       final String fromEmailPassword = "Aedteam@62"; //your email password
+       final String fromEmailPassword = "xstphiczsmzzcwht"; //your email password
        String subject = subjectTextField.getText();
         
         Properties properties = new Properties();
@@ -320,13 +320,9 @@ public class InspireCuredPatientsJPanel extends javax.swing.JPanel {
             //JOptionPane.showMessageDialog(null,"Please select a row from the table first to View Details!","Warning!",JOptionPane.WARNING_MESSAGE);
         }
         else{
-        
-        
         toTextField.setText(String.valueOf(tblCuredPatient.getValueAt(selectedRow, 2)));        
         
         }
-        
-        
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
