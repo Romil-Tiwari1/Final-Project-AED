@@ -10,6 +10,7 @@ import HealthCentre.Enterprise.Enterprise;
 import HealthCentre.Network.Network;
 import HealthCentre.Organization.OrganBankOrganization;
 import HealthCentre.UserAccount.UserAccount;
+import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.ImageIcon;
@@ -459,10 +460,18 @@ public class OrganBankCoordinatorWorkAreaJPanel extends javax.swing.JPanel {
 
     private void profileButtonLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileButtonLabelMouseClicked
         // TODO add your handling code here:
+  ManageOrganBankCoordinatorProfileJPanel manageProfile = new ManageOrganBankCoordinatorProfileJPanel(userAccount,organBankOrganisation,enterprise);
+        userProcessContainer.add("ManageOrganBankCoordinatorProfileJPanel",manageProfile);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_profileButtonLabelMouseClicked
 
     private void manageRequestsButtonLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageRequestsButtonLabelMouseClicked
         // TODO add your handling code here:
+OrganRequestJPanel RequestJPanel = new OrganRequestJPanel( userAccount,  organBankOrganisation, enterprise, network, ecoSystem);
+        userProcessContainer.add("organBankOrganisation",RequestJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_manageRequestsButtonLabelMouseClicked
 
     private void backLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backLabelMouseClicked
