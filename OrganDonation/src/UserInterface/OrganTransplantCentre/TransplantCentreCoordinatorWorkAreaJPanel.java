@@ -29,7 +29,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import static javax.swing.SwingUtilities.getWindowAncestor;
-//import UserInterface.GovernmentCoordinatorRole.EncourageCuredPatientsJPanel;
 
 /**
  *
@@ -127,6 +126,7 @@ public class TransplantCentreCoordinatorWorkAreaJPanel extends javax.swing.JPane
         jPanel2 = new javax.swing.JPanel();
         btnProfile = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         btnPatientStatus = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
@@ -360,15 +360,33 @@ public class TransplantCentreCoordinatorWorkAreaJPanel extends javax.swing.JPane
 
         jPanel3.setBackground(new java.awt.Color(31, 31, 31));
 
+        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 220, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                    .addContainerGap(30, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(32, Short.MAX_VALUE)))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
 
         menuhide.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, -1, -1));
@@ -568,6 +586,10 @@ public class TransplantCentreCoordinatorWorkAreaJPanel extends javax.swing.JPane
         // TODO add your handling code here:
     }//GEN-LAST:event_ButtonHideMenuMouseExited
 
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel1MouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ButtonClose;
@@ -582,6 +604,7 @@ public class TransplantCentreCoordinatorWorkAreaJPanel extends javax.swing.JPane
     private javax.swing.JLabel fullmax;
     private javax.swing.JPanel hidemenu;
     private javax.swing.JPanel iconminmax;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;

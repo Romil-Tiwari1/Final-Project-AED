@@ -34,7 +34,8 @@ public abstract class Organization {
         Doctor("Doctor Organization"), 
         ConsentVerification("Consent Verification Organization "),
         TransplantCentreOrganization("Transplant Centre Organization"),
-        LabCoordinator(" LabCoordinator Organization");
+        LabCoordinator(" LabCoordinator Organization"),
+        OrganBank("Organ Bank Coordinator Organization");
   
   
 
@@ -46,6 +47,20 @@ public abstract class Organization {
             return value;
         }
     }
+    
+    public enum OrganBankType {
+         
+        OrganBank("Organ Bank Coordinator Organization");
+        private String value;
+
+        private OrganBankType(String value) {
+            this.value = value;
+        }
+
+        public String getValue() {
+            return value;
+        }
+     }
     
 
      public enum TransplantCentreOrganizationType {
@@ -107,19 +122,7 @@ public abstract class Organization {
         ++counter;
     }
     
-    public enum OrganBankType {
-         
-        OrganBank("Organ Bank Coordinator Organization");
-        private String value;
-
-        private OrganBankType(String value) {
-            this.value = value;
-        }
-
-        public String getValue() {
-            return value;
-        }
-     }
+    
 
     public abstract ArrayList<UserRole> getSupportedRole();
     

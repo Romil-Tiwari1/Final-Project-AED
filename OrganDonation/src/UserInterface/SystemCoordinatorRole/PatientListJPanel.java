@@ -5,18 +5,18 @@
  */
 package UserInterface.SystemCoordinatorRole;
 
-import  HealthCentre.DB4OUtil.DB4OUtil;
-import  HealthCentre.EcoSystem;
-import  HealthCentre.Enterprise.Enterprise;
-import  HealthCentre.Network.Network;
-import  HealthCentre.Organization.DoctorOrganization;
-import  HealthCentre.Organization.Organization;
-import  HealthCentre.Organization.SystemCoordinatorOrganization;
-import  HealthCentre.Person.Patient;
-import  HealthCentre.Person.PatientDirectory;
-import  HealthCentre.UserAccount.UserAccount;
-import  HealthCentre.WorkQueue.WorkRequest;
-import  HomeScreens.TableFormat;
+import HealthCentre.DB4OUtil.DB4OUtil;
+import HealthCentre.EcoSystem;
+import HealthCentre.Enterprise.Enterprise;
+import HealthCentre.Network.Network;
+import HealthCentre.Organization.DoctorOrganization;
+import HealthCentre.Organization.Organization;
+import HealthCentre.Organization.SystemCoordinatorOrganization;
+import HealthCentre.Person.Patient;
+import HealthCentre.Person.PatientDirectory;
+import HealthCentre.UserAccount.UserAccount;
+import HealthCentre.WorkQueue.WorkRequest;
+import HomeScreens.TableFormat;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -34,54 +34,51 @@ public class PatientListJPanel extends javax.swing.JPanel {
     //private JPanel userProcessContainerJPanel;
     private PatientDirectory patientDirectory;
     private UserAccount userAccount;
-    private  EcoSystem system;
+    private EcoSystem system;
     private Network network;
     private SystemCoordinatorOrganization systorganization;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
-    
+
     public PatientListJPanel(UserAccount userAccount, EcoSystem system, Network network, SystemCoordinatorOrganization systorganization) {
         initComponents();
         this.userAccount = userAccount;
         this.system = system;
         this.network = network;
         this.systorganization = systorganization;
-       
+
         tblAssignment.getTableHeader().setDefaultRenderer(new TableFormat());
         tblHospital.getTableHeader().setDefaultRenderer(new TableFormat());
         populateHospitalTable();
         populateRequestTable();
     }
 
+    private void populateHospitalTable() {
 
-    
-    
-    private void populateHospitalTable(){
-        
         DefaultTableModel dtm = (DefaultTableModel) tblHospital.getModel();
         dtm.setRowCount(0);
-        
+
         System.out.println("list of enterprises:");
-       // System.out.println(enterpriseDirectory.getEnterpriseList());
+        // System.out.println(enterpriseDirectory.getEnterpriseList());
         System.out.println("list of enterprises ends");
         System.out.println(network.getName());
-        for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()){
-            if(enterprise.getEnterpriseType().toString().equals("Hospital")){
+        for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
+            if (enterprise.getEnterpriseType().toString().equals("Hospital")) {
                 System.out.println("Hosp");
                 Object[] row = new Object[2];
                 row[0] = enterprise;
                 row[1] = enterprise.getName();
-                
+
                 dtm.addRow(row);
+            }
         }
-        }       
-        }
-    
-     public void populateRequestTable(){
-        DefaultTableModel model = (DefaultTableModel)tblAssignment.getModel();
-        
+    }
+
+    public void populateRequestTable() {
+        DefaultTableModel model = (DefaultTableModel) tblAssignment.getModel();
+
         model.setRowCount(0);
-        
-        for(WorkRequest request : systorganization.getWorkQueue().getWorkRequestList()){
+
+        for (WorkRequest request : systorganization.getWorkQueue().getWorkRequestList()) {
             Object[] row = new Object[6];
             row[0] = request;
             row[1] = request.getDoctorRequestSummary();
@@ -89,13 +86,10 @@ public class PatientListJPanel extends javax.swing.JPanel {
             row[3] = request.getEnterprise();
             row[4] = request.getStatus();
             row[5] = request.getPatient().isEmergencyStatus();
-            
+
             model.addRow(row);
         }
     }
-    
-    
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -121,14 +115,12 @@ public class PatientListJPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Patients In Need For Organ Transplantation Treatment (Organ Recievers)");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Assign the Patient to a Hospital");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 390, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
 
         btnAssign.setBackground(new java.awt.Color(31, 31, 31));
         btnAssign.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -140,7 +132,7 @@ public class PatientListJPanel extends javax.swing.JPanel {
                 btnAssignActionPerformed(evt);
             }
         });
-        add(btnAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 670, 142, 60));
+        add(btnAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 530, 142, 60));
 
         tblHospital.setBackground(new java.awt.Color(0, 0, 0));
         tblHospital.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -165,7 +157,7 @@ public class PatientListJPanel extends javax.swing.JPanel {
         tblHospital.setRowHeight(30);
         jScrollPane2.setViewportView(tblHospital);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 450, 810, 200));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 410, 200));
 
         tblAssignment.setBackground(new java.awt.Color(0, 0, 0));
         tblAssignment.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -190,7 +182,7 @@ public class PatientListJPanel extends javax.swing.JPanel {
         tblAssignment.setRowHeight(30);
         jScrollPane4.setViewportView(tblAssignment);
 
-        add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 1140, 200));
+        add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 600, 200));
 
         jPanel3.setBackground(new java.awt.Color(31, 31, 31));
         jPanel3.setPreferredSize(new java.awt.Dimension(926, 70));
@@ -205,9 +197,8 @@ public class PatientListJPanel extends javax.swing.JPanel {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, 1616, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 925, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 715, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -220,7 +211,7 @@ public class PatientListJPanel extends javax.swing.JPanel {
         add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 0, 1640, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images_1/patient.png"))); // NOI18N
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 440, -1, 144));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 470, -1, 144));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignActionPerformed
@@ -230,56 +221,51 @@ public class PatientListJPanel extends javax.swing.JPanel {
         if (row < 0) {
             //JOptionPane.showMessageDialog(null, "Please select a row from the Request table", "Warning", JOptionPane.WARNING_MESSAGE);
             //return;
-            JOptionPane.showMessageDialog(null, new JLabel(  "<html><h2><I>Please select<font color='red'> a row</font> from the<font color='green'> Request Table</I></font></h2></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><I>Please select<font color='red'> a row</font> from the<font color='green'> Request Table</I></font></h2></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
         if (row1 < 0) {
             //JOptionPane.showMessageDialog(null, "Please select a row from the Hospital table", "Warning", JOptionPane.WARNING_MESSAGE);
             //return;
-            JOptionPane.showMessageDialog(null, new JLabel(  "<html><h2><I>Please select<font color='red'> a row</font> from the<font color='green'> Hospital Table</I></font></h2></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><I>Please select<font color='red'> a row</font> from the<font color='green'> Hospital Table</I></font></h2></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
             return;
-        }
-        
-        else{
-            WorkRequest request = (WorkRequest)tblAssignment.getValueAt(row, 0);   
-            if(request.getStatus().equals("Organbank Approved. Passing to System Coordinator")){
-                    
-                    request.setEnterprise((Enterprise) tblHospital.getValueAt(row1, 0));
-                    request.setStatus("Assigned in Doctor Pool");
-                    
-                    dB4OUtil.storeSystem(system);
-                    populateRequestTable();
-                    
-                    
-                    Organization org = null;
-                    Enterprise enterprise = (Enterprise) tblHospital.getValueAt(row1, 0);
-                    for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
-                            if (organization instanceof DoctorOrganization) {
-                                org = organization;
-                                break;
-                            }
+        } else {
+            WorkRequest request = (WorkRequest) tblAssignment.getValueAt(row, 0);
+            if (request.getStatus().equals("Organbank Approved. Passing to Health Care System Coordinator")) {
+
+                request.setEnterprise((Enterprise) tblHospital.getValueAt(row1, 0));
+                request.setStatus("Assigned in Doctor Pool");
+
+                dB4OUtil.storeSystem(system);
+                populateRequestTable();
+
+                Organization org = null;
+                Enterprise enterprise = (Enterprise) tblHospital.getValueAt(row1, 0);
+                for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
+                    if (organization instanceof DoctorOrganization) {
+                        org = organization;
+                        break;
                     }
-                    if (org != null) {
-                        org.getWorkQueue().getWorkRequestList().add(request);
-                        System.out.println(org.getName());
-                        userAccount.getWorkQueue().getWorkRequestList().add(request);
-                        JOptionPane.showMessageDialog(null,
-                                new JLabel(  "<html><h2><I>Patient successfully<font color='green'> assigned</font> to the Hospital.</I></h2></html>"), 
-                                 "Info", JOptionPane.INFORMATION_MESSAGE);
-                        populateRequestTable();
-                    }
-                    else {
-                    JOptionPane.showMessageDialog(null, "No organization present", "Error", JOptionPane.ERROR_MESSAGE);
-                    }
-                }   
-            else{
-                JOptionPane.showMessageDialog(null, new JLabel(  "<html><h2><I>Work Request is<font color='red'> already</font> in progress!</I></h2></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
                 }
-        
+                if (org != null) {
+                    org.getWorkQueue().getWorkRequestList().add(request);
+                    System.out.println(org.getName());
+                    userAccount.getWorkQueue().getWorkRequestList().add(request);
+                    JOptionPane.showMessageDialog(null,
+                            new JLabel("<html><h2><I>Patient successfully<font color='green'> assigned</font> to the Hospital.</I></h2></html>"),
+                            "Info", JOptionPane.INFORMATION_MESSAGE);
+                    populateRequestTable();
+                } else {
+                    JOptionPane.showMessageDialog(null, "No organization present", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, new JLabel("<html><h2><I>Work Request is<font color='red'> already</font> in progress!</I></h2></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+
         }
         dB4OUtil.storeSystem(system);
         populateRequestTable();
-                
+
     }//GEN-LAST:event_btnAssignActionPerformed
 
 

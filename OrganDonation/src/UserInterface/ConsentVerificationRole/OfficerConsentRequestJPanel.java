@@ -132,7 +132,7 @@ public class OfficerConsentRequestJPanel extends javax.swing.JPanel {
                 btnAssignActionPerformed(evt);
             }
         });
-        add(btnAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 290, 140, 40));
+        add(btnAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 290, 140, 40));
 
         tblLegalOrganisation.setBackground(new java.awt.Color(0, 0, 0));
         tblLegalOrganisation.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -154,12 +154,10 @@ public class OfficerConsentRequestJPanel extends javax.swing.JPanel {
             }
         });
         tblLegalOrganisation.setGridColor(new java.awt.Color(0, 0, 0));
-        tblLegalOrganisation.setIntercellSpacing(new java.awt.Dimension(0, 0));
         tblLegalOrganisation.setRowHeight(30);
-        tblLegalOrganisation.setShowVerticalLines(false);
         jScrollPane2.setViewportView(tblLegalOrganisation);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 1280, 190));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 770, 190));
 
         tblLegalOfficer.setBackground(new java.awt.Color(0, 0, 0));
         tblLegalOfficer.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -181,12 +179,10 @@ public class OfficerConsentRequestJPanel extends javax.swing.JPanel {
             }
         });
         tblLegalOfficer.setGridColor(new java.awt.Color(0, 0, 0));
-        tblLegalOfficer.setIntercellSpacing(new java.awt.Dimension(0, 0));
         tblLegalOfficer.setRowHeight(30);
-        tblLegalOfficer.setShowVerticalLines(false);
         jScrollPane4.setViewportView(tblLegalOfficer);
 
-        add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, 1280, 190));
+        add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 770, 190));
 
         jPanel3.setBackground(new java.awt.Color(31, 31, 31));
         jPanel3.setPreferredSize(new java.awt.Dimension(926, 70));
@@ -202,8 +198,8 @@ public class OfficerConsentRequestJPanel extends javax.swing.JPanel {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, 1556, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 809, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(765, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -218,22 +214,22 @@ public class OfficerConsentRequestJPanel extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("To:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 560, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 550, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("From:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 600, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 600, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Subject:");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 640, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 640, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Message: ");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 700, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 550, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(31, 31, 31));
         jButton1.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -245,19 +241,24 @@ public class OfficerConsentRequestJPanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 660, 290, 40));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 700, 290, 40));
 
         toTextField.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         toTextField.setText("shruti@gmail.com");
-        add(toTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 560, 320, -1));
+        add(toTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 550, 320, -1));
 
         fromTextField.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        fromTextField.setText("legalOfficer@gmail.com");
-        add(fromTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 600, 320, -1));
+        fromTextField.setText("group62.aedteam@gmail.com");
+        fromTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fromTextFieldActionPerformed(evt);
+            }
+        });
+        add(fromTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 600, 320, -1));
 
         subjectTextField.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         subjectTextField.setText("Consent form");
-        add(subjectTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 640, 320, -1));
+        add(subjectTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 640, 320, -1));
 
         messageTextField.setColumns(20);
         messageTextField.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -265,7 +266,7 @@ public class OfficerConsentRequestJPanel extends javax.swing.JPanel {
         messageTextField.setText("Hi,\n\nKindly sign the Consent form for Organ Donation.\n\nThank you");
         jScrollPane1.setViewportView(messageTextField);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 710, 330, 240));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 550, 330, 150));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignActionPerformed
@@ -279,18 +280,18 @@ public class OfficerConsentRequestJPanel extends javax.swing.JPanel {
         }
         else{
             WorkRequest request = (WorkRequest)tblLegalOrganisation.getValueAt(selectedRow, 0);    
-           
-            if(request.getStatus().equals("Assigned to Pool"))
-            {
-            request.setStatus("Assign to Officer" + userAccount.getUsername());
+           request.setStatus("Assign to Officer" + userAccount.getUsername());
             request.setUserAccount(userAccount);
             userAccount.getWorkQueue().getWorkRequestList().add(request);
-            }
-            else{
-            //JOptionPane.showMessageDialog(null, "Work Request is already assigned!" );
-            JOptionPane.showMessageDialog(null, new JLabel(  "<html><h2><I>Work Request is<font color='red'> already</font> in progress!</I></h2></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
-             
-            }
+//            if(request.getStatus().equals("Assigned to Pool"))
+//            {
+//            
+//            }
+//            else{
+//            //JOptionPane.showMessageDialog(null, "Work Request is already assigned!" );
+//            JOptionPane.showMessageDialog(null, new JLabel(  "<html><h2><I>Work Request is<font color='red'> already</font> in progress!</I></h2></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
+//             
+//            }
             dB4OUtil.storeSystem(system);
             populateOrganisationpatientTable();
             populateConcentPatientTable();
@@ -310,8 +311,8 @@ public class OfficerConsentRequestJPanel extends javax.swing.JPanel {
         else{
         String toEmail = toTextField.getText();
 
-        final String fromEmail = fromTextField.getText();
-        final String fromEmailPassword = "teamtitans"; //your email password
+        final String fromEmail = "group62.aedteam";
+        final String fromEmailPassword = "xstphiczsmzzcwht"; //your email password
         String subject = subjectTextField.getText();
 
         Properties properties = new Properties();
@@ -373,6 +374,10 @@ public class OfficerConsentRequestJPanel extends javax.swing.JPanel {
         }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void fromTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fromTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fromTextFieldActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

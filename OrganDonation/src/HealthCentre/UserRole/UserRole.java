@@ -17,19 +17,20 @@ import HealthCentre.EcoSystem;
  * @author fakhr
  */
 public abstract class UserRole {
-     public enum RoleType{
+
+    public enum RoleType {
         Admin("Admin"),
         Doctor("Doctor"),
         SystemCoordinator("SystemCoordinator"),
         DonationCoordinator("DonationCoordinator"),
         OrganBankCoordinator("OrganBankCoordinator"),
         ConsentVerification("OrganBankCoordinator"),
-TransplantCenter("TransplantCenter"),
-LabCoordinator("LabCoordinator");
+        TransplantCenter("TransplantCenter"),
+        LabCoordinator("LabCoordinator");
 
-        
         private String value;
-        private RoleType(String value){
+
+        private RoleType(String value) {
             this.value = value;
         }
 
@@ -42,11 +43,11 @@ LabCoordinator("LabCoordinator");
             return value;
         }
     }
-    
-    public abstract JPanel createWorkArea(JPanel userProcessContainer, 
-            UserAccount account, 
-            Organization organization, 
-            Enterprise enterprise, 
+
+    public abstract JPanel createWorkArea(JPanel userProcessContainer,
+            UserAccount account,
+            Organization organization,
+            Enterprise enterprise,
             EcoSystem business,
             Network network);
 
@@ -54,5 +55,5 @@ LabCoordinator("LabCoordinator");
     public String toString() {
         return this.getClass().getName();
     }
-    
+
 }

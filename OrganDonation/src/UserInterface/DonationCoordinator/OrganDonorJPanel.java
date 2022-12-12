@@ -117,7 +117,7 @@ public class OrganDonorJPanel extends javax.swing.JPanel {
     private void populateGoogleSheetTable() throws GeneralSecurityException, IOException{
             final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
         final String spreadsheetId = "1Va7KrVFeUUZ66miZKIJpwLMF2Cctda60DAUJJqtlrq0";
-        final String range = "Form Responses 2!A2:S";
+        final String range = "Form Responses 1!A2:S";
         //final String range = "Form Responses 1!A2:E";
         Sheets service = new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
                 .setApplicationName(APPLICATION_NAME)

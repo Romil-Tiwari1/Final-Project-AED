@@ -141,7 +141,6 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
         checkInfection = new javax.swing.JCheckBox();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
 
         setBackground(new java.awt.Color(255, 153, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -169,13 +168,13 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
         tblOrganisationDonors.setRowHeight(30);
         jScrollPane1.setViewportView(tblOrganisationDonors);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 1330, 160));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 760, 160));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("List Of Voluntary Organ Donors");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 90, 511, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 80, 511, -1));
 
         btnAssignLabCord.setBackground(new java.awt.Color(31, 31, 31));
         btnAssignLabCord.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -187,7 +186,7 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
                 btnAssignLabCordActionPerformed(evt);
             }
         });
-        add(btnAssignLabCord, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 550, 160, 40));
+        add(btnAssignLabCord, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 520, 160, 40));
 
         tblOrgantDonors.setBackground(new java.awt.Color(0, 0, 0));
         tblOrgantDonors.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -212,7 +211,7 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
         tblOrgantDonors.setRowHeight(30);
         jScrollPane2.setViewportView(tblOrgantDonors);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 1330, 190));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 750, 190));
 
         buttonAddOrgan.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         buttonAddOrgan.setForeground(new java.awt.Color(255, 255, 255));
@@ -225,17 +224,17 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
                 buttonAddOrganActionPerformed(evt);
             }
         });
-        add(buttonAddOrgan, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 720, 280, 40));
+        add(buttonAddOrgan, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 610, 280, 40));
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Blood Pressure Check");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 710, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Pulse Check");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 670, -1, 20));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 530, -1, 20));
 
         buttonOrganDonate.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         buttonOrganDonate.setForeground(new java.awt.Color(255, 255, 255));
@@ -248,17 +247,17 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
                 buttonOrganDonateActionPerformed(evt);
             }
         });
-        add(buttonOrganDonate, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 660, 290, 40));
+        add(buttonOrganDonate, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 610, 290, 40));
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Health check");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 760, -1, 20));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 600, -1, 20));
 
         jLabel6.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Tests on Patient for any infection");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 810, 360, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 650, 360, -1));
 
         buttonOrganDiscard.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         buttonOrganDiscard.setForeground(new java.awt.Color(255, 255, 255));
@@ -271,7 +270,7 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
                 buttonOrganDiscardActionPerformed(evt);
             }
         });
-        add(buttonOrganDiscard, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 790, 290, 40));
+        add(buttonOrganDiscard, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 660, 290, 40));
 
         checkBP.setBackground(new java.awt.Color(0, 0, 0));
         checkBP.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -282,13 +281,13 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
                 checkBPActionPerformed(evt);
             }
         });
-        add(checkBP, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 710, 20, -1));
+        add(checkBP, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 580, 20, -1));
 
         checkPulse.setBackground(new java.awt.Color(0, 0, 0));
         checkPulse.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         checkPulse.setForeground(new java.awt.Color(255, 255, 255));
         checkPulse.setEnabled(false);
-        add(checkPulse, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 670, 20, 20));
+        add(checkPulse, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 530, 20, 20));
 
         checkTest.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         checkTest.setForeground(new java.awt.Color(255, 255, 255));
@@ -298,7 +297,7 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
                 checkTestActionPerformed(evt);
             }
         });
-        add(checkTest, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 760, 30, 30));
+        add(checkTest, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 600, 30, 30));
 
         jPanel3.setBackground(new java.awt.Color(31, 31, 31));
         jPanel3.setPreferredSize(new java.awt.Dimension(926, 70));
@@ -336,7 +335,7 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
                 organTypeJComboBoxActionPerformed(evt);
             }
         });
-        add(organTypeJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 670, 110, 30));
+        add(organTypeJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 530, 110, 30));
 
         buttonProcessRequest.setBackground(new java.awt.Color(31, 31, 31));
         buttonProcessRequest.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -348,7 +347,7 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
                 buttonProcessRequestActionPerformed(evt);
             }
         });
-        add(buttonProcessRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 550, 210, 40));
+        add(buttonProcessRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 520, 210, 40));
 
         textRequest.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         textRequest.setForeground(new java.awt.Color(255, 255, 255));
@@ -359,7 +358,7 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("OrganType");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 670, -1, 30));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 530, -1, 30));
 
         checkInfection.setBackground(new java.awt.Color(0, 0, 0));
         checkInfection.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -370,14 +369,13 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
                 checkInfectionActionPerformed(evt);
             }
         });
-        add(checkInfection, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 810, 20, 20));
+        add(checkInfection, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 650, 20, 20));
 
         jLabel9.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Request Number:");
         add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, -1, 30));
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(668, 80, 120, 100));
-        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 620, 1320, 10));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAssignLabCordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignLabCordActionPerformed
@@ -639,7 +637,6 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JComboBox organTypeJComboBox;
     private javax.swing.JTable tblOrganisationDonors;
     private javax.swing.JTable tblOrgantDonors;

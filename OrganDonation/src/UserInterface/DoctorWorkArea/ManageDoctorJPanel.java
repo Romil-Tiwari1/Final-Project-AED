@@ -124,7 +124,7 @@ public class ManageDoctorJPanel extends javax.swing.JPanel {
         oraganDonationListLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         oraganDonationListLabel.setText("Organ Donation Patient List");
         oraganDonationListLabel.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 204, 204), new java.awt.Color(0, 0, 0), null, new java.awt.Color(204, 204, 204)));
-        add(oraganDonationListLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, 560, 60));
+        add(oraganDonationListLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, 560, 60));
 
         assignButton.setBackground(new java.awt.Color(31, 31, 31));
         assignButton.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -136,7 +136,7 @@ public class ManageDoctorJPanel extends javax.swing.JPanel {
                 assignButtonActionPerformed(evt);
             }
         });
-        add(assignButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 460, 250, 70));
+        add(assignButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 450, 250, 50));
 
         treatmentCompletedButton.setBackground(new java.awt.Color(31, 31, 31));
         treatmentCompletedButton.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -148,7 +148,7 @@ public class ManageDoctorJPanel extends javax.swing.JPanel {
                 treatmentCompletedButtonActionPerformed(evt);
             }
         });
-        add(treatmentCompletedButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 860, 250, 70));
+        add(treatmentCompletedButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 450, 250, 50));
 
         doctorOrganisationTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         doctorOrganisationTable.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -172,7 +172,7 @@ public class ManageDoctorJPanel extends javax.swing.JPanel {
         doctorOrganisationTable.setRowHeight(30);
         jScrollPane4.setViewportView(doctorOrganisationTable);
 
-        add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 230, 1080, 200));
+        add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, 560, 200));
 
         doctorAssignmentTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         doctorAssignmentTable.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -196,7 +196,7 @@ public class ManageDoctorJPanel extends javax.swing.JPanel {
         doctorAssignmentTable.setRowHeight(30);
         jScrollPane5.setViewportView(doctorAssignmentTable);
 
-        add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 560, 1080, 270));
+        add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 550, 580, 270));
 
         jPanel3.setBackground(new java.awt.Color(31, 31, 31));
         jPanel3.setPreferredSize(new java.awt.Dimension(926, 70));
@@ -213,22 +213,18 @@ public class ManageDoctorJPanel extends javax.swing.JPanel {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, 1668, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 916, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 764, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
 
         add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1680, -1));
 
-        doctorIcon.setIcon(new javax.swing.ImageIcon("/Users/romiltiwari/Desktop/Mitochondria/Final-Project-AED/OrganDonation/src/Images_1/doctor.png")); // NOI18N
-        add(doctorIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 480, 740));
+        doctorIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images_1/doctor.png"))); // NOI18N
+        add(doctorIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 380, 740));
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -279,21 +275,7 @@ public class ManageDoctorJPanel extends javax.swing.JPanel {
             populateDoctorAndPatient();
 
             // CELEBRATION
-            JFrame frame = new JFrame("Fireworks");
-            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-            Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-            frame.setSize(screenSize.width / 2, screenSize.height / 2);
-            frame.setResizable(false);
-            frame.setUndecorated(false);
-            frame.getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
-            frame.setLayout(new BorderLayout());
-            JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
-            JLabel jLabel = new JLabel("Fireworks By Team: 200 Success");
-            jLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
-            panel.add(jLabel);
-            frame.getContentPane().add(panel, BorderLayout.NORTH);
-            frame.getContentPane().add(new AnimationJPanel(), BorderLayout.CENTER);
-            frame.setVisible(true);
+          JOptionPane.showMessageDialog(null, new JLabel("<html><h2>Congratulations transplant is successful<font color='green'><I><B>!!!</B></I></font>!</h2></html>"));
         }
 
     }//GEN-LAST:event_treatmentCompletedButtonActionPerformed

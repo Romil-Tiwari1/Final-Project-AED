@@ -113,7 +113,7 @@ public class DonorStatusJPanel extends javax.swing.JPanel {
         donorRequestTable.setRowHeight(30);
         jScrollPane1.setViewportView(donorRequestTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 580, 1030, 160));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 580, 650, 160));
 
         jPanel3.setBackground(new java.awt.Color(31, 31, 31));
         jPanel3.setPreferredSize(new java.awt.Dimension(926, 70));
@@ -172,7 +172,7 @@ public class DonorStatusJPanel extends javax.swing.JPanel {
         donorRequestTable1.setRowHeight(30);
         jScrollPane2.setViewportView(donorRequestTable1);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 1030, 160));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 800, 160));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

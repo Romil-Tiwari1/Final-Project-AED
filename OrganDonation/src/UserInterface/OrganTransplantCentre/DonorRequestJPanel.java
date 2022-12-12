@@ -31,7 +31,6 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-
 /**
  *
  * @author shrutisrivastava
@@ -41,12 +40,12 @@ public class DonorRequestJPanel extends javax.swing.JPanel {
     /**
      * Creates new form VolunteerReceiverRequestJPanel
      */
-    private  EcoSystem system;
+    private EcoSystem system;
     private PatientRequest patientRequest;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
     private UserAccount userAccount;
     private Network network;
-    
+
     public DonorRequestJPanel(EcoSystem system, UserAccount userAccount, Network network) {
         initComponents();
         this.system = system;
@@ -55,22 +54,21 @@ public class DonorRequestJPanel extends javax.swing.JPanel {
         requestTable.getTableHeader().setDefaultRenderer(new TableFormat());
         populateRequestTable();
     }
-  
 
-    private void populateRequestTable(){
+    private void populateRequestTable() {
         DefaultTableModel dtm = (DefaultTableModel) requestTable.getModel();
-        
+
         dtm.setRowCount(0);
-        
-         for(PatientRequest patientRequest: system.getPatientRequestDirectory().getPatientRequestList()){            
+
+        for (PatientRequest patientRequest : system.getPatientRequestDirectory().getPatientRequestList()) {
             Object row[] = new Object[4];
-            row[0]= patientRequest;
-            row[1]= patientRequest.getName();
-            row[2]= patientRequest.getContact();
-            row[3]= patientRequest.getStatus();
-              
+            row[0] = patientRequest;
+            row[1] = patientRequest.getName();
+            row[2] = patientRequest.getContact();
+            row[3] = patientRequest.getStatus();
+
             dtm.addRow(row);
-        }        
+        }
     }
 
     /**
@@ -99,7 +97,6 @@ public class DonorRequestJPanel extends javax.swing.JPanel {
         genderText = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         bloodText = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         streetText = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
@@ -108,18 +105,15 @@ public class DonorRequestJPanel extends javax.swing.JPanel {
         stateText = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
         zipText = new javax.swing.JTextField();
-        jLabel19 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
-        labConfirmationText = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         requestTable = new javax.swing.JTable();
         statusText = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         lblProfilePicture = new javax.swing.JLabel();
         dobDateField = new com.toedter.calendar.JDateChooser();
-        diagnosedDateChooser = new com.toedter.calendar.JDateChooser();
         jLabel2 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
@@ -139,7 +133,7 @@ public class DonorRequestJPanel extends javax.swing.JPanel {
                 buttonRejectActionPerformed(evt);
             }
         });
-        add(buttonReject, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 430, 100, 40));
+        add(buttonReject, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 100, 40));
 
         buttonApprove.setBackground(new java.awt.Color(31, 31, 31));
         buttonApprove.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -152,121 +146,88 @@ public class DonorRequestJPanel extends javax.swing.JPanel {
                 buttonApproveActionPerformed(evt);
             }
         });
-        add(buttonApprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 490, 110, 40));
+        add(buttonApprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, 110, 40));
 
         jLabel6.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("UID");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, -1, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 360, -1, -1));
 
         uidText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        uidText.setForeground(new java.awt.Color(255, 255, 255));
-        add(uidText, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, 180, -1));
+        add(uidText, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 360, 180, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Name");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 380, -1, 30));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 360, -1, 30));
 
         nameText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        nameText.setForeground(new java.awt.Color(255, 255, 255));
-        add(nameText, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 380, 190, -1));
+        add(nameText, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 360, 190, -1));
 
         jLabel7.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("DOB");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 420, -1, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 400, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Age");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 420, -1, 30));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 400, -1, 30));
 
         ageText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        ageText.setForeground(new java.awt.Color(255, 255, 255));
-        add(ageText, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 420, 190, -1));
+        add(ageText, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 400, 190, -1));
 
         jLabel16.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setText("Contact Number");
-        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 460, -1, -1));
+        jLabel16.setText("Contact");
+        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 450, -1, -1));
 
         contactText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        contactText.setForeground(new java.awt.Color(255, 255, 255));
-        add(contactText, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 460, 180, -1));
+        add(contactText, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 450, 180, -1));
 
         jLabel17.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Email ID");
-        add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 460, -1, 30));
+        add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 450, -1, 30));
 
         emailText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        emailText.setForeground(new java.awt.Color(255, 255, 255));
-        add(emailText, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 460, 190, -1));
+        add(emailText, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 450, 190, -1));
 
         jLabel9.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Gender");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 500, 70, -1));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 500, 70, -1));
 
         genderText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        genderText.setForeground(new java.awt.Color(255, 255, 255));
-        add(genderText, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 500, 180, -1));
+        add(genderText, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 500, 180, -1));
 
         jLabel10.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Blood group");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 500, -1, 20));
+        jLabel10.setText("Organ Type");
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 500, -1, 30));
 
         bloodText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        bloodText.setForeground(new java.awt.Color(255, 255, 255));
-        add(bloodText, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 500, 190, -1));
-
-        jLabel11.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Transplant Recommended Date");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 690, -1, 30));
+        add(bloodText, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 500, 190, -1));
 
         jLabel12.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Street address");
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 610, -1, -1));
+        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 600, -1, -1));
 
         streetText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        streetText.setForeground(new java.awt.Color(255, 255, 255));
-        add(streetText, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 610, 176, -1));
+        add(streetText, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 600, 176, -1));
 
         jLabel13.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("City");
-        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 650, -1, -1));
+        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 640, -1, -1));
 
         cityText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        cityText.setForeground(new java.awt.Color(255, 255, 255));
-        add(cityText, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 650, 180, -1));
+        add(cityText, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 640, 180, -1));
 
         jLabel14.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("State");
-        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 690, -1, -1));
+        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 680, -1, -1));
 
         stateText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        stateText.setForeground(new java.awt.Color(255, 255, 255));
-        add(stateText, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 690, 180, -1));
+        add(stateText, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 680, 180, -1));
 
         jLabel15.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("ZipCode");
-        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 730, -1, -1));
+        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 720, -1, -1));
 
         zipText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        zipText.setForeground(new java.awt.Color(255, 255, 255));
-        add(zipText, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 730, 180, -1));
-
-        jLabel19.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel19.setText("Does Doctor recommended Organ Transplant?");
-        add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 650, -1, -1));
+        add(zipText, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 730, 180, -1));
 
         jButton3.setBackground(new java.awt.Color(31, 31, 31));
         jButton3.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -278,7 +239,7 @@ public class DonorRequestJPanel extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
-        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, 120, 40));
+        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 120, 40));
 
         jPanel3.setBackground(new java.awt.Color(31, 31, 31));
         jPanel3.setPreferredSize(new java.awt.Dimension(926, 70));
@@ -302,15 +263,11 @@ public class DonorRequestJPanel extends javax.swing.JPanel {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+                .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1580, -1));
-
-        labConfirmationText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        labConfirmationText.setForeground(new java.awt.Color(255, 255, 255));
-        add(labConfirmationText, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 650, 210, -1));
 
         requestTable.setBackground(new java.awt.Color(0, 0, 0));
         requestTable.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -336,11 +293,10 @@ public class DonorRequestJPanel extends javax.swing.JPanel {
         requestTable.setRowHeight(30);
         jScrollPane1.setViewportView(requestTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, 1130, 240));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 870, 240));
 
         statusText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        statusText.setForeground(new java.awt.Color(255, 255, 255));
-        add(statusText, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 610, 200, -1));
+        add(statusText, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 580, 200, -1));
 
         jLabel1.setText("Status");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 11, -1, -1));
@@ -352,227 +308,174 @@ public class DonorRequestJPanel extends javax.swing.JPanel {
         dobDateField.setBackground(new java.awt.Color(255, 255, 255));
         dobDateField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         dobDateField.setForeground(new java.awt.Color(255, 255, 255));
-        add(dobDateField, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 420, 180, 30));
-
-        diagnosedDateChooser.setBackground(new java.awt.Color(255, 255, 255));
-        diagnosedDateChooser.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        diagnosedDateChooser.setForeground(new java.awt.Color(255, 255, 255));
-        add(diagnosedDateChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 690, 170, 30));
+        add(dobDateField, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 400, 180, 30));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Status");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 610, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 580, -1, -1));
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 550, 20, 230));
+        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 550, 20, 230));
         add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 550, 860, 10));
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Location Details");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 560, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 560, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonApproveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonApproveActionPerformed
         // TODO add your handling code here:
-        if( !statusText.getText().equals("New Request"))
-            {
-                JOptionPane.showMessageDialog(null, new JLabel(  "<html><h2><I>Request<font color='red'> can not</font> be approved!</I></h2></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
-           
-                
+        if (!statusText.getText().equals("New Request")) {
+            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><I>Request<font color='red'> can not</font> be approved!</I></h2></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
+
             //    JOptionPane.showMessageDialog(null,"Can Not Approve the Request!");
-            }
-        
-        else
-        {
-        
-        Patient patient = system.getPatientDirectory().addPatient();
-        patient.setName(nameText.getText());
-        patient.setContact(contactText.getText());  
-        
-        patient.setPatientID(uidText.getText()); // UID, receiverID
-        patient.setName(nameText.getText()); // Name
-       
-       
-        
-        patient.setAge(Integer.parseInt(ageText.getText())); // Age
-        patient.setGender(genderText.getText()); // gender
-        patient.setBloodGroup(bloodText.getText()); // Blood group
-        patient.setStreetAddress(streetText.getText()); // streetAddress
-        patient.setCity(cityText.getText()); // city
-        patient.setState(stateText.getText()); // state
-        patient.setZipCode(Integer.parseInt(zipText.getText())); // zipCode
-        patient.setContact(contactText.getText()); // contact
-        patient.setEmailID(emailText.getText()); // emailID
-        patient.setStatus("Centre Approved"); // status
-       
-      
-        
-        for(PatientRequest patientRequest: system.getPatientRequestDirectory().getPatientRequestList()){                      
-        
-            if(patientRequest.getPatientID().equals(uidText.getText())){
-            patientRequest.setStatus("Centre Approved");
-            dB4OUtil.storeSystem(system);
-            }
-        }
+        } else {
 
+            Patient patient = system.getPatientDirectory().addPatient();
+            patient.setName(nameText.getText());
+            patient.setContact(contactText.getText());
 
+            patient.setPatientID(uidText.getText()); // UID, receiverID
+            patient.setName(nameText.getText()); // Name
 
-        // WORK REQUEST
-        
-        WorkRequest request = new HealthCareSystemCoordinatorWorkRequest();
-        
-        request.setPatient(patient);
-        request.setActionDate(new Date());
-        request.setDoctorRequestSummary("Requested for Organ Reception");
-        request.setStatus("Assigned to Concent Verification");
-        
-        request.setUserAccount(userAccount);
-       
-        Enterprise ent = null;
-        Organization org = null;
-        
-        for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
-            if (enterprise.getEnterpriseType().toString().equals("ConsentVerification")) {
-            
-                ent = enterprise;
-                System.out.println(enterprise);
-                break;
+            patient.setAge(Integer.parseInt(ageText.getText())); // Age
+            patient.setGender(genderText.getText()); // gender
+            patient.setOrganType(bloodText.getText()); // Blood group
+            patient.setStreetAddress(streetText.getText()); // streetAddress
+            patient.setCity(cityText.getText()); // city
+            patient.setState(stateText.getText()); // state
+            patient.setZipCode(Integer.parseInt(zipText.getText())); // zipCode
+            patient.setContact(contactText.getText()); // contact
+            patient.setEmailID(emailText.getText()); // emailID
+            patient.setStatus("Centre Approved"); // status
+
+            for (PatientRequest patientRequest : system.getPatientRequestDirectory().getPatientRequestList()) {
+
+                if (patientRequest.getPatientID().equals(uidText.getText())) {
+                    patientRequest.setStatus("Centre Approved");
+                    dB4OUtil.storeSystem(system);
+                }
             }
-        }
-        
-        
-       
-        for (Organization organization : ent.getOrganizationDirectory().getOrganizationList()) {
-            if(organization instanceof ConsentVerificationOrganization) {
-                org = organization;
-                break;
+
+            // WORK REQUEST
+            WorkRequest request = new HealthCareSystemCoordinatorWorkRequest();
+
+            request.setPatient(patient);
+            request.setActionDate(new Date());
+            request.setDoctorRequestSummary("Requested for Organ Reception");
+            request.setStatus("Assigned to Concent Verification");
+
+            request.setUserAccount(userAccount);
+
+            Enterprise ent = null;
+            Organization org = null;
+
+            for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
+                if (enterprise.getEnterpriseType().toString().equals("ConsentVerification")) {
+
+                    ent = enterprise;
+                    System.out.println(enterprise);
+                    break;
+                }
             }
-        }
-        
-        if (org != null) {
-            org.getWorkQueue().getWorkRequestList().add(request);
-            System.out.println(org.getName());
-            userAccount.getWorkQueue().getWorkRequestList().add(request);
-            //user.addUserRequest(request);
-            
+
+            for (Organization organization : ent.getOrganizationDirectory().getOrganizationList()) {
+                if (organization instanceof ConsentVerificationOrganization) {
+                    org = organization;
+                    break;
+                }
+            }
+
+            if (org != null) {
+                org.getWorkQueue().getWorkRequestList().add(request);
+                System.out.println(org.getName());
+                userAccount.getWorkQueue().getWorkRequestList().add(request);
+                //user.addUserRequest(request);
+
+                dB4OUtil.storeSystem(system);
+                populateRequestTable();
+                JOptionPane.showMessageDialog(null, new JLabel("<html><h2><I>Request<font color='green'> approved</font> successfully!</I></h2></html>"));
+
+                //JOptionPane.showMessageDialog(null,"Request Sent Successfully", "Info", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+
+                JOptionPane.showMessageDialog(null, "No organization present", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+
+            statusText.setText("Centre Approved");
             dB4OUtil.storeSystem(system);
             populateRequestTable();
-            JOptionPane.showMessageDialog(null, new JLabel(  "<html><h2><I>Request<font color='green'> approved</font> successfully!</I></h2></html>"));
-           
-            //JOptionPane.showMessageDialog(null,"Request Sent Successfully", "Info", JOptionPane.INFORMATION_MESSAGE);
-            
-        } else {
-        
-         JOptionPane.showMessageDialog(null, "No organization present", "Error", JOptionPane.ERROR_MESSAGE);
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        statusText.setText("Centre Approved");
-        dB4OUtil.storeSystem(system);
-        populateRequestTable();
-      //  JOptionPane.showMessageDialog(null,"New patient has been added!");
-        
+            //  JOptionPane.showMessageDialog(null,"New patient has been added!");
+
         }
     }//GEN-LAST:event_buttonApproveActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        
-        
-        
+
         int selectedRow = requestTable.getSelectedRow();
-        if(selectedRow < 0){
-            
-             JOptionPane.showMessageDialog(null, new JLabel(  "<html><h2><I>Please select<font color='red'> a row</font> from the<font color='green'> table</I></font></h2></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
-           
-            
+        if (selectedRow < 0) {
+
+            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><I>Please select<font color='red'> a row</font> from the<font color='green'> table</I></font></h2></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
+
             //JOptionPane.showMessageDialog(null,"Please select a row from the table first to View Details!","Warning!",JOptionPane.WARNING_MESSAGE);
-        }
-        else{
-       //display the details 
+        } else {
+            //display the details 
             patientRequest = (PatientRequest) requestTable.getValueAt(selectedRow, 0);
             populateRequestDetails(patientRequest);
             buttonApprove.setEnabled(true);
             buttonReject.setEnabled(true);
-            
-            if(Integer.parseInt(ageText.getText()) < 18)
-            {
-            ageText.setBorder(BorderFactory.createLineBorder(Color.RED));
-            ageText.setForeground(Color.red);
+
+            if (Integer.parseInt(ageText.getText()) < 18) {
+                ageText.setBorder(BorderFactory.createLineBorder(Color.RED));
+                ageText.setForeground(Color.red);
             }
-            if(labConfirmationText.getText().equals("false"))
-            {
-            labConfirmationText.setBorder(BorderFactory.createLineBorder(Color.RED));
-            labConfirmationText.setForeground(Color.red);
-            }
-            
-            
-             dB4OUtil.storeSystem(system);
-            
-            
+            dB4OUtil.storeSystem(system);
+
         }
     }
-        
-        private void populateRequestDetails(PatientRequest patientRequest){
-            uidText.setText(patientRequest.getPatientID());
-            nameText.setText(patientRequest.getName());
-            dobDateField.setDate(patientRequest.getDob());
-            ageText.setText(String.valueOf(patientRequest.getAge()));
-            genderText.setText(patientRequest.getGender());
-         
-            streetText.setText(patientRequest.getStreetAddress());
-            cityText.setText(patientRequest.getCity());
-            stateText.setText(patientRequest.getState());
-            zipText.setText(String.valueOf(patientRequest.getZipCode()));
-            contactText.setText(String.valueOf(patientRequest.getContact()));
-            emailText.setText(patientRequest.getEmailID());
-            statusText.setText(patientRequest.getStatus());
- 
-            
-            
-            
-            
-             if(patientRequest.getdP() !=null){
+
+    private void populateRequestDetails(PatientRequest patientRequest) {
+        uidText.setText(patientRequest.getPatientID());
+        nameText.setText(patientRequest.getName());
+        dobDateField.setDate(patientRequest.getDob());
+        ageText.setText(String.valueOf(patientRequest.getAge()));
+        genderText.setText(patientRequest.getGender());
+
+        streetText.setText(patientRequest.getStreetAddress());
+        cityText.setText(patientRequest.getCity());
+        stateText.setText(patientRequest.getState());
+        zipText.setText(String.valueOf(patientRequest.getZipCode()));
+        contactText.setText(String.valueOf(patientRequest.getContact()));
+        emailText.setText(patientRequest.getEmailID());
+        statusText.setText(patientRequest.getStatus());
+
+        if (patientRequest.getdP() != null) {
             //Working line
             byte[] JLabelpictureLabel = patientRequest.getdP();
             ImageIcon i = setPicturebyte(JLabelpictureLabel);
             lblProfilePicture.setIcon(i);
-            }
-            else{
+        } else {
             System.err.println("No Image");
-            }
-             
-             
-            uidText.setEditable(false);
-            nameText.setEditable(false);
-            ageText.setEditable(false);
-            genderText.setEditable(false);
-            bloodText.setEditable(false);
-            streetText.setEditable(false);
-            cityText.setEditable(false);
-            stateText.setEditable(false);
-            zipText.setEditable(false);
-            contactText.setEditable(false);
-            emailText.setEditable(false);
-            statusText.setEditable(false);
-            labConfirmationText.setEditable(false);     
-            diagnosedDateChooser.setEnabled(false);
-            dobDateField.setEnabled(false);
-                   
-             
-            
         }
-        
-        
-        private ImageIcon setPicturebyte(byte[] byteArrayImage){
+
+        uidText.setEditable(false);
+        nameText.setEditable(false);
+        ageText.setEditable(false);
+        genderText.setEditable(false);
+        bloodText.setEditable(false);
+        streetText.setEditable(false);
+        cityText.setEditable(false);
+        stateText.setEditable(false);
+        zipText.setEditable(false);
+        contactText.setEditable(false);
+        emailText.setEditable(false);
+        statusText.setEditable(false);
+        dobDateField.setEnabled(false);
+
+    }
+
+    private ImageIcon setPicturebyte(byte[] byteArrayImage) {
 
         ImageIcon imageCar;
         imageCar = new ImageIcon(byteArrayImage);
@@ -581,37 +484,36 @@ public class DonorRequestJPanel extends javax.swing.JPanel {
         pictureLabel1.setSize(107, 133);
         Image resizedImage = picCar.getScaledInstance(pictureLabel1.getWidth(), pictureLabel1.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon selectedCarPicture = new ImageIcon(resizedImage);
-        return selectedCarPicture;  
+        return selectedCarPicture;
 
-    
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void buttonRejectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRejectActionPerformed
         // TODO add your handling code here:
-        
-       if(!statusText.getText().equals("New Request"))
-                  {
-                      JOptionPane.showMessageDialog(null, new JLabel(  "<html><h2><I>Request<font color='red'> can not</font> be rejected!</I></h2></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
-          
-                     // JOptionPane.showMessageDialog(null,"Can Not Reject the Request!");
+
+        if (!statusText.getText().equals("New Request")) {
+            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><I>Request<font color='red'> can not</font> be rejected!</I></h2></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
+
+            // JOptionPane.showMessageDialog(null,"Can Not Reject the Request!");
+        } else {
+            for (PatientRequest patientRequest : system.getPatientRequestDirectory().getPatientRequestList()) {
+
+                if (patientRequest.getName().equals(nameText.getText())) {
+                    statusText.setText("Rejected");
+                    patientRequest.setStatus("Rejected");
+                }
+            }
+
+            dB4OUtil.storeSystem(system);
+            populateRequestTable();
+
+            JOptionPane.showMessageDialog(null, new JLabel("<html><h2><I>Request has been<font color='red'> rejected</font>!</I></h2></html>"));
+
+            //JOptionPane.showMessageDialog(null,"Rejected the Patient's Request!");
         }
-       else{
-        for(PatientRequest patientRequest: system.getPatientRequestDirectory().getPatientRequestList()){                      
-        
-            if(patientRequest.getName().equals(nameText.getText())){
-            statusText.setText("Rejected");
-            patientRequest.setStatus("Rejected");
-            }}
-        
-        dB4OUtil.storeSystem(system);   
-        populateRequestTable();
-        
-         JOptionPane.showMessageDialog(null, new JLabel("<html><h2><I>Request has been<font color='red'> rejected</font>!</I></h2></html>"));
-        
-        //JOptionPane.showMessageDialog(null,"Rejected the Patient's Request!");
-        }
-       
-        
+
+
     }//GEN-LAST:event_buttonRejectActionPerformed
 
 
@@ -622,21 +524,18 @@ public class DonorRequestJPanel extends javax.swing.JPanel {
     private javax.swing.JButton buttonReject;
     private javax.swing.JTextField cityText;
     private javax.swing.JTextField contactText;
-    private com.toedter.calendar.JDateChooser diagnosedDateChooser;
     private com.toedter.calendar.JDateChooser dobDateField;
     private javax.swing.JTextField emailText;
     private javax.swing.JTextField genderText;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
@@ -649,7 +548,6 @@ public class DonorRequestJPanel extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JTextField labConfirmationText;
     private javax.swing.JLabel lblProfilePicture;
     private javax.swing.JTextField nameText;
     private javax.swing.JTable requestTable;

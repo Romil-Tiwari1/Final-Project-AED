@@ -11,6 +11,7 @@ import HealthCentre.EcoSystem;
 import HealthCentre.Employee.Employee;
 import HealthCentre.Enterprise.Enterprise;
 import HealthCentre.Network.Network;
+import HealthCentre.Organization.OrganBankOrganization;
 import HealthCentre.Organization.Organization;
 //import HealthCentre.Organization.OrganBankOrganization;
 import HealthCentre.UserAccount.UserAccount;
@@ -124,9 +125,7 @@ public class PatientConsentJPanel extends javax.swing.JPanel {
         });
         tblPatientConsent.setFocusable(false);
         tblPatientConsent.setGridColor(new java.awt.Color(0, 0, 0));
-        tblPatientConsent.setIntercellSpacing(new java.awt.Dimension(0, 0));
         tblPatientConsent.setRowHeight(30);
-        tblPatientConsent.setShowVerticalLines(false);
         jScrollPane1.setViewportView(tblPatientConsent);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 1330, 220));
@@ -234,7 +233,7 @@ public class PatientConsentJPanel extends javax.swing.JPanel {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+                .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -278,10 +277,10 @@ public class PatientConsentJPanel extends javax.swing.JPanel {
         }
         
         for (Organization organization : ent.getOrganizationDirectory().getOrganizationList()) {
-//            if(organization instanceof OrganBankOrganization) {
-//                org = organization;
-//                break;
-//            }
+            if(organization instanceof OrganBankOrganization) {
+                org = organization;
+                break;
+            }
         }
         
         if (org != null) {

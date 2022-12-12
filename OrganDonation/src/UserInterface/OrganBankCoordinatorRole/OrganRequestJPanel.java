@@ -11,6 +11,7 @@ import HealthCentre.Network.Network;
 import HealthCentre.Organization.CareSystemCoordinatorOrganisation;
 import HealthCentre.Organization.OrganBankOrganization;
 import HealthCentre.Organization.Organization;
+import HealthCentre.Organization.SystemCoordinatorOrganization;
 import HealthCentre.UserAccount.UserAccount;
 import HealthCentre.WorkQueue.WorkRequest;
 import HomeScreens.TableFormat;
@@ -87,9 +88,12 @@ public class OrganRequestJPanel extends javax.swing.JPanel {
      * Description : Populate Organ Coordinator table
      */
     public void populateOrganCoordinatorTable() {
+        System.out.println("Inside POpulate");
         DefaultTableModel model = (DefaultTableModel) organCoordinatorListTable.getModel();
         model.setRowCount(0);
+        System.out.println(userAccount.getWorkQueue().getWorkRequestList());
         for (WorkRequest request : userAccount.getWorkQueue().getWorkRequestList()) {
+            System.out.println("Inside POpulate For" + request);
             Object[] row = new Object[6];
             row[0] = request;
             row[1] = request.getPatient();
@@ -245,13 +249,15 @@ public class OrganRequestJPanel extends javax.swing.JPanel {
         });
         add(holdReqButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 600, 190, 40));
 
+        organCoordinatorListTable.setBackground(new java.awt.Color(0, 0, 0));
         organCoordinatorListTable.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        organCoordinatorListTable.setForeground(new java.awt.Color(255, 255, 255));
         organCoordinatorListTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Request Number", "Patient ID", "Patient Name", "Email ID", "Blood Group", "Status"
+                "Request Number", "Patient ID", "Patient Name", "Email ID", "Organ Type", "Status"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -330,20 +336,28 @@ public class OrganRequestJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
 
         int selectedRow = organCoordinatorListTable.getSelectedRow();
+
         if (selectedRow < 0) {
             //JOptionPane.showMessageDialog(null, "Please select a row first!" );
             JOptionPane.showMessageDialog(null, new JLabel("<html><h2><I>Please select<font color='red'> a row</font> from the<font color='green'> table</I></font></h2></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         } else {
+
             WorkRequest request = (WorkRequest) organCoordinatorListTable.getValueAt(selectedRow, 0);
+            System.out.println("test11" + request.getStatus());
             if (request.getStatus().equals("Legally Approved. Passing to OrganBank")
                     || request.getStatus().equals("Request on Hold Due to Organ not available currently")) {
                 request.setStatus("Organbank Approved. Passing to Health Care System Coordinator");
                 dB4OUtil.storeSystem(ecoSystem);
                 populateOrganCoordinatorTable();
+
+            } else {
+                //JOptionPane.showMessageDialog(null, "Work Request is already in progress!" );
                 Enterprise ent = null;
                 Organization org = null;
+
                 for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
+                    System.out.println("test12 ent type" + enterprise.getEnterpriseType());
                     if (enterprise.getEnterpriseType().toString().equals("Hospital")) {
                         ent = enterprise;
                         break;
@@ -351,28 +365,26 @@ public class OrganRequestJPanel extends javax.swing.JPanel {
                 }
                 for (Organization organization : ent.getOrganizationDirectory()
                         .getOrganizationList()) {
-                    if (organization instanceof CareSystemCoordinatorOrganisation) {
+                    System.out.println("test13 org1 type" + organization);
+                    if (organization instanceof SystemCoordinatorOrganization) {
                         org = organization;
                         break;
                     }
                 }
 
                 if (org != null) {
+                    System.out.println("org" + org);
                     org.getWorkQueue().getWorkRequestList().add(request);
+                    System.out.println("final organ" + request.getPatient().getOrganType());
                     org.getOrganType().subtractOrganType(request.getPatient().getOrganType());
                     populateOrganTypeFields();
                 } else {
                     JOptionPane.showMessageDialog(null, "No organization present", "Error", JOptionPane.ERROR_MESSAGE);
                 }
-            } else {
-                // JOptionPane.showMessageDialog(null, "Work Request is already in progress!" );
-                JOptionPane.showMessageDialog(null, new JLabel("<html><h2><I>Work Request is<font color='red'> already</font> in progress!</I></h2></html>"), "Warning", JOptionPane.WARNING_MESSAGE);
-
             }
         }
 
         dB4OUtil.storeSystem(ecoSystem);
-
     }//GEN-LAST:event_approveButtonActionPerformed
 
     private void holdReqButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_holdReqButtonActionPerformed

@@ -324,7 +324,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
 
         jLabel19.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel19.setText("Was your COVID-19 diagnosis confirmed by a lab test?");
+        jLabel19.setText("Were you recommended by Doctor for transplant?");
         add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 460, -1, 30));
 
         jLabel9.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -476,8 +476,8 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("COVID Details");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 410, 150, -1));
+        jLabel1.setText("Transplant Inquiry");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 410, 190, -1));
 
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
         add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 390, 30, 250));

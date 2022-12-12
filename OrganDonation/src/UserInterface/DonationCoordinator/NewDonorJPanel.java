@@ -344,7 +344,9 @@ public class NewDonorJPanel extends javax.swing.JPanel {
         jLabel17.setText("Email ID");
         add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, -1, 30));
 
+        emailText.setBackground(new java.awt.Color(0, 0, 0));
         emailText.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        emailText.setForeground(new java.awt.Color(255, 255, 255));
         emailText.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 emailTextMouseClicked(evt);

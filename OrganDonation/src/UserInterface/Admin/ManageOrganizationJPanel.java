@@ -82,11 +82,10 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
                 }
             }
         } else if (enterprise.getEnterpriseType().toString().equals(OrganBank.toString())) {
-            for (Organization.OrganBankType cType : Organization.OrganBankType.values()) {
-                if (cType.getValue().equals(Organization.OrganBankType.OrganBank.getValue())) {
-                    organizationJComboBox.addItem(cType);
-                }
-            }
+       
+                  organizationJComboBox.addItem(Organization.OrganBankType.OrganBank);
+                
+            
         } else if (enterprise.getEnterpriseType().toString().equals(OrganTransplantCentre.toString())) {
             for (Organization.TransplantCentreOrganizationType cType : Organization.TransplantCentreOrganizationType.values()) {
                 if (cType.getValue().equals(Organization.TransplantCentreOrganizationType.TransplantCentreOrganization.getValue())) {
