@@ -25,7 +25,7 @@ public class DonorRequest {
     private String city;
     private String state;
     private int zipCode;
-    private int contact;
+    private String contact;
     private String emailID;
     private String status;
     private boolean inheritedDisease;
@@ -61,8 +61,8 @@ public class DonorRequest {
 // Getter Setter Functions
     public String getName() {return name;}
     public void setName(String name) {this.name = name;}
-    public int getContact() {return contact;}
-    public void setContact(int contact) {this.contact = contact;}
+    public String getContact() {return contact;}
+    public void setContact(String contact) {this.contact = contact;}
     public String getDonorID() {        return donorID;    }
     public void setDonorID(String donorID) {        this.donorID = donorID;    }
     public Date getDob() {        return dob;    }

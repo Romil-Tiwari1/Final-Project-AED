@@ -708,7 +708,7 @@ public class NewDonorJPanel extends javax.swing.JPanel {
                 donorRequest.setCity(cityText.getText()); // city
                 donorRequest.setState((String) stateJComboBox.getSelectedItem()); // state
                 donorRequest.setZipCode(Integer.parseInt(zipText.getText())); // zipCode
-                donorRequest.setContact(Integer.parseInt(contactText.getText())); // contact
+                donorRequest.setContact(contactText.getText()); // contact
                 donorRequest.setEmailID(emailText.getText()); // emailID
                 donorRequest.setStatus("New Request"); // status
                 //donorRequest.setImagePath(photoTextField.getText()); 
