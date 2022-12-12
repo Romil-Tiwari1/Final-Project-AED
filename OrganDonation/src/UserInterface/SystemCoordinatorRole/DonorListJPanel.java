@@ -64,6 +64,8 @@ public class DonorListJPanel extends javax.swing.JPanel {
         
         for (Donor donor : system.getOrganDonorDirectory().getDonorList()){
             Object row[] = new  Object[4];
+            System.out.println("Inside for" + donor);
+            System.out.println("Inside for" + donor.getClass().getSimpleName());
             row[0] = donor;
             row[1] = donor.getName();
             row[2] = donor.getContact();

@@ -485,6 +485,10 @@ public class DoctorRoleWorkAreaJPanel extends javax.swing.JPanel {
 
     private void manageDoctorJPanelLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageDoctorJPanelLabelMouseClicked
         // TODO add your handling code here:
+        ManageDoctorJPanel manageDoctorJPanel = new ManageDoctorJPanel(system, userAccount, doctorOrganization, enterprise);
+        userProcessContainer.add("ManageDoctorJPanel",manageDoctorJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_manageDoctorJPanelLabelMouseClicked
 
     private void backArrowLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backArrowLabelMouseClicked

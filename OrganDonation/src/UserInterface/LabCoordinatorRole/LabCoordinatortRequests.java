@@ -63,9 +63,7 @@ public class LabCoordinatortRequests extends javax.swing.JPanel {
     
     public void populateOrganizationDonorTable(){
         DefaultTableModel model = (DefaultTableModel)tblOrganisationDonors.getModel();
-        
         model.setRowCount(0);
-        
         for(WorkRequest request : labCoordinatorOrganization.getWorkQueue().getWorkRequestList()){
             Object[] row = new Object[6];
             row[0] = request;

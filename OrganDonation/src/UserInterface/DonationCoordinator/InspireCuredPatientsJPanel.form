@@ -346,9 +346,13 @@
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
 <<<<<<< HEAD
+          <AbsoluteConstraints x="90" y="620" width="790" height="260"/>
+=======
+<<<<<<< HEAD
           <AbsoluteConstraints x="290" y="610" width="790" height="260"/>
 =======
           <AbsoluteConstraints x="80" y="620" width="790" height="260"/>
+>>>>>>> origin
 >>>>>>> origin
         </Constraint>
       </Constraints>
@@ -368,7 +372,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Hi,&#xa;&#xa;As per our records you had got organ transplantation.Please do fill this form to donate&#xa; your &#xa;organ so that it can save life of someone else too.&#xa;&#xa;Link to register-&#xa;https://docs.google.com/forms/d/e/1FAIpQLSdmQsO8s6or4MMN4Ial4feTCAzuOZ72le_6sY0fphEyKMSrmQ/viewform?usp=sf_link"/>
+            <Property name="text" type="java.lang.String" value="Hi,&#xa;&#xa;As per our records you had got organ transplantation.Please do fill this form to donate&#xa; your &#xa;organ so that it can save life of someone else too.&#xa;&#xa;Link to register-&#xa;https://docs.google.com/forms/d/e/1FAIpQLSctNJbRkeB5XJN-n46hkmwWNwJ_mC067THtusTTQH9UVSJWUA/viewform?usp=sf_link"/>
           </Properties>
         </Component>
       </SubComponents>

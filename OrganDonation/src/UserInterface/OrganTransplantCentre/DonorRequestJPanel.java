@@ -139,7 +139,7 @@ public class DonorRequestJPanel extends javax.swing.JPanel {
                 buttonRejectActionPerformed(evt);
             }
         });
-        add(buttonReject, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 370, 100, 40));
+        add(buttonReject, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 430, 100, 40));
 
         buttonApprove.setBackground(new java.awt.Color(31, 31, 31));
         buttonApprove.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -152,7 +152,7 @@ public class DonorRequestJPanel extends javax.swing.JPanel {
                 buttonApproveActionPerformed(evt);
             }
         });
-        add(buttonApprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 370, 110, 40));
+        add(buttonApprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 490, 110, 40));
 
         jLabel6.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -333,9 +333,7 @@ public class DonorRequestJPanel extends javax.swing.JPanel {
         });
         requestTable.setFocusable(false);
         requestTable.setGridColor(new java.awt.Color(0, 0, 0));
-        requestTable.setIntercellSpacing(new java.awt.Dimension(0, 0));
         requestTable.setRowHeight(30);
-        requestTable.setShowVerticalLines(false);
         jScrollPane1.setViewportView(requestTable);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, 1130, 240));
@@ -391,7 +389,7 @@ public class DonorRequestJPanel extends javax.swing.JPanel {
         
         Patient patient = system.getPatientDirectory().addPatient();
         patient.setName(nameText.getText());
-        patient.setContact(Integer.parseInt(contactText.getText()));  
+        patient.setContact(contactText.getText());  
         
         patient.setPatientID(uidText.getText()); // UID, receiverID
         patient.setName(nameText.getText()); // Name
@@ -405,7 +403,7 @@ public class DonorRequestJPanel extends javax.swing.JPanel {
         patient.setCity(cityText.getText()); // city
         patient.setState(stateText.getText()); // state
         patient.setZipCode(Integer.parseInt(zipText.getText())); // zipCode
-        patient.setContact(Integer.parseInt(contactText.getText())); // contact
+        patient.setContact(contactText.getText()); // contact
         patient.setEmailID(emailText.getText()); // emailID
         patient.setStatus("Centre Approved"); // status
        
@@ -436,7 +434,7 @@ public class DonorRequestJPanel extends javax.swing.JPanel {
         Organization org = null;
         
         for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
-            if (enterprise.getEnterpriseType().toString().equals("Legal")) {
+            if (enterprise.getEnterpriseType().toString().equals("ConsentVerification")) {
             
                 ent = enterprise;
                 System.out.println(enterprise);

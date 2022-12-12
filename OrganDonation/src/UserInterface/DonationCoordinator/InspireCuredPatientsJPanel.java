@@ -236,10 +236,10 @@ public class InspireCuredPatientsJPanel extends javax.swing.JPanel {
         messageTextField.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         messageTextField.setForeground(new java.awt.Color(255, 255, 255));
         messageTextField.setRows(5);
-        messageTextField.setText("Hi,\n\nAs per our records you had got organ transplantation.Please do fill this form to donate\n your \norgan so that it can save life of someone else too.\n\nLink to register-\nhttps://docs.google.com/forms/d/e/1FAIpQLSdmQsO8s6or4MMN4Ial4feTCAzuOZ72le_6sY0fphEyKMSrmQ/viewform?usp=sf_link");
+        messageTextField.setText("Hi,\n\nAs per our records you had got organ transplantation.Please do fill this form to donate\n your \norgan so that it can save life of someone else too.\n\nLink to register-\nhttps://docs.google.com/forms/d/e/1FAIpQLSctNJbRkeB5XJN-n46hkmwWNwJ_mC067THtusTTQH9UVSJWUA/viewform?usp=sf_link");
         jScrollPane2.setViewportView(messageTextField);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 620, 790, 260));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 620, 790, 260));
     }// </editor-fold>//GEN-END:initComponents
 
     private void toTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toTextFieldActionPerformed
