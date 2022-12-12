@@ -57,7 +57,7 @@ public class OrganDonorJPanel extends javax.swing.JPanel {
      * If modifying these scopes, delete your previously saved tokens/ folder.
      */
     private static final List<String> SCOPES = Collections.singletonList(SheetsScopes.SPREADSHEETS_READONLY);
-    private static final String CREDENTIALS_FILE_PATH = "/credentials.json";
+    private static final String CREDENTIALS_FILE_PATH = "././credentials.json";
 
     /**
      * Creates an authorized Credential object.
@@ -116,7 +116,7 @@ public class OrganDonorJPanel extends javax.swing.JPanel {
     
     private void populateGoogleSheetTable() throws GeneralSecurityException, IOException{
             final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
-        final String spreadsheetId = "1YulpIxHOwFfDMM57n7hbxZueFSsw-q414bD5tzNMUv0";
+        final String spreadsheetId = "1Va7KrVFeUUZ66miZKIJpwLMF2Cctda60DAUJJqtlrq0";
         final String range = "Form Responses 2!A2:S";
         //final String range = "Form Responses 1!A2:E";
         Sheets service = new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
@@ -341,7 +341,7 @@ public class OrganDonorJPanel extends javax.swing.JPanel {
         organTypeTextField.setEnabled(false);
         add(organTypeTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 500, 230, -1));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/blood-donor-card.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images_1/liver_small.png"))); // NOI18N
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 440, 130, 90));
     }// </editor-fold>//GEN-END:initComponents
 
@@ -353,7 +353,7 @@ public class OrganDonorJPanel extends javax.swing.JPanel {
         donor.setDonorID(uidTextField.getText());
         
         System.out.println(contactTextField.getText());  
-        donor.setContact((int) Double.parseDouble(contactTextField.getText()));  
+        donor.setContact(contactTextField.getText());  
         donor.setOrganType(organTypeTextField.getText());
         donor.setStatus("Donor Coordinator Approved");
 

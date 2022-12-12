@@ -154,7 +154,7 @@ public class DonorStatusJPanel extends javax.swing.JPanel {
         });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 520, 117, 39));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/blood-donation_2.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images_1/donor.png"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 340, -1, 141));
 
         donorRequestTable1.setBackground(new java.awt.Color(0, 0, 0));

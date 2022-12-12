@@ -703,7 +703,8 @@ public class NewDonorJPanel extends javax.swing.JPanel {
                 donorRequest.setDob(dobDateField.getDate()); // DOB 
                 donorRequest.setAge(Integer.parseInt(ageText.getText())); // Age
                 donorRequest.setGender((String) genderJComboBox.getSelectedItem()); // gender
-                donorRequest.setOrganType((String) OrganTypeJComboBox.getSelectedItem()); //organType
+                donorRequest.setOrganType((String) OrganTypeJComboBox.getSelectedItem());
+                System.out.println("OrganTypeJComboBox.getSelectedItem()" + OrganTypeJComboBox.getSelectedItem());//organType
                 donorRequest.setStreetAddress(streetText.getText()); // streetAddress
                 donorRequest.setCity(cityText.getText()); // city
                 donorRequest.setState((String) stateJComboBox.getSelectedItem()); // state

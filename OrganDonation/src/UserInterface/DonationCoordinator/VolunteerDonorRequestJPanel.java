@@ -460,12 +460,13 @@ public class VolunteerDonorRequestJPanel extends javax.swing.JPanel {
         donor.setDob(dobDateField.getDate()); // DOB 
         donor.setAge(Integer.parseInt(ageText.getText())); // Age
         donor.setGender(genderText.getText()); // gender
-        donor.setOrganType(organTypeText.getText()); // organ type
+        donor.setOrganType(organTypeText.getText()); 
+        System.out.println("organTypeText.getText()" + organTypeText.getText());// organ type
         donor.setStreetAddress(streetText.getText()); // streetAddress
         donor.setCity(cityText.getText()); // city
         donor.setState(stateText.getText()); // state
         donor.setZipCode(Integer.parseInt(zipText.getText())); // zipCode
-        donor.setContact(Integer.parseInt(contactText.getText())); // contact
+        donor.setContact(contactText.getText()); // contact
         donor.setEmailID(statusText.getText()); // emailID
         donor.setStatus("Donation Coordinator Approved"); // status
     
@@ -546,6 +547,7 @@ public class VolunteerDonorRequestJPanel extends javax.swing.JPanel {
             ageText.setText(String.valueOf(donorRequest.getAge()));
             genderText.setText(donorRequest.getGender());
             organTypeText.setText(donorRequest.getOrganType());
+            System.out.println("donorRequest.getOrganType()" +donorRequest.getOrganType());
             streetText.setText(donorRequest.getStreetAddress());
             cityText.setText(donorRequest.getCity());
             stateText.setText(donorRequest.getState());

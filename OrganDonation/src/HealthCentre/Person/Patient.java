@@ -19,7 +19,7 @@ public class Patient {
     private String city;
     private String state;
     private int zipCode;
-    private int contact;
+    private String contact;
     private String emailID;
     private String status;
     private boolean labReport;
@@ -74,11 +74,11 @@ public class Patient {
         this.zipCode = zipCode;
     }
 
-    public int getContact() {
+    public String getContact() {
         return contact;
     }
 
-    public void setContact(int contact) {
+    public void setContact(String contact) {
         this.contact = contact;
     }
 
