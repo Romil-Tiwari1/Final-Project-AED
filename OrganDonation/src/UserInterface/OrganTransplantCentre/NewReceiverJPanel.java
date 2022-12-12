@@ -339,7 +339,7 @@ public class NewReceiverJPanel extends javax.swing.JPanel {
 
         jLabel10.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Covid diagnosed date");
+        jLabel10.setText("Doctor Diagnosis Date");
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 570, -1, -1));
 
         btnAddPhoto.setBackground(new java.awt.Color(31, 31, 31));
