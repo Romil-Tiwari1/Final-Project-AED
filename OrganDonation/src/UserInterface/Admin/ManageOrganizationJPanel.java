@@ -19,7 +19,6 @@ import HealthCentre.Organization.Organization.DonationType;
 
 import HealthCentre.Organization.Organization.ConsentVerificationType;
 import HealthCentre.Organization.Organization.OrganBankType;
-
 import HealthCentre.Organization.Organization.TransplantCentreOrganizationType;
 
 import HealthCentre.Organization.Organization.Type;
@@ -73,41 +72,37 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
             for (Organization.DonationType donType : Organization.DonationType.values()) {
                 if (donType.getValue().equals(Organization.DonationType.Donation.getValue())) {
                     organizationJComboBox.addItem(donType);
-       
+
                 }
             }
-        }
-       else if(enterprise.getEnterpriseType().toString().equals(ConsentVerification.toString())){
-        for(Organization.ConsentVerificationType cType: Organization.ConsentVerificationType.values()){
-            if (cType.getValue().equals(Organization.ConsentVerificationType.ConsentVerification.getValue())){
-                organizationJComboBox.addItem(cType);
+        } else if (enterprise.getEnterpriseType().toString().equals(ConsentVerification.toString())) {
+            for (Organization.ConsentVerificationType cType : Organization.ConsentVerificationType.values()) {
+                if (cType.getValue().equals(Organization.ConsentVerificationType.ConsentVerification.getValue())) {
+                    organizationJComboBox.addItem(cType);
+                }
             }
-        }
-        }
-       else if(enterprise.getEnterpriseType().toString().equals(OrganBank.toString())){
-        for(Organization.OrganBankType cType: Organization.OrganBankType.values()){
-            if (cType.getValue().equals(Organization.OrganBankType.OrganBank.getValue())){
-                organizationJComboBox.addItem(cType);
+        } else if (enterprise.getEnterpriseType().toString().equals(OrganBank.toString())) {
+            for (Organization.OrganBankType cType : Organization.OrganBankType.values()) {
+                if (cType.getValue().equals(Organization.OrganBankType.OrganBank.getValue())) {
+                    organizationJComboBox.addItem(cType);
+                }
             }
-        }
-        }
-             else if(enterprise.getEnterpriseType().toString().equals(OrganTransplantCentre.toString())){
-        for(Organization.TransplantCentreOrganizationType cType: Organization.TransplantCentreOrganizationType.values()){
-            if (cType.getValue().equals(Organization.TransplantCentreOrganizationType.TransplantCentreOrganization.getValue())){
-                organizationJComboBox.addItem(cType);
+        } else if (enterprise.getEnterpriseType().toString().equals(OrganTransplantCentre.toString())) {
+            for (Organization.TransplantCentreOrganizationType cType : Organization.TransplantCentreOrganizationType.values()) {
+                if (cType.getValue().equals(Organization.TransplantCentreOrganizationType.TransplantCentreOrganization.getValue())) {
+                    organizationJComboBox.addItem(cType);
+                }
             }
+        } else {
+            for (Organization.Type type : Organization.Type.values()) {
+                if (type.getValue().equals(Organization.Type.SystemCoordinator.getValue())
+                        || type.getValue().equals(Organization.Type.Doctor.getValue())
+                        || type.getValue().equals(Organization.Type.LabCoordinator.getValue())) {
+                    organizationJComboBox.addItem(type);
+                }
+            }
+
         }
-        }
-else{
-        for (Organization.Type type : Organization.Type.values()){            
-            if (type.getValue().equals(Organization.Type.SystemCoordinator.getValue())
-                    ||type.getValue().equals(Organization.Type.Doctor.getValue())
-                    ||type.getValue().equals(Organization.Type.LabCoordinator.getValue())
-                    )
-                organizationJComboBox.addItem(type);
-        }
-       
-    }
     }
 
     private void populateTable() {
@@ -341,21 +336,17 @@ else{
             if (enterprise.getEnterpriseType().toString().equals(Donation.toString())) {
                 directory.createDonationOrganization((DonationType) organizationJComboBox.getSelectedItem(), txtOrgRealName.getText());
 
-            } 
- else if(enterprise.getEnterpriseType().toString().equals(ConsentVerification.toString())){
-            directory.createConsentVerificationOrganization((ConsentVerificationType) organizationJComboBox.getSelectedItem(), txtOrgRealName.getText());
-        }
-else if(enterprise.getEnterpriseType().toString().equals(OrganBank.toString())){
-            directory.createOrganBankOrganization((OrganBankType) organizationJComboBox.getSelectedItem(), txtOrgRealName.getText());
-        }
-else if(enterprise.getEnterpriseType().toString().equals(OrganTransplantCentre.toString())){
-            directory.createTransplantCentreOrganization((TransplantCentreOrganizationType) organizationJComboBox.getSelectedItem(), txtOrgRealName.getText());
-        }
-else {
+            } else if (enterprise.getEnterpriseType().toString().equals(ConsentVerification.toString())) {
+                directory.createConsentVerificationOrganization((ConsentVerificationType) organizationJComboBox.getSelectedItem(), txtOrgRealName.getText());
+            } else if (enterprise.getEnterpriseType().toString().equals(OrganBank.toString())) {
+                directory.createOrganBankOrganization((OrganBankType) organizationJComboBox.getSelectedItem(), txtOrgRealName.getText());
+            } else if (enterprise.getEnterpriseType().toString().equals(OrganTransplantCentre.toString())) {
+                directory.createTransplantCentreOrganization((TransplantCentreOrganizationType) organizationJComboBox.getSelectedItem(), txtOrgRealName.getText());
+            } else {
 
                 Type type = (Type) organizationJComboBox.getSelectedItem();
                 directory.createOrganization(type, txtOrgRealName.getText());
-    } 
+            }
             System.out.println("data getting stored");
             populateTable();
             System.out.println("data stored");

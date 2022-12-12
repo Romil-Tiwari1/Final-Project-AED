@@ -393,9 +393,6 @@ public class OrganDonorJPanel extends javax.swing.JPanel {
         buttonCreate.setEnabled(true);
         
         }
-        
-        
-        
     }//GEN-LAST:event_jButton2ActionPerformed
 
 
